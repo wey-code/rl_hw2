@@ -74,9 +74,6 @@ class Dueling_DQN_vector(nn.Module):
         advantage = self.advantage(x)
         value     = self.value(x)
         return value + advantage  - advantage.mean()
-<<<<<<< HEAD
-    
-=======
 
 
 class attention_Dueling_DQN(nn.Module):
@@ -222,4 +219,3 @@ class NONLocalBlock2D(_NonLocalBlockND):
                                               inter_channels=inter_channels,
                                               dimension=2, sub_sample=sub_sample,
                                               bn_layer=bn_layer)
->>>>>>> b899d1b (对image添加了nonlocal-attention)

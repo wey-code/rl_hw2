@@ -15,19 +15,12 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torchvision import transforms
-<<<<<<< HEAD
-=======
 
->>>>>>> b899d1b (对image添加了nonlocal-attention)
 from tensorboardX import SummaryWriter
 import pickle
 from models import *
 import random
-<<<<<<< HEAD
-from network import Dueling_DQN,Dueling_DQN_vector
-=======
 from network import Dueling_DQN,Dueling_DQN_vector,attention_Dueling_DQN
->>>>>>> b899d1b (对image添加了nonlocal-attention)
 from torch.autograd import Variable
 import pdb
 from numpy import *
@@ -92,11 +85,8 @@ class DDQN(object):
         self._init_hyperparameters()
         if args.input == 'image':
             self.eval_net,self.target_net = Dueling_DQN(num_states,num_actions).to(self.device),Dueling_DQN(num_states,num_actions).to(self.device)
-<<<<<<< HEAD
-=======
         if args.input == 'image_attention':
             self.eval_net,self.target_net = attention_Dueling_DQN(num_states,num_actions).to(self.device),attention_Dueling_DQN(num_states,num_actions).to(self.device)
->>>>>>> b899d1b (对image添加了nonlocal-attention)
         if args.input == 'vector':
             self.eval_net,self.target_net = Dueling_DQN_vector(num_states,num_actions).to(self.device),Dueling_DQN_vector(num_states,num_actions).to(self.device)
         self.memory =  ReplayBuffer()
@@ -201,11 +191,8 @@ class DDQN(object):
         state_ki = torch.from_numpy(state_ki.reshape(1,-1)).float()
         if self.args.input == 'image':
             return state_image
-<<<<<<< HEAD
-=======
         if self.args.input == 'image_attention':
             return state_image
->>>>>>> b899d1b (对image添加了nonlocal-attention)
         if self.args.input == 'vector':
             return state_ki
 
@@ -219,11 +206,7 @@ def parse_args(args):
     parser = argparse.ArgumentParser(description='Training parameters')
     # #
     parser.add_argument('--mode', default='train', type=str, choices=['train', 'test'])  # mode = 'train' or 'test'
-<<<<<<< HEAD
-    parser.add_argument('--input',default='image',type=str,choices=['image','vector'])
-=======
     parser.add_argument('--input',default='image',type=str,choices=['image','vector','image_attention'])
->>>>>>> b899d1b (对image添加了nonlocal-attention)
     parser.add_argument('--file_name',default='./',type=str)
     parser.add_argument('--episode_num',default=1001,type=int)
     parser.add_argument('--epsilon_decay',default = 6250,type=int)
@@ -318,11 +301,8 @@ def train(args=None):
     reward_list = []
     if args.input == 'image':
         agent = DDQN(np.array([4,150,600]),5,args)
-<<<<<<< HEAD
-=======
     if args.input == 'image_attention':
         agent = DDQN(np.array([4,150,600]),5,args)
->>>>>>> b899d1b (对image添加了nonlocal-attention)
     if args.input == 'vector':
         agent = DDQN(15*7,5,args)
     t_so_far = 0
@@ -438,11 +418,8 @@ def test(args=None):
     #编写测试过程
     if args.input == 'image':
         agent = DDQN(np.array([4,150,600]),5,args)
-<<<<<<< HEAD
-=======
     if args.input == 'image_attention':
         agent = DDQN(np.array([4,150,600]),5,args)
->>>>>>> b899d1b (对image添加了nonlocal-attention)
     if args.input == 'vector':
         agent = DDQN(15*7,5,args)
     agent.epsilon = 1.0
