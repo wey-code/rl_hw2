@@ -20,7 +20,7 @@ from tensorboardX import SummaryWriter
 import pickle
 from models import *
 import random
-from network import Dueling_DQN,Dueling_DQN_vector,attention_Dueling_DQN
+from network import Dueling_DQN,Dueling_DQN_vector,attention_Dueling_DQN,EgoAttentionNetwork
 from torch.autograd import Variable
 import pdb
 from numpy import *
@@ -89,6 +89,8 @@ class DDQN(object):
             self.eval_net,self.target_net = attention_Dueling_DQN(num_states,num_actions).to(self.device),attention_Dueling_DQN(num_states,num_actions).to(self.device)
         if args.input == 'vector':
             self.eval_net,self.target_net = Dueling_DQN_vector(num_states,num_actions).to(self.device),Dueling_DQN_vector(num_states,num_actions).to(self.device)
+        if args.input == 'vector_attention':
+            self.eval_net,self.target_net = EgoAttentionNetwork(num_states,num_actions).to(self.device),EgoAttentionNetwork(num_states,num_actions).to(self.device)
         self.memory =  ReplayBuffer()
         
         self.optimizer = torch.optim.Adam(self.eval_net.parameters(),lr = self.lr)
@@ -195,6 +197,8 @@ class DDQN(object):
             return state_image
         if self.args.input == 'vector':
             return state_ki
+        if self.args.input == 'vector_attention':
+            return torch.tensor([state['kinematics']], dtype=torch.float)
 
         # return state_image
 
@@ -206,7 +210,7 @@ def parse_args(args):
     parser = argparse.ArgumentParser(description='Training parameters')
     # #
     parser.add_argument('--mode', default='train', type=str, choices=['train', 'test'])  # mode = 'train' or 'test'
-    parser.add_argument('--input',default='image',type=str,choices=['image','vector','image_attention'])
+    parser.add_argument('--input',default='image',type=str,choices=['image','vector','image_attention','vector_attention'])
     parser.add_argument('--file_name',default='./',type=str)
     parser.add_argument('--episode_num',default=1001,type=int)
     parser.add_argument('--epsilon_decay',default = 6250,type=int)
@@ -305,6 +309,9 @@ def train(args=None):
         agent = DDQN(np.array([4,150,600]),5,args)
     if args.input == 'vector':
         agent = DDQN(15*7,5,args)
+    if args.input == 'vector_attention':
+        agent = DDQN(7,5,args)
+
     t_so_far = 0
     ep_r_be = 0
 
@@ -422,8 +429,11 @@ def test(args=None):
         agent = DDQN(np.array([4,150,600]),5,args)
     if args.input == 'vector':
         agent = DDQN(15*7,5,args)
+    if args.input == 'vector_attention':
+        agent = DDQN(7, 5, args)
+
     agent.epsilon = 1.0
-    agent.load(args.file_name,1000)
+    agent.load(args.file_name,400)
     # t_so_far = 0
     time_safe = 0
     ep_r_list = []
@@ -472,4 +482,3 @@ if __name__ == "__main__":
         train(args)
     else:
         test(args)
- #   test()
