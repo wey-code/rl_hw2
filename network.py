@@ -99,8 +99,8 @@ def attention(query, key, value, mask=None, dropout=None):
 
 
 class EgoAttentionNetwork(nn.Module):
-    def __init__(self, input_shape, num_outputs):
-        super(EgoAttentionNetwork, self).__init__()
+    def __init__(self, input_shape=7, num_outputs=5):
+        super().__init__()
 
         self.input_shape = input_shape
         self.num_actions = num_outputs
@@ -218,14 +218,14 @@ class Dueling_DQN_vector(nn.Module):
 
 
 class attention_Dueling_DQN(nn.Module):
-    def __init__(self, input_shape, num_outputs):
+    def __init__(self, im_shape=[4,150,600], num_outputs=5):
         super(attention_Dueling_DQN, self).__init__()
         
-        self.input_shape = input_shape
+        self.input_shape = im_shape
         self.num_actions = num_outputs
 
         self.features = nn.Sequential(
-            nn.Conv2d(input_shape[0], 32, kernel_size=8, stride=4),
+            nn.Conv2d(im_shape[0], 32, kernel_size=8, stride=4),
             nn.ReLU(),
             nn.Conv2d(32, 64, kernel_size=4, stride=2),
             nn.ReLU(),
@@ -260,8 +260,6 @@ class attention_Dueling_DQN(nn.Module):
     
     def feature_size(self):
         return self.features(autograd.Variable(torch.zeros(1, *self.input_shape))).reshape(1, -1).size(1)
-
-
 
 
 class _NonLocalBlockND(nn.Module):
@@ -360,3 +358,65 @@ class NONLocalBlock2D(_NonLocalBlockND):
                                               inter_channels=inter_channels,
                                               dimension=2, sub_sample=sub_sample,
                                               bn_layer=bn_layer)
+
+
+class MultiAttentionNetwork(EgoAttentionNetwork, attention_Dueling_DQN):
+    def __init__(self, input_shape, img_shape, num_outputs):
+        super(MultiAttentionNetwork, self).__init__()
+        #EgoAttentionNetwork.__init__(self, input_shape=input_shape, num_outputs=num_outputs)
+        #attention_Dueling_DQN.__init__(self, img_shape, num_outputs)
+        self.vec_shape = input_shape
+        self.img_shape = img_shape
+        self.num_actions = num_outputs
+        self.heads = 2
+
+        # 向量attention部分
+        self.ego_embedding = nn.Sequential(
+            nn.Linear(self.vec_shape, 64),
+            nn.ReLU(),
+            nn.Linear(64, 64),
+            nn.ReLU(),
+        )
+
+        self.others_embedding = nn.Sequential(
+            nn.Linear(self.vec_shape, 64),
+            nn.ReLU(),
+            nn.Linear(64, 64),
+            nn.ReLU(),
+        )
+
+        self.attention_layer = EgoAttetion(64, self.heads)
+
+        # 图像attention部分
+        self.features = nn.Sequential(
+            nn.Conv2d(img_shape[0], 32, kernel_size=8, stride=4),
+            nn.ReLU(),
+            nn.Conv2d(32, 64, kernel_size=4, stride=2),
+            nn.ReLU(),
+            nn.Conv2d(64, 64, kernel_size=3, stride=1),
+            nn.ReLU()
+        )
+
+        self.attention = NONLocalBlock2D(64, sub_sample=False, bn_layer=False)
+
+        self.decoder = nn.Sequential(
+            nn.Linear(68224, 128),
+            nn.ReLU(),
+            nn.Linear(128, 128),
+            nn.ReLU(),
+        )
+
+        self.advantage = nn.Linear(128, self.num_actions)
+
+        self.value = nn.Linear(128, 1)
+
+    def forward(self, vec_x, img_x):
+        ego_embedded_att, _ = self.forward_attention(vec_x)
+        feature = self.features(img_x)
+        img_attention = self.attention(feature)
+        img_attention = img_attention.reshape(img_attention.size(0), -1)
+        attention = torch.cat([ego_embedded_att, img_attention], dim=1)
+        x = self.decoder(attention)
+        advantage = self.advantage(x)
+        value = self.value(x).expand(-1, self.num_actions)
+        return value + advantage - advantage.mean(1).unsqueeze(1).expand(-1, self.num_actions)

@@ -20,7 +20,7 @@ from tensorboardX import SummaryWriter
 import pickle
 from models import *
 import random
-from network import Dueling_DQN,Dueling_DQN_vector,attention_Dueling_DQN,EgoAttentionNetwork
+from network import Dueling_DQN,Dueling_DQN_vector,attention_Dueling_DQN,EgoAttentionNetwork,MultiAttentionNetwork
 from torch.autograd import Variable
 import pdb
 from numpy import *
@@ -64,8 +64,10 @@ class ReplayBuffer(object):
 
         # pdb.set_trace()
         # pdb.set_trace()
-
-        return torch.cat(states),np.array(actions), np.array(rewards), torch.cat(next_states),np.array(dones)
+        if isinstance(states[0], tuple):
+            return states,np.array(actions), np.array(rewards),next_states,np.array(dones)
+        else:
+            return torch.cat(states),np.array(actions), np.array(rewards), torch.cat(next_states),np.array(dones)
 
     def size(self):
         return len(self.buffer)
@@ -91,17 +93,21 @@ class DDQN(object):
             self.eval_net,self.target_net = Dueling_DQN_vector(num_states,num_actions).to(self.device),Dueling_DQN_vector(num_states,num_actions).to(self.device)
         if args.input == 'vector_attention':
             self.eval_net,self.target_net = EgoAttentionNetwork(num_states,num_actions).to(self.device),EgoAttentionNetwork(num_states,num_actions).to(self.device)
+        if args.input == 'multi_attention':
+            self.eval_net, self.target_net = MultiAttentionNetwork(num_states[0], num_states[1], num_actions).to(self.device), MultiAttentionNetwork(num_states[0], num_states[1],num_actions).to(self.device)
         self.memory =  ReplayBuffer()
-        
         self.optimizer = torch.optim.Adam(self.eval_net.parameters(),lr = self.lr)
         self.loss_func = nn.MSELoss()
         self.mean_reward = []
 
     def choose_action(self, state):
         #编写选择动作
+
         if np.random.uniform() < self.epsilon:
-#             pdb.set_trace()
-            action_value = self.eval_net.forward(state.to(self.device))
+            if isinstance(state, tuple):
+                action_value = self.eval_net.forward(state[0].to(self.device),state[1].to(self.device))
+            else:
+                action_value = self.eval_net.forward(state.to(self.device))
             action = torch.max(action_value,1)[1].cpu().data.numpy()
             #pdb.set_trace()
             #print(action)
@@ -115,15 +121,38 @@ class DDQN(object):
     def learn(self):
        #编写agent算法训练过程
        b_s,b_a,b_r,b_s_,b_done = self.memory.sample(self.batchsize)
-       b_s = Variable(b_s).to(self.device)
+       if isinstance(b_s[0],tuple):
+            vec_s = torch.cat([b_s[i][0] for i in range(len(b_s))])
+            vec_s = Variable(vec_s).to(self.device)
+            img_s = torch.cat([b_s[i][1] for i in range(len(b_s))])
+            img_s = Variable(img_s).to(self.device)
+            vec_s_ = torch.cat([b_s_[i][0] for i in range(len(b_s_))])
+            vec_s_ = Variable(vec_s_).to(self.device)
+            img_s_ = torch.cat([b_s_[i][1] for i in range(len(b_s_))])
+            img_s_ = Variable(img_s_).to(self.device)
+       else:
+           b_s = Variable(b_s).to(self.device)
+           b_s_ = Variable(b_s_).to(self.device)
        b_a = Variable(torch.LongTensor(b_a)).reshape(self.batchsize,-1).to(self.device)
        b_r = Variable(torch.FloatTensor(b_r)).reshape(self.batchsize,-1).to(self.device)
-       b_s_ = Variable(b_s_).to(self.device)
        b_done = Variable(torch.BoolTensor(b_done)).reshape(self.batchsize,-1).to(self.device)
-
-       q_eval = self.eval_net(b_s).gather(1,b_a)
-       q_next_action = self.eval_net(b_s_).max(1)[1].reshape(self.batchsize,-1).detach()#如果这里是target就是传统的dqn  现在为double dqn
-       q_next = self.target_net(b_s_).gather(1,q_next_action)
+       # if args.input == 'multi_attention':
+       #     for i in ['vec', 'img']:
+       #         random.seed(2)
+       #         b_s, b_a, b_r, b_s_, b_done = self.vec_memory.sample(self.batchsize)
+       #         vec_s = Variable(b_s).to(self.device)
+       #         vec_a = Variable(torch.LongTensor(b_a)).reshape(self.batchsize, -1).to(self.device)
+       #         vec_r = Variable(torch.FloatTensor(b_r)).reshape(self.batchsize, -1).to(self.device)
+       #         vec_s_ = Variable(b_s_).to(self.device)
+       #         vec_done = Variable(torch.BoolTensor(b_done)).reshape(self.batchsize, -1).to(self.device)
+       if self.args.input == 'multi_attention':
+           q_eval = self.eval_net(vec_s,img_s).gather(1, b_a)
+           q_next_action = self.eval_net(vec_s_, img_s_).max(1)[1].reshape(self.batchsize,-1).detach()#如果这里是target就是传统的dqn  现在为double dqn
+           q_next = self.target_net(vec_s_, img_s_).gather(1,q_next_action)
+       else:
+           q_eval = self.eval_net(b_s).gather(1,b_a)
+           q_next_action = self.eval_net(b_s_).max(1)[1].reshape(self.batchsize,-1).detach()#如果这里是target就是传统的dqn  现在为double dqn
+           q_next = self.target_net(b_s_).gather(1,q_next_action)
        q_target = b_r + self.gamma * q_next
        #pdb.set_trace()
 
@@ -146,6 +175,8 @@ class DDQN(object):
        return loss.item()
 
     def save(self, directory, i):
+        if not os.path.exists(directory):
+            os.mkdir(directory)
         torch.save(self.eval_net.state_dict(), directory + 'dqn{}.pth'.format(i))
         # print("====================================")
         # print("Model has been saved...")
@@ -199,6 +230,8 @@ class DDQN(object):
             return state_ki
         if self.args.input == 'vector_attention':
             return torch.tensor([state['kinematics']], dtype=torch.float)
+        if self.args.input == 'multi_attention':
+            return (torch.tensor([state['kinematics']], dtype=torch.float), state_image)
 
         # return state_image
 
@@ -210,7 +243,7 @@ def parse_args(args):
     parser = argparse.ArgumentParser(description='Training parameters')
     # #
     parser.add_argument('--mode', default='train', type=str, choices=['train', 'test'])  # mode = 'train' or 'test'
-    parser.add_argument('--input',default='image',type=str,choices=['image','vector','image_attention','vector_attention'])
+    parser.add_argument('--input',default='image',type=str,choices=['image','vector','image_attention','vector_attention','multi_attention'])
     parser.add_argument('--file_name',default='./',type=str)
     parser.add_argument('--episode_num',default=1001,type=int)
     parser.add_argument('--epsilon_decay',default = 6250,type=int)
@@ -311,6 +344,8 @@ def train(args=None):
         agent = DDQN(15*7,5,args)
     if args.input == 'vector_attention':
         agent = DDQN(7,5,args)
+    if args.input == 'multi_attention':
+        agent = DDQN([7,[4,150,600]],5,args)
 
     t_so_far = 0
     ep_r_be = 0
@@ -362,13 +397,14 @@ def train(args=None):
                 env.render()
 
 
-        if i % 200 == 0:
-            agent.save(args.file_name,i)
+        if i % 100 == 0:
+            path_name = args.file_name+'weights_with_{}'.format(args.input)+'/'
+            agent.save(path_name,i)
             plt.plot(mean_reward_list)
-            plt.savefig(args.file_name+'mean_reward.png')
+            plt.savefig(path_name+'mean_reward.png')
             plt.close()
             plt.plot(reward_list)
-            plt.savefig(args.file_name+'reward.png')
+            plt.savefig(path_name+'reward.png')
             plt.close()
 
 
@@ -431,9 +467,12 @@ def test(args=None):
         agent = DDQN(15*7,5,args)
     if args.input == 'vector_attention':
         agent = DDQN(7, 5, args)
+    if args.input == 'multi_attention':
+        agent = DDQN([7, [4, 150, 600]], 5, args)
 
     agent.epsilon = 1.0
-    agent.load(args.file_name,400)
+    path_name = args.file_name + 'weights_with_{}'.format(args.input) + '/'
+    agent.load(path_name, 400)
     # t_so_far = 0
     time_safe = 0
     ep_r_list = []
