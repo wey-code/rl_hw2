@@ -16,9 +16,9 @@ class HighwayEnv(AbstractEnv):
 
     COLLISION_REWARD = -1
     """ The reward received when colliding with a vehicle."""
-    RIGHT_LANE_REWARD = 0.1
+    #RIGHT_LANE_REWARD = 0 #0.1
     """ The reward received when driving on the right-most lanes, linearly mapped to zero for other lanes."""
-    HIGH_VELOCITY_REWARD = 0.4
+    #HIGH_VELOCITY_REWARD = 0.4
     """ The reward received when driving at full speed, linearly mapped to zero for lower speeds."""
     LANE_CHANGE_REWARD = -0
     """ The reward received at each lane change action."""
@@ -75,10 +75,12 @@ class HighwayEnv(AbstractEnv):
         neighbours = self.road.network.all_side_lanes(self.vehicle.lane_index)
         state_reward = \
             + self.config["collision_reward"] * self.vehicle.crashed \
-            + self.RIGHT_LANE_REWARD * self.vehicle.target_lane_index[2] / (len(neighbours) - 1) \
-            + self.HIGH_VELOCITY_REWARD * self.vehicle.velocity_index / (self.vehicle.SPEED_COUNT - 1)
+            + self.config["RIGHT_LANE_REWARD"] * self.vehicle.target_lane_index[2] / (len(neighbours) - 1) \
+            + self.config["HIGH_VELOCITY_REWARD"] * self.vehicle.velocity_index / (self.vehicle.SPEED_COUNT - 1)
+        # print('RIGHT_LANE_REWARD:', self.config["RIGHT_LANE_REWARD"])
+        # print('HIGH_VELOCITY_REWARD:', self.config["HIGH_VELOCITY_REWARD"])
         return utils.remap(action_reward[action] + state_reward,
-                           [self.config["collision_reward"], self.HIGH_VELOCITY_REWARD+self.RIGHT_LANE_REWARD],
+                           [self.config["collision_reward"], self.config["HIGH_VELOCITY_REWARD"]+self.config["RIGHT_LANE_REWARD"]],
                            [0, 1])
 
     def _is_terminal(self):
