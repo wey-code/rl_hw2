@@ -1,0 +1,57 @@
+\begin{thebibliography}{1}
+
+\bibitem{1}
+Antonio Morales, Pedro~J Sanz, Angel~P Del~Pobil, and Andrew~H Fagg.
+\newblock Vision-based three-finger grasp synthesis constrained by hand
+  geometry.
+\newblock {\em Robotics and Autonomous Systems}, 54(6):496--512, 2006.
+
+\bibitem{2}
+Gabriel Recatala, Raffaella Carloni, Claudio Melchiorri, Pedro~J Sanz, Enric
+  Cervera, and Angel~P del Pobil.
+\newblock Vision-based grasp tracking for planar objects.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics, Part C
+  (Applications and Reviews)}, 38(6):844--849, 2008.
+
+\bibitem{3}
+Johannes Speth, Antonio Morales, and Pedro~J Sanz.
+\newblock Vision-based grasp planning of 3d objects by extending 2d contour
+  based algorithms.
+\newblock In {\em 2008 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems}, pages 2240--2245. IEEE, 2008.
+
+\bibitem{4}
+Jianhua Su, Hong Qiao, and Chuankai Liu.
+\newblock A vision-based 3d grasp planning approach with one single image.
+\newblock In {\em 2009 International Conference on Mechatronics and
+  Automation}, pages 3281--3286. IEEE, 2009.
+
+\bibitem{5}
+Valerio Ortenzi, Naresh Marturi, Michael Mistry, Jeffrey Kuo, and Rustam
+  Stolkin.
+\newblock Vision-based framework to estimate robot configuration and kinematic
+  constraints.
+\newblock {\em IEEE/ASME Transactions on Mechatronics}, 23(5):2402--2412, 2018.
+
+\bibitem{6}
+Yang Hu, Lin Zhang, Carlo~A Seneci, Wei Li, Mohamed~EMK Abdelaziz, and
+  Guang-Zhong Yang.
+\newblock Design, fabrication, and testing a semiautomatic sewing device for
+  personalized stent graft manufacturing.
+\newblock {\em IEEE/ASME Transactions on Mechatronics}, 24(2):517--526, 2019.
+
+\bibitem{kobay}
+Futoshi Kobayashi, Souta Ueno, Hiroyuki Nakamoto, and Fumio Kojima.
+\newblock Vision based grasping system with universal jamming hand.
+\newblock In {\em 2015 10th Asian Control Conference (ASCC)}, pages 1--4. IEEE,
+  2015.
+
+\bibitem{VVV}
+F.~Tomita, T.~Yoshimi, T.~Ueshiba, Y.~Kawai, Y.~Sumi, T.~Matsushita,
+  N.~Ichimura, K.~Sugimoto, and Y.~Ishiyama.
+\newblock R amp;d of versatile 3d vision system vvv.
+\newblock In {\em SMC'98 Conference Proceedings. 1998 IEEE International
+  Conference on Systems, Man, and Cybernetics (Cat. No.98CH36218)}, volume~5,
+  pages 4510--4516 vol.5, 1998.
+
+\end{thebibliography}

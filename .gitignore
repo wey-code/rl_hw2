@@ -23,3 +23,10 @@ _build
 
 # pth
 *.pth
+
+#latex 
+report/*.aux
+report/*.bbl
+report/*.blg
+report/*.log
+report/*.synctex.gz
