@@ -237,7 +237,7 @@ def parse_args(args):
     parser.add_argument('--double', default=False, action='store_true')
     parser.add_argument('--right_r', default=0.1, type=float)
     parser.add_argument('--highspeed_r', default=0.4, type=float)
-    parser.add_argument('--normal', default=True, action='store_flase')
+    parser.add_argument('--normal', default=True, action='store_false')
     parser.add_argument('--absolute', default=False, action='store_true')
 
     return parser.parse_args(args)

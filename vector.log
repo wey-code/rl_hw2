@@ -1,0 +1,31 @@
+pygame 2.1.0 (SDL 2.0.16, Python 3.8.0)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Traceback (most recent call last):
+  File "./agent.py", line 486, in <module>
+    args = parse_args(args)
+  File "./agent.py", line 240, in parse_args
+    parser.add_argument('--normal', default=True, action='store_flase')
+  File "/home/slc/miniconda3/envs/RL2/lib/python3.8/argparse.py", line 1367, in add_argument
+    raise ValueError('unknown action "%s"' % (action_class,))
+ValueError: unknown action "store_flase"
+pygame 2.1.0 (SDL 2.0.16, Python 3.8.0)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Successfully set seed to 2
+Dueling_DQN_vector(
+  (features): Sequential(
+    (0): Linear(in_features=105, out_features=512, bias=True)
+    (1): ReLU()
+  )
+  (advantage): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=5, bias=True)
+  )
+  (value): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=1, bias=True)
+  )
+)
+Ep: 0 | Ep_r: 8.57 | t_so_far: {10} | epsilon: 0.101 max: 8.566666666666666
+Ep: 1 | Ep_r: 8.44 | t_so_far: {20} | epsilon: 0.103 max: 8.566666666666666
