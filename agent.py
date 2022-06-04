@@ -35,7 +35,7 @@ render_op = False
 
 
 class ReplayBuffer(object):
-    def __init__(self, memory_size=10000):
+    def __init__(self, memory_size=5000):
         self.buffer = []
         self.memory_size = memory_size
         self.next_idx = 0
@@ -235,6 +235,10 @@ def parse_args(args):
     parser.add_argument('--gpu', type=str, default=0, help='GPU ID')
     parser.add_argument('--add_dueling', default=False, action='store_true')
     parser.add_argument('--double', default=False, action='store_true')
+    parser.add_argument('--right_r', default=0.1, type=float)
+    parser.add_argument('--highspeed_r', default=0.4, type=float)
+    parser.add_argument('--normal', default=True, action='store_flase')
+    parser.add_argument('--absolute', default=False, action='store_true')
 
     return parser.parse_args(args)
 
@@ -280,14 +284,17 @@ def train(args=None):
             # "type": "Kinematics",
             "vehicles_count": 15,
             "features": ["presence", "x", "y", "vx", "vy", "cos_h", "sin_h"],
-            "order": "shuffled"
+            "order": "shuffled",
+            "normalize" : args.normal,
+            "absolute": args.absolute
         },
 
         "offscreen_rendering": True,
         "screen_width": 600,  # [px]
         "screen_height": 150,  # [px]
-        "RIGHT_LANE_REWARD": 0.1,
-        "HIGH_VELOCITY_REWARD": 0.4,
+        "RIGHT_LANE_REWARD": args.right_r,
+        "HIGH_VELOCITY_REWARD": args.highspeed_r,
+
         # "destination": "o1"
     }
     env = gym.make("highway-v0")
@@ -399,7 +406,9 @@ def test(args=None):
             # "type": "Kinematics",
             "vehicles_count": 15,
             "features": ["presence", "x", "y", "vx", "vy", "cos_h", "sin_h"],
-            "order": "shuffled"
+            "order": "shuffled",
+            "normalize" : args.normal,
+            "absolute": args.absolute
         },
 
         "offscreen_rendering": True,
