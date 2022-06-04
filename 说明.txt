@@ -1,0 +1,11 @@
+DQN:
+--input ~~
+DDQN:
+--input ~~ --double
+Dueling DQN
+--input ~~ --add_dueling
+D3QN:
+--input ~~ --add_dueling --double
+
+要修改reward：
+在agent.py中env_config字典中修改"RIGHT_LANE_REWARD"，"HIGH_VELOCITY_REWARD"。
