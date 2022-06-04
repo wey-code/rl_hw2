@@ -6,11 +6,12 @@ import torch.autograd as autograd
 import numpy as np
 
 class Dueling_DQN(nn.Module):
-    def __init__(self, input_shape, num_outputs):
+    def __init__(self, input_shape, num_outputs, add_dueling=False):
         super(Dueling_DQN, self).__init__()
         
         self.input_shape = input_shape
         self.num_actions = num_outputs
+        self.add_dueling = add_dueling
         
         self.features = nn.Sequential(
             nn.Conv2d(input_shape[0], 32, kernel_size=8, stride=4),
@@ -20,7 +21,7 @@ class Dueling_DQN(nn.Module):
             nn.Conv2d(64, 64, kernel_size=3, stride=1),
             nn.ReLU()
         )
-        
+
         self.advantage = nn.Sequential(
             nn.Linear(self.feature_size(), 512),
             nn.ReLU(),
@@ -32,13 +33,18 @@ class Dueling_DQN(nn.Module):
             nn.ReLU(),
             nn.Linear(512, 1)
         )
+        self.output = self.advantage if not self.add_dueling else None
         
     def forward(self, x):
         x = self.features(x)
         x = x.reshape(x.size(0), -1)
-        advantage = self.advantage(x)
-        value     = self.value(x)
-        return value + advantage  - advantage.mean()
+        if self.add_dueling:
+            advantage = self.advantage(x)
+            value     = self.value(x)
+            return value + advantage  - advantage.mean()
+        else:
+            output = self.output(x)
+            return output
     
     def feature_size(self):
         return self.features(autograd.Variable(torch.zeros(1, *self.input_shape))).reshape(1, -1).size(1)
@@ -99,24 +105,14 @@ def attention(query, key, value, mask=None, dropout=None):
 
 
 class EgoAttentionNetwork(nn.Module):
-    def __init__(self, input_shape=7, num_outputs=5):
+    def __init__(self, input_shape=7, num_outputs=5, add_dueling=False):
         super().__init__()
 
         self.input_shape = input_shape
         self.num_actions = num_outputs
+        self.add_dueling = add_dueling
         self.heads = 2
 
-        # self.ego_embedding = nn.Sequential(
-        #     nn.Linear(self.input_shape, 512),
-        #     nn.ReLU(),
-        #     # nn.Linear(512, 512),
-        #     # nn.ReLU(),
-        # )
-        #
-        # self.others_embedding = nn.Sequential(
-        #     nn.Linear(self.input_shape, 512),
-        #     nn.ReLU(),
-        # )
 
         self.ego_embedding = nn.Sequential(
             nn.Linear(self.input_shape, 64),
@@ -141,27 +137,23 @@ class EgoAttentionNetwork(nn.Module):
             nn.ReLU(),
         )
 
-        # self.advantage = nn.Sequential(
-        #     nn.Linear(512, 512),
-        #     nn.ReLU(),
-        #     nn.Linear(512, num_outputs)
-        # )
-        #
-        # self.value = nn.Sequential(
-        #     nn.Linear(512, 512),
-        #     nn.ReLU(),
-        #     nn.Linear(512, 1)
-        # )
         self.advantage = nn.Linear(64, self.num_actions)
 
         self.value = nn.Linear(64, 1)
 
+        self.output = self.advantage if not self.add_dueling else None
+
+
     def forward(self, x):
         ego_embedded_att, _ = self.forward_attention(x)
         x = self.decoder(ego_embedded_att)
-        advantage = self.advantage(x)
-        value = self.value(x).expand(-1,  self.num_actions)
-        return value + advantage - advantage.mean(1).unsqueeze(1).expand(-1,  self.num_actions)
+        if self.add_dueling:
+            advantage = self.advantage(x)
+            value = self.value(x).expand(-1,  self.num_actions)
+            return value + advantage - advantage.mean(1).unsqueeze(1).expand(-1,  self.num_actions)
+        else:
+            output = self.output(x)
+            return output
 
     def split_input(self, x, mask=None):
         # Dims: batch, entities, features
@@ -185,12 +177,13 @@ class EgoAttentionNetwork(nn.Module):
 
 
 class Dueling_DQN_vector(nn.Module):
-    def __init__(self, input_shape, num_outputs):
+    def __init__(self, input_shape, num_outputs, add_dueling=False):
         super(Dueling_DQN_vector, self).__init__()
         
         self.input_shape = input_shape
         self.num_actions = num_outputs
-        
+        self.add_dueling = add_dueling
+
         self.features = nn.Sequential(
             nn.Linear(self.input_shape, 512),
             nn.ReLU(),
@@ -209,20 +202,28 @@ class Dueling_DQN_vector(nn.Module):
             nn.ReLU(),
             nn.Linear(512, 1)
         )
-        
+
+        self.output = self.advantage if not self.add_dueling else None
+
     def forward(self, x):
         x = self.features(x)
-        advantage = self.advantage(x)
-        value     = self.value(x)
-        return value + advantage  - advantage.mean()
+        if self.add_dueling:
+            advantage = self.advantage(x)
+            value     = self.value(x)
+            return value + advantage  - advantage.mean()
+        else:
+            output = self.output(x)
+            return output
 
 
 class attention_Dueling_DQN(nn.Module):
-    def __init__(self, im_shape=[4,150,600], num_outputs=5):
+    def __init__(self, im_shape=[4,150,600], num_outputs=5, add_dueling=False):
         super(attention_Dueling_DQN, self).__init__()
         
         self.input_shape = im_shape
         self.num_actions = num_outputs
+        self.add_dueling = add_dueling
+
 
         self.features = nn.Sequential(
             nn.Conv2d(im_shape[0], 32, kernel_size=8, stride=4),
@@ -233,7 +234,6 @@ class attention_Dueling_DQN(nn.Module):
             nn.ReLU()
         )
 
-        ##加入nonloacl-attention部分
         self.attention = NONLocalBlock2D(64, sub_sample=False, bn_layer=False)
 
 
@@ -248,15 +248,21 @@ class attention_Dueling_DQN(nn.Module):
             nn.ReLU(),
             nn.Linear(512, 1)
         )
+
+        self.output = self.advantage if not self.add_dueling else None
     
 
     def forward(self, x):
         x = self.features(x)
         x = self.attention(x)
         x = x.reshape(x.size(0), -1)
-        advantage = self.advantage(x)
-        value     = self.value(x)
-        return value + advantage - advantage.mean()
+        if self.add_dueling:
+            advantage = self.advantage(x)
+            value     = self.value(x)
+            return value + advantage - advantage.mean()
+        else:
+            output = self.output(x)
+            return output
     
     def feature_size(self):
         return self.features(autograd.Variable(torch.zeros(1, *self.input_shape))).reshape(1, -1).size(1)
@@ -279,7 +285,6 @@ class _NonLocalBlockND(nn.Module):
             if self.inter_channels == 0:
                 self.inter_channels = 1
 
-        #不同的卷积，对应不同格式的数据需求
         if dimension == 3:
             conv_nd = nn.Conv3d
             max_pool_layer = nn.MaxPool3d(kernel_size=(1, 2, 2))
@@ -293,10 +298,10 @@ class _NonLocalBlockND(nn.Module):
             max_pool_layer = nn.MaxPool1d(kernel_size=(2))
             bn = nn.BatchNorm1d
 
-        #权重g
+
         self.g = conv_nd(in_channels=self.in_channels, out_channels=self.inter_channels,
                          kernel_size=1, stride=1, padding=0)
-        #输出层w
+
         if bn_layer:
             self.W = nn.Sequential(
                 conv_nd(in_channels=self.inter_channels, out_channels=self.in_channels,
@@ -311,11 +316,11 @@ class _NonLocalBlockND(nn.Module):
             nn.init.constant_(self.W.weight, 0)
             nn.init.constant_(self.W.bias, 0)
 
-        #theat
+
         self.theta = conv_nd(in_channels=self.in_channels, out_channels=self.inter_channels,
                              kernel_size=1, stride=1, padding=0)
 
-        #phi
+
         self.phi = conv_nd(in_channels=self.in_channels, out_channels=self.inter_channels,
                            kernel_size=1, stride=1, padding=0)
 
@@ -361,16 +366,17 @@ class NONLocalBlock2D(_NonLocalBlockND):
 
 
 class MultiAttentionNetwork(EgoAttentionNetwork, attention_Dueling_DQN):
-    def __init__(self, input_shape, img_shape, num_outputs):
+    def __init__(self, input_shape, img_shape, num_outputs, add_dueling=False):
         super(MultiAttentionNetwork, self).__init__()
         #EgoAttentionNetwork.__init__(self, input_shape=input_shape, num_outputs=num_outputs)
         #attention_Dueling_DQN.__init__(self, img_shape, num_outputs)
         self.vec_shape = input_shape
         self.img_shape = img_shape
         self.num_actions = num_outputs
+        self.add_dueling = add_dueling
         self.heads = 2
 
-        # 向量attention部分
+
         self.ego_embedding = nn.Sequential(
             nn.Linear(self.vec_shape, 64),
             nn.ReLU(),
@@ -387,7 +393,6 @@ class MultiAttentionNetwork(EgoAttentionNetwork, attention_Dueling_DQN):
 
         self.attention_layer = EgoAttetion(64, self.heads)
 
-        # 图像attention部分
         self.features = nn.Sequential(
             nn.Conv2d(img_shape[0], 32, kernel_size=8, stride=4),
             nn.ReLU(),
@@ -399,16 +404,26 @@ class MultiAttentionNetwork(EgoAttentionNetwork, attention_Dueling_DQN):
 
         self.attention = NONLocalBlock2D(64, sub_sample=False, bn_layer=False)
 
-        self.decoder = nn.Sequential(
-            nn.Linear(68224, 128),
+        # self.decoder = nn.Sequential(
+        #     nn.Linear(68224, 256),
+        #     nn.ReLU(),
+        #     nn.Linear(256, 256),
+        #     nn.ReLU(),
+        # )
+
+        self.advantage = nn.Sequential(
+            nn.Linear(68224, 512),
             nn.ReLU(),
-            nn.Linear(128, 128),
-            nn.ReLU(),
+            nn.Linear(512, self.num_actions),
         )
 
-        self.advantage = nn.Linear(128, self.num_actions)
+        self.value = nn.Sequential(
+            nn.Linear(68224, 512),
+            nn.ReLU(),
+            nn.Linear(512, 1),
+        )
 
-        self.value = nn.Linear(128, 1)
+        self.output = self.advantage if not self.add_dueling else None
 
     def forward(self, vec_x, img_x):
         ego_embedded_att, _ = self.forward_attention(vec_x)
@@ -416,7 +431,11 @@ class MultiAttentionNetwork(EgoAttentionNetwork, attention_Dueling_DQN):
         img_attention = self.attention(feature)
         img_attention = img_attention.reshape(img_attention.size(0), -1)
         attention = torch.cat([ego_embedded_att, img_attention], dim=1)
-        x = self.decoder(attention)
-        advantage = self.advantage(x)
-        value = self.value(x).expand(-1, self.num_actions)
-        return value + advantage - advantage.mean(1).unsqueeze(1).expand(-1, self.num_actions)
+        if self.add_dueling:
+            print(1)
+            advantage = self.advantage(attention)
+            value = self.value(attention).expand(-1, self.num_actions)
+            return value + advantage - advantage.mean(1).unsqueeze(1).expand(-1, self.num_actions)
+        else:
+            output = self.output(attention)
+            return output
