@@ -198,7 +198,37 @@ $$
 
 
 \section{注意力机制}
+\subsection{Ego-attention}
+对于基于向量的状态输入，这里采用的注意力模型是ego-attention\cite{leurent2019social}。这种注意力模型是社会注意力机制的一种变形，可以使得智能体更加关注距离其较近或者容易发生碰撞的
+车辆。
 
+引入ego-attention注意力机制的模型如图\ref{fig:ego-attention}所示，其可以用来表示DQN算法或者Dueling DQN算法中的Q函数。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{fig/网络结构.png}
+    \caption{引入ego-attention的网络结构}
+    \label{fig:ego-attention}
+  \end{figure}
+网络首先由线性编码层组成，所有编码层的权重相同。经过线性编码层后每个实体
+的特征维度为$d_x$，编码后的特征送入由多头堆叠而成的ego-attention层。该层类似于多头自注意力层\cite{vaswani2017attention}但是仅有关于当前车辆的单个输出，也即仅有当前车辆的询问编码。
+Ego-attention头的结构如图\ref{fig:ego-head}所示，
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{fig/ego-attention结构.png}
+    \caption{ego-attention头的结构}
+    \label{fig:ego-head}
+  \end{figure}
+  为了选择基于环境车辆的子集，当前实体首先发出单个询问$Q=[q_0]\in \mathbb{R} ^{1\times d_k}$，由当前实体编码特征经过线性投影
+$L_q\in\mathbb{R} ^{d_x\times d_k}$。这个询问之后与键的集合$K=[k_0,\ldots,k_N]\in\mathbb{R} ^{N\times d_k}$进行比较，其中包含每个实体的描述性特征$k_i$，同样是由
+共享权重的线性映射$L_k\in\mathbb{R} ^{d_x\times d_k}$计算得到。询问$q_0$与任意键$k_i$间的相似性由它们之间的点积$q_0k_i^T$衡量，并由$1/\sqrt{d_k}$进行放缩，最后由softmax算子$\sigma $进行归一化。
+得到的注意力矩阵用来对输出值的集合$V=[v_0,\ldots,v_N]$进行加权融合，其中每个值$v_i$是经过共享权重的线性映射$L_v\in\mathbb{R} ^{d_x\times d_v }$得到的特征。
+综上，每头的注意力计算可以写作：
+\begin{equation}
+    output=\sigma\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+    \label{con:output}
+\end{equation}
+
+最后所有头的输出经过一个线性层进行结合，整个过程具有置换不变性：一个置换$\tau$会改变公式中键$K$与值$V$行的顺序，但是两者的对应关系仍然得以保持。它也可以很自然地解释当前车辆与环境车辆的交互关系。
 \section{实验分析}
 
 

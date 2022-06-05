@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.17)  5 JUN 2022 17:19
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.4)  5 JUN 2022 19:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -60,7 +60,7 @@ LaTeX Font Warning: Font shape `TU/ptm/bx/it' undefined
 \@IEEEtranrubishbin=\box47
 )
 ** ATTENTION: Overriding command lockouts (line 9).
-(c:/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.sty
+(d:/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 
 
@@ -98,28 +98,28 @@ Package subfigure Warning: Your document class has a bad definition
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(c:/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+(d:/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip57
 \subfig@bottom=\skip58
-) (c:/texlive/2021/texmf-dist/tex/latex/cite/cite.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-) (c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/09/23 v2.17i AMS math features
 \@mathmargin=\skip59
 
 For additional information on amsmath, use the `?' option.
-(c:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(d:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
- (c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (d:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
 \ex@=\dimen151
-)) (c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (d:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen152
-) (c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count191
@@ -159,38 +159,38 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
-) (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+ (d:/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (c:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+)) (d:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+ (d:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks21
-) (c:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+ (d:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (d:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 105.
- (c:/texlive/2021/texmf-dist/tex/latex/graphics-def/xetex.def
+ (d:/texlive/2021/texmf-dist/tex/latex/graphics-def/xetex.def
 File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
 ))
 \Gin@req@height=\dimen160
 \Gin@req@width=\dimen161
-) (c:/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-) (c:/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
- (c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (d:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: xetex.def on input line 225.
@@ -202,32 +202,32 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-) (c:/texlive/2021/texmf-dist/tex/latex/algorithms/algorithm.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/algorithms/algorithm.sty
 Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
- (c:/texlive/2021/texmf-dist/tex/latex/float/float.sty
+ (d:/texlive/2021/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count269
 \float@exts=\toks22
 \float@box=\box50
 \@float@everytoks=\toks23
 \@floatcapt=\box51
-) (c:/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks24
 \c@algorithm=\count270
-) (c:/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip62
 \multirow@cntb=\count271
 \multirow@dima=\skip63
 \bigstrutjot=\dimen162
-) (c:/texlive/2021/texmf-dist/tex/latex/was/gensymb.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
-) (c:/texlive/2021/texmf-dist/tex/latex/mathtools/mathtools.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2021/03/18 v1.25 mathematical typesetting tools
- (c:/texlive/2021/texmf-dist/tex/latex/tools/calc.sty
+ (d:/texlive/2021/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count272
 \calc@Bcount=\count273
@@ -239,7 +239,7 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count274
 \calc@Cskip=\skip66
-) (c:/texlive/2021/texmf-dist/tex/latex/mathtools/mhsetup.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
@@ -257,9 +257,9 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \l_MT_below_shortintertext_sep=\dimen171
 \xmathstrut@box=\box52
 \xmathstrut@dim=\dimen172
-) (c:/texlive/2021/texmf-dist/tex/latex/forloop/forloop.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/forloop/forloop.sty
 Package: forloop 2006/09/18 v3.0 For Loops for LaTeX
-) (c:/texlive/2021/texmf-dist/tex/generic/soul/soul.sty
+) (d:/texlive/2021/texmf-dist/tex/generic/soul/soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@word=\toks25
 \SOUL@lasttoken=\toks26
@@ -270,7 +270,7 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@ttwidth=\dimen173
 \SOUL@uldp=\dimen174
 \SOUL@ulht=\dimen175
-) (c:/texlive/2021/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
@@ -284,13 +284,13 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \c@ALG@storecount=\count281
 \c@ALG@tmpcounter=\count282
 \ALG@tmplength=\skip71
-) (c:/texlive/2021/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
 
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (c:/texlive/2021/texmf-dist/tex/latex/ctex/ctex.sty (c:/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/ctex/ctex.sty (d:/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2021-02-18 L3 programming layer (loader) 
- (c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+ (d:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2021-03-18 L3 backend support: XeTeX
  (|extractbb --version)
 \c__kernel_sys_dvipdfmx_version_int=\count283
@@ -303,32 +303,32 @@ File: l3backend-xetex.def 2021-03-18 L3 backend support: XeTeX
 \g__pdf_backend_link_int=\count289
 ))
 Package: ctex 2021/03/14 v2.5.6 Chinese adapter in LaTeX (CTEX)
- (c:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (c:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty (c:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex))) (c:/texlive/2021/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+ (d:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (d:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty (d:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex))) (d:/texlive/2021/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
-) (c:/texlive/2021/texmf-dist/tex/latex/ctex/ctexhook.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/ctex/ctexhook.sty
 Package: ctexhook 2021/03/14 v2.5.6 Document and package hooks (CTEX)
-) (c:/texlive/2021/texmf-dist/tex/latex/ctex/ctexpatch.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/ctex/ctexpatch.sty
 Package: ctexpatch 2021/03/14 v2.5.6 Patching commands (CTEX)
-) (c:/texlive/2021/texmf-dist/tex/latex/base/fix-cm.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/base/fix-cm.sty
 Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
- (c:/texlive/2021/texmf-dist/tex/latex/base/ts1enc.def
+ (d:/texlive/2021/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
-)) (c:/texlive/2021/texmf-dist/tex/latex/everysel/everysel.sty
+)) (d:/texlive/2021/texmf-dist/tex/latex/everysel/everysel.sty
 Package: everysel 2021/01/20 v2.1 EverySelectfont Package (MS)
- (c:/texlive/2021/texmf-dist/tex/latex/everysel/everysel-2011-10-28.sty))
+ (d:/texlive/2021/texmf-dist/tex/latex/everysel/everysel-2011-10-28.sty))
 \l__ctex_tmp_int=\count290
 \l__ctex_tmp_box=\box54
 \l__ctex_tmp_dim=\dimen176
 \g__ctex_section_depth_int=\count291
 \g__ctex_font_size_int=\count292
- (c:/texlive/2021/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+ (d:/texlive/2021/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
 File: ctexopts.cfg 2021/03/14 v2.5.6 Option configuration file (CTEX)
-) (c:/texlive/2021/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
+) (d:/texlive/2021/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
 File: ctex-engine-xetex.def 2021/03/14 v2.5.6 XeLaTeX adapter (CTEX)
- (c:/texlive/2021/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+ (d:/texlive/2021/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
 Package: xeCJK 2020/10/19 v3.8.6 Typesetting CJK scripts with XeLaTeX
- (c:/texlive/2021/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+ (d:/texlive/2021/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
 Package: xtemplate 2021-03-12 L3 Experimental prototype document functions
 \l__xtemplate_tmp_dim=\dimen177
 \l__xtemplate_tmp_int=\count293
@@ -393,9 +393,9 @@ Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
 \g__xeCJK_fam_allocation_int=\count303
 \l__xeCJK_verb_case_int=\count304
 \l__xeCJK_verb_exspace_skip=\skip78
- (c:/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec.sty
+ (d:/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec.sty
 Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
- (c:/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+ (d:/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_script_int=\count305
 \l__fontspec_language_int=\count306
@@ -411,19 +411,19 @@ Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_tmpa_dim=\dimen262
 \l__fontspec_tmpb_dim=\dimen263
 \l__fontspec_tmpc_dim=\dimen264
- (c:/texlive/2021/texmf-dist/tex/latex/base/fontenc.sty
+ (d:/texlive/2021/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
-) (c:/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (c:/texlive/2021/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+) (d:/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (d:/texlive/2021/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
 File: xeCJK.cfg 2020/10/19 v3.8.6 Configuration file for xeCJK package
 ))
 \ccwd=\dimen265
 \l__ctex_ccglue_skip=\skip79
 )
 \l__ctex_ziju_dim=\dimen266
- (c:/texlive/2021/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+ (d:/texlive/2021/texmf-dist/tex/latex/zhnumber/zhnumber.sty
 Package: zhnumber 2020/05/01 v2.8 Typesetting numbers with Chinese glyphs
 \l__zhnum_scale_int=\count316
- (c:/texlive/2021/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+ (d:/texlive/2021/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
 File: zhnumber-utf8.cfg 2020/05/01 v2.8 Chinese numerals with UTF8 encoding
 ))
 
@@ -431,11 +431,11 @@ Package ctex Warning: Neither `\bibname' nor `\refname' can be found.
 (ctex)                The key `bibname' will set `\ctexbibname' to the given
 (ctex)                value.
 
-(c:/texlive/2021/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese.def
+(d:/texlive/2021/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese.def
 File: ctex-scheme-chinese.def 2021/03/14 v2.5.6 Chinese scheme for generic (CTEX)
- (c:/texlive/2021/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
+ (d:/texlive/2021/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
 File: ctex-name-utf8.cfg 2021/03/14 v2.5.6 Caption with encoding UTF-8 (CTEX)
-)) (c:/texlive/2021/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-fandol.def
+)) (d:/texlive/2021/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-fandol.def
 File: ctex-fontset-fandol.def 2021/03/14 v2.5.6 Fandol fonts definition (CTEX)
 
 
@@ -460,7 +460,7 @@ Package fontspec Info: Font family 'FandolSong-Regular(0)' created for font
 (fontspec)             <->"[FandolKai-Regular.otf]/OT:language=dflt;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 
-)) (c:/texlive/2021/texmf-dist/tex/latex/ctex/config/ctex.cfg
+)) (d:/texlive/2021/texmf-dist/tex/latex/ctex/config/ctex.cfg
 File: ctex.cfg 2021/03/14 v2.5.6 Configuration file (CTEX)
 )
 ** ATTENTION: Overriding IEEE standard margins (line 40).
@@ -557,11 +557,11 @@ LaTeX Font Warning: Font shape `TU/FandolSong-Regular(0)/m/sc' undefined
 (Font)              using `TU/FandolSong-Regular(0)/m/n' instead on input line 90.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 98.
-(c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+(d:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 98.
- (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+ (d:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 File: fig/1.png Graphic file (type bmp)
@@ -592,7 +592,15 @@ Overfull \hbox (20.8527pt too wide) in paragraph at lines 185--191
 [] \TU/FandolSong-Regular(0)/m/n/10 令 $\OML/cmm/m/it/10 y[] \OT1/cmr/m/n/10 = []$ 
  []
 
-No file root.bbl.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+File: fig/网络结构.png Graphic file (type bmp)
+<fig/网络结构.png>
+File: fig/ego-attention结构.png Graphic file (type bmp)
+<fig/ego-attention结构.png>
+ (./root.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -604,21 +612,16 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the US letter (8.5in X 11in) paper size.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2] [3
-
-] (./root.aux)
+[3] (./root.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 10190 strings out of 476919
- 239952 string characters out of 5825424
- 598996 words of memory out of 5000000
- 29982 multiletter control sequences out of 15000+600000
+ 10209 strings out of 476919
+ 240282 string characters out of 5825425
+ 599996 words of memory out of 5000000
+ 29997 multiletter control sequences out of 15000+600000
  406967 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,11n,104p,347b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
