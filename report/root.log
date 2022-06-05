@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.17)  5 JUN 2022 17:00
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.17)  5 JUN 2022 17:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -604,12 +604,14 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the US letter (8.5in X 11in) paper size.
 
-[2] (./root.aux)
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2] [3
+
+] (./root.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
@@ -621,4 +623,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  101i,11n,104p,347b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on root.pdf (2 pages).
+Output written on root.pdf (3 pages).

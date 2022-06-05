@@ -135,7 +135,7 @@
 
 根据前一节的分析，状态空间、动作空间、奖励函数均已得到。折扣因子$\gamma$设为0.99。不妨设$t$时刻的回报$G_t$为:
 $$
-G_t = \sum^{\infty}_{i=0}\gamma^ir_{t+k}
+G_t = \sum^{\infty}_{i=0}\gamma^ir_{t+i}
 $$
 
 $G_t$表示了从$t$时刻到结束的总的奖励，整个强化学习过程的目标即为最大化回报。但转移概率未知，因此采用无模型强化学习的方法，常用的无模型方法为Q学习算法。针对某个策略，定义$Q^\pi$为状态动作对好坏的评价标准，可以借助前面的回报定义为：
@@ -189,7 +189,7 @@ $$
                       \end{cases}
                     $
                     \State 设定损失函数为$(y_j-Q(s_j,a_j;\theta))^2$，采用随机梯度下降的方法更新参数$\theta$
-                    \State 更新$\epsilon$
+                    \State 更新$\epsilon$，更新公式为$\epsilon_t =\epsilon_{max} - (\epsilon_{max}-\epsilon_{min})e^{-\frac{t_{sofar}}{n_{decay}}}$
                     \State 每$C$步令$\hat{Q} = Q$
                 \EndFor
             \EndFor
