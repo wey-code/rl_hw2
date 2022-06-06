@@ -29,3 +29,4 @@ _build
 report/*.bbl
 report/*.blg
 report/*.log
+report/*.synctex.gz
