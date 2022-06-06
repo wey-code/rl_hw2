@@ -915,3 +915,281 @@ Ep: 857 | Ep_r: 45.42 | t_so_far: {33835} | epsilon: 0.995 max: 45.4213686064795
 Ep: 858 | Ep_r: 45.58 | t_so_far: {33885} | epsilon: 0.995 max: 45.5815393296281
 Ep: 859 | Ep_r: 45.22 | t_so_far: {33935} | epsilon: 0.995 max: 45.5815393296281
 Ep: 860 | Ep_r: 44.82 | t_so_far: {33985} | epsilon: 0.995 max: 45.5815393296281
+Ep: 861 | Ep_r: 45.15 | t_so_far: {34035} | epsilon: 0.995 max: 45.5815393296281
+Ep: 862 | Ep_r: 40.16 | t_so_far: {34059} | epsilon: 0.995 max: 45.5815393296281
+Ep: 863 | Ep_r: 40.57 | t_so_far: {34106} | epsilon: 0.995 max: 45.5815393296281
+Ep: 864 | Ep_r: 41.77 | t_so_far: {34156} | epsilon: 0.995 max: 45.5815393296281
+Ep: 865 | Ep_r: 41.88 | t_so_far: {34201} | epsilon: 0.995 max: 45.5815393296281
+Ep: 866 | Ep_r: 42.93 | t_so_far: {34251} | epsilon: 0.995 max: 45.5815393296281
+Ep: 867 | Ep_r: 43.99 | t_so_far: {34301} | epsilon: 0.995 max: 45.5815393296281
+Ep: 868 | Ep_r: 44.41 | t_so_far: {34351} | epsilon: 0.995 max: 45.5815393296281
+Ep: 869 | Ep_r: 38.6 | t_so_far: {34368} | epsilon: 0.995 max: 45.5815393296281
+Ep: 870 | Ep_r: 39.92 | t_so_far: {34418} | epsilon: 0.995 max: 45.5815393296281
+Ep: 871 | Ep_r: 34.89 | t_so_far: {34434} | epsilon: 0.995 max: 45.5815393296281
+Ep: 872 | Ep_r: 37.4 | t_so_far: {34484} | epsilon: 0.995 max: 45.5815393296281
+Ep: 873 | Ep_r: 39.19 | t_so_far: {34534} | epsilon: 0.995 max: 45.5815393296281
+Ep: 874 | Ep_r: 38.93 | t_so_far: {34577} | epsilon: 0.995 max: 45.5815393296281
+Ep: 875 | Ep_r: 39.94 | t_so_far: {34627} | epsilon: 0.995 max: 45.5815393296281
+Ep: 876 | Ep_r: 40.95 | t_so_far: {34677} | epsilon: 0.995 max: 45.5815393296281
+Ep: 877 | Ep_r: 42.07 | t_so_far: {34727} | epsilon: 0.996 max: 45.5815393296281
+Ep: 878 | Ep_r: 41.19 | t_so_far: {34777} | epsilon: 0.996 max: 45.5815393296281
+Ep: 879 | Ep_r: 33.44 | t_so_far: {34781} | epsilon: 0.996 max: 45.5815393296281
+Ep: 880 | Ep_r: 29.71 | t_so_far: {34800} | epsilon: 0.996 max: 45.5815393296281
+Ep: 881 | Ep_r: 32.41 | t_so_far: {34850} | epsilon: 0.996 max: 45.5815393296281
+Ep: 882 | Ep_r: 35.11 | t_so_far: {34900} | epsilon: 0.996 max: 45.5815393296281
+Ep: 883 | Ep_r: 36.91 | t_so_far: {34950} | epsilon: 0.996 max: 45.5815393296281
+Ep: 884 | Ep_r: 34.9 | t_so_far: {34987} | epsilon: 0.996 max: 45.5815393296281
+Ep: 885 | Ep_r: 35.63 | t_so_far: {35037} | epsilon: 0.996 max: 45.5815393296281
+Ep: 886 | Ep_r: 37.15 | t_so_far: {35087} | epsilon: 0.996 max: 45.5815393296281
+Ep: 887 | Ep_r: 37.9 | t_so_far: {35137} | epsilon: 0.996 max: 45.5815393296281
+Ep: 888 | Ep_r: 39.5 | t_so_far: {35187} | epsilon: 0.996 max: 45.5815393296281
+Ep: 889 | Ep_r: 39.91 | t_so_far: {35237} | epsilon: 0.996 max: 45.5815393296281
+Ep: 890 | Ep_r: 40.77 | t_so_far: {35287} | epsilon: 0.996 max: 45.5815393296281
+Ep: 891 | Ep_r: 41.22 | t_so_far: {35337} | epsilon: 0.996 max: 45.5815393296281
+Ep: 892 | Ep_r: 41.6 | t_so_far: {35387} | epsilon: 0.996 max: 45.5815393296281
+Ep: 893 | Ep_r: 42.61 | t_so_far: {35437} | epsilon: 0.996 max: 45.5815393296281
+Ep: 894 | Ep_r: 37.49 | t_so_far: {35459} | epsilon: 0.996 max: 45.5815393296281
+Ep: 895 | Ep_r: 38.77 | t_so_far: {35509} | epsilon: 0.996 max: 45.5815393296281
+Ep: 896 | Ep_r: 39.99 | t_so_far: {35559} | epsilon: 0.996 max: 45.5815393296281
+Ep: 897 | Ep_r: 41.15 | t_so_far: {35609} | epsilon: 0.996 max: 45.5815393296281
+Ep: 898 | Ep_r: 41.9 | t_so_far: {35659} | epsilon: 0.996 max: 45.5815393296281
+Ep: 899 | Ep_r: 43.07 | t_so_far: {35709} | epsilon: 0.996 max: 45.5815393296281
+Ep: 900 | Ep_r: 43.3 | t_so_far: {35759} | epsilon: 0.996 max: 45.5815393296281
+Ep: 901 | Ep_r: 43.53 | t_so_far: {35809} | epsilon: 0.996 max: 45.5815393296281
+Ep: 902 | Ep_r: 43.71 | t_so_far: {35859} | epsilon: 0.996 max: 45.5815393296281
+Ep: 903 | Ep_r: 43.53 | t_so_far: {35909} | epsilon: 0.996 max: 45.5815393296281
+Ep: 904 | Ep_r: 44.07 | t_so_far: {35959} | epsilon: 0.996 max: 45.5815393296281
+Ep: 905 | Ep_r: 44.25 | t_so_far: {36009} | epsilon: 0.996 max: 45.5815393296281
+Ep: 906 | Ep_r: 44.36 | t_so_far: {36059} | epsilon: 0.996 max: 45.5815393296281
+Ep: 907 | Ep_r: 45.15 | t_so_far: {36109} | epsilon: 0.996 max: 45.5815393296281
+Ep: 908 | Ep_r: 45.52 | t_so_far: {36159} | epsilon: 0.996 max: 45.5815393296281
+Ep: 909 | Ep_r: 45.64 | t_so_far: {36209} | epsilon: 0.996 max: 45.64004251980156
+Ep: 910 | Ep_r: 45.91 | t_so_far: {36259} | epsilon: 0.996 max: 45.91203401584125
+Ep: 911 | Ep_r: 45.89 | t_so_far: {36309} | epsilon: 0.996 max: 45.91203401584125
+Ep: 912 | Ep_r: 46.15 | t_so_far: {36359} | epsilon: 0.996 max: 46.15259065902728
+Ep: 913 | Ep_r: 46.03 | t_so_far: {36409} | epsilon: 0.996 max: 46.15259065902728
+Ep: 914 | Ep_r: 46.4 | t_so_far: {36459} | epsilon: 0.996 max: 46.404324688444134
+Ep: 915 | Ep_r: 45.99 | t_so_far: {36509} | epsilon: 0.996 max: 46.404324688444134
+Ep: 916 | Ep_r: 45.77 | t_so_far: {36559} | epsilon: 0.996 max: 46.404324688444134
+Ep: 917 | Ep_r: 45.73 | t_so_far: {36609} | epsilon: 0.996 max: 46.404324688444134
+Ep: 918 | Ep_r: 45.67 | t_so_far: {36659} | epsilon: 0.996 max: 46.404324688444134
+Ep: 919 | Ep_r: 45.58 | t_so_far: {36709} | epsilon: 0.996 max: 46.404324688444134
+Ep: 920 | Ep_r: 45.4 | t_so_far: {36759} | epsilon: 0.996 max: 46.404324688444134
+Ep: 921 | Ep_r: 45.39 | t_so_far: {36809} | epsilon: 0.997 max: 46.404324688444134
+Ep: 922 | Ep_r: 45.73 | t_so_far: {36859} | epsilon: 0.997 max: 46.404324688444134
+Ep: 923 | Ep_r: 46.3 | t_so_far: {36909} | epsilon: 0.997 max: 46.404324688444134
+Ep: 924 | Ep_r: 46.24 | t_so_far: {36959} | epsilon: 0.997 max: 46.404324688444134
+Ep: 925 | Ep_r: 45.9 | t_so_far: {37009} | epsilon: 0.997 max: 46.404324688444134
+Ep: 926 | Ep_r: 44.16 | t_so_far: {37051} | epsilon: 0.997 max: 46.404324688444134
+Ep: 927 | Ep_r: 44.84 | t_so_far: {37101} | epsilon: 0.997 max: 46.404324688444134
+Ep: 928 | Ep_r: 44.36 | t_so_far: {37151} | epsilon: 0.997 max: 46.404324688444134
+Ep: 929 | Ep_r: 44.67 | t_so_far: {37201} | epsilon: 0.997 max: 46.404324688444134
+Ep: 930 | Ep_r: 44.67 | t_so_far: {37251} | epsilon: 0.997 max: 46.404324688444134
+Ep: 931 | Ep_r: 44.51 | t_so_far: {37301} | epsilon: 0.997 max: 46.404324688444134
+Ep: 932 | Ep_r: 43.85 | t_so_far: {37351} | epsilon: 0.997 max: 46.404324688444134
+Ep: 933 | Ep_r: 43.79 | t_so_far: {37401} | epsilon: 0.997 max: 46.404324688444134
+Ep: 934 | Ep_r: 43.55 | t_so_far: {37451} | epsilon: 0.997 max: 46.404324688444134
+Ep: 935 | Ep_r: 42.84 | t_so_far: {37501} | epsilon: 0.997 max: 46.404324688444134
+Ep: 936 | Ep_r: 42.09 | t_so_far: {37551} | epsilon: 0.997 max: 46.404324688444134
+Ep: 937 | Ep_r: 41.38 | t_so_far: {37601} | epsilon: 0.997 max: 46.404324688444134
+Ep: 938 | Ep_r: 41.89 | t_so_far: {37651} | epsilon: 0.997 max: 46.404324688444134
+Ep: 939 | Ep_r: 42.66 | t_so_far: {37701} | epsilon: 0.997 max: 46.404324688444134
+Ep: 940 | Ep_r: 43.13 | t_so_far: {37751} | epsilon: 0.997 max: 46.404324688444134
+Ep: 941 | Ep_r: 42.33 | t_so_far: {37801} | epsilon: 0.997 max: 46.404324688444134
+Ep: 942 | Ep_r: 42.57 | t_so_far: {37851} | epsilon: 0.997 max: 46.404324688444134
+Ep: 943 | Ep_r: 42.04 | t_so_far: {37901} | epsilon: 0.997 max: 46.404324688444134
+Ep: 944 | Ep_r: 41.67 | t_so_far: {37951} | epsilon: 0.997 max: 46.404324688444134
+Ep: 945 | Ep_r: 41.65 | t_so_far: {38001} | epsilon: 0.997 max: 46.404324688444134
+Ep: 946 | Ep_r: 41.92 | t_so_far: {38051} | epsilon: 0.997 max: 46.404324688444134
+Ep: 947 | Ep_r: 41.58 | t_so_far: {38101} | epsilon: 0.997 max: 46.404324688444134
+Ep: 948 | Ep_r: 37.24 | t_so_far: {38123} | epsilon: 0.997 max: 46.404324688444134
+Ep: 949 | Ep_r: 37.99 | t_so_far: {38173} | epsilon: 0.997 max: 46.404324688444134
+Ep: 950 | Ep_r: 39.33 | t_so_far: {38223} | epsilon: 0.997 max: 46.404324688444134
+Ep: 951 | Ep_r: 41.17 | t_so_far: {38273} | epsilon: 0.997 max: 46.404324688444134
+Ep: 952 | Ep_r: 41.98 | t_so_far: {38323} | epsilon: 0.997 max: 46.404324688444134
+Ep: 953 | Ep_r: 42.61 | t_so_far: {38373} | epsilon: 0.997 max: 46.404324688444134
+Ep: 954 | Ep_r: 43.06 | t_so_far: {38423} | epsilon: 0.997 max: 46.404324688444134
+Ep: 955 | Ep_r: 42.92 | t_so_far: {38473} | epsilon: 0.997 max: 46.404324688444134
+Ep: 956 | Ep_r: 37.8 | t_so_far: {38495} | epsilon: 0.997 max: 46.404324688444134
+Ep: 957 | Ep_r: 39.57 | t_so_far: {38545} | epsilon: 0.997 max: 46.404324688444134
+Ep: 958 | Ep_r: 40.68 | t_so_far: {38595} | epsilon: 0.997 max: 46.404324688444134
+Ep: 959 | Ep_r: 41.12 | t_so_far: {38645} | epsilon: 0.997 max: 46.404324688444134
+Ep: 960 | Ep_r: 41.65 | t_so_far: {38695} | epsilon: 0.997 max: 46.404324688444134
+Ep: 961 | Ep_r: 41.88 | t_so_far: {38743} | epsilon: 0.997 max: 46.404324688444134
+Ep: 962 | Ep_r: 42.57 | t_so_far: {38793} | epsilon: 0.997 max: 46.404324688444134
+Ep: 963 | Ep_r: 43.08 | t_so_far: {38843} | epsilon: 0.997 max: 46.404324688444134
+Ep: 964 | Ep_r: 43.2 | t_so_far: {38893} | epsilon: 0.997 max: 46.404324688444134
+Ep: 965 | Ep_r: 43.67 | t_so_far: {38943} | epsilon: 0.997 max: 46.404324688444134
+Ep: 966 | Ep_r: 44.16 | t_so_far: {38993} | epsilon: 0.997 max: 46.404324688444134
+Ep: 967 | Ep_r: 44.41 | t_so_far: {39043} | epsilon: 0.997 max: 46.404324688444134
+Ep: 968 | Ep_r: 44.0 | t_so_far: {39093} | epsilon: 0.997 max: 46.404324688444134
+Ep: 969 | Ep_r: 44.38 | t_so_far: {39143} | epsilon: 0.997 max: 46.404324688444134
+Ep: 970 | Ep_r: 44.28 | t_so_far: {39193} | epsilon: 0.997 max: 46.404324688444134
+Ep: 971 | Ep_r: 44.78 | t_so_far: {39243} | epsilon: 0.997 max: 46.404324688444134
+Ep: 972 | Ep_r: 45.29 | t_so_far: {39293} | epsilon: 0.997 max: 46.404324688444134
+Ep: 973 | Ep_r: 45.52 | t_so_far: {39343} | epsilon: 0.997 max: 46.404324688444134
+Ep: 974 | Ep_r: 46.06 | t_so_far: {39393} | epsilon: 0.997 max: 46.404324688444134
+Ep: 975 | Ep_r: 46.03 | t_so_far: {39443} | epsilon: 0.997 max: 46.404324688444134
+Ep: 976 | Ep_r: 45.64 | t_so_far: {39493} | epsilon: 0.997 max: 46.404324688444134
+Ep: 977 | Ep_r: 45.78 | t_so_far: {39543} | epsilon: 0.997 max: 46.404324688444134
+Ep: 978 | Ep_r: 45.67 | t_so_far: {39593} | epsilon: 0.997 max: 46.404324688444134
+Ep: 979 | Ep_r: 45.6 | t_so_far: {39643} | epsilon: 0.997 max: 46.404324688444134
+Ep: 980 | Ep_r: 45.86 | t_so_far: {39693} | epsilon: 0.997 max: 46.404324688444134
+Ep: 981 | Ep_r: 45.62 | t_so_far: {39743} | epsilon: 0.997 max: 46.404324688444134
+Ep: 982 | Ep_r: 45.52 | t_so_far: {39793} | epsilon: 0.997 max: 46.404324688444134
+Ep: 983 | Ep_r: 45.93 | t_so_far: {39843} | epsilon: 0.997 max: 46.404324688444134
+Ep: 984 | Ep_r: 45.83 | t_so_far: {39893} | epsilon: 0.997 max: 46.404324688444134
+Ep: 985 | Ep_r: 44.58 | t_so_far: {39936} | epsilon: 0.997 max: 46.404324688444134
+Ep: 986 | Ep_r: 44.77 | t_so_far: {39986} | epsilon: 0.998 max: 46.404324688444134
+Ep: 987 | Ep_r: 44.77 | t_so_far: {40036} | epsilon: 0.998 max: 46.404324688444134
+Ep: 988 | Ep_r: 44.64 | t_so_far: {40086} | epsilon: 0.998 max: 46.404324688444134
+Ep: 989 | Ep_r: 44.49 | t_so_far: {40136} | epsilon: 0.998 max: 46.404324688444134
+Ep: 990 | Ep_r: 45.1 | t_so_far: {40186} | epsilon: 0.998 max: 46.404324688444134
+Ep: 991 | Ep_r: 45.3 | t_so_far: {40236} | epsilon: 0.998 max: 46.404324688444134
+Ep: 992 | Ep_r: 44.64 | t_so_far: {40286} | epsilon: 0.998 max: 46.404324688444134
+Ep: 993 | Ep_r: 44.91 | t_so_far: {40336} | epsilon: 0.998 max: 46.404324688444134
+Ep: 994 | Ep_r: 40.13 | t_so_far: {40360} | epsilon: 0.998 max: 46.404324688444134
+Ep: 995 | Ep_r: 40.93 | t_so_far: {40410} | epsilon: 0.998 max: 46.404324688444134
+Ep: 996 | Ep_r: 41.81 | t_so_far: {40460} | epsilon: 0.998 max: 46.404324688444134
+Ep: 997 | Ep_r: 42.45 | t_so_far: {40510} | epsilon: 0.998 max: 46.404324688444134
+Ep: 998 | Ep_r: 43.11 | t_so_far: {40560} | epsilon: 0.998 max: 46.404324688444134
+Ep: 999 | Ep_r: 43.49 | t_so_far: {40610} | epsilon: 0.998 max: 46.404324688444134
+Ep: 1000 | Ep_r: 43.44 | t_so_far: {40660} | epsilon: 0.998 max: 46.404324688444134
+pygame 2.1.0 (SDL 2.0.16, Python 3.8.0)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Successfully set seed to 2
+MultiAttentionNetwork(
+  (features): Sequential(
+    (0): Conv2d(4, 32, kernel_size=(8, 8), stride=(4, 4))
+    (1): ReLU()
+    (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+    (3): ReLU()
+    (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+    (5): ReLU()
+  )
+  (attention): NONLocalBlock2D(
+    (g): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (W): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1))
+    (theta): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (phi): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+  )
+  (advantage): Sequential(
+    (0): Linear(in_features=68224, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=5, bias=True)
+  )
+  (value): Sequential(
+    (0): Linear(in_features=68224, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=1, bias=True)
+  )
+  (output): None
+  (ego_embedding): Sequential(
+    (0): Linear(in_features=7, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+  (others_embedding): Sequential(
+    (0): Linear(in_features=7, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+  (attention_layer): EgoAttetion(
+    (value_all): Linear(in_features=64, out_features=64, bias=False)
+    (key_all): Linear(in_features=64, out_features=64, bias=False)
+    (query_ego): Linear(in_features=64, out_features=64, bias=False)
+    (attention_combine): Linear(in_features=64, out_features=64, bias=False)
+  )
+  (decoder): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+)
+====================================
+Model has been loaded...
+====================================
+./agent.py:220: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755903507/work/torch/csrc/utils/tensor_new.cpp:210.)
+  return (torch.tensor([state['kinematics']], dtype=torch.float), state_image)
+step: 49, ep_reward: 47.40000000000001
+step: 49, ep_reward: 44.466666666666676
+step: 39, ep_reward: 37.36666666666667
+step: 44, ep_reward: 42.86666666666667
+step: 25, ep_reward: 22.533333333333342
+step: 49, ep_reward: 49.5
+step: 24, ep_reward: 22.733333333333338
+step: 33, ep_reward: 31.16666666666667
+step: 49, ep_reward: 45.166666666666686
+step: 49, ep_reward: 46.06666666666667
+pygame 2.1.0 (SDL 2.0.16, Python 3.8.0)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Successfully set seed to 2
+MultiAttentionNetwork(
+  (features): Sequential(
+    (0): Conv2d(4, 32, kernel_size=(8, 8), stride=(4, 4))
+    (1): ReLU()
+    (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+    (3): ReLU()
+    (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+    (5): ReLU()
+  )
+  (attention): NONLocalBlock2D(
+    (g): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (W): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1))
+    (theta): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (phi): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+  )
+  (advantage): Sequential(
+    (0): Linear(in_features=68224, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=5, bias=True)
+  )
+  (value): Sequential(
+    (0): Linear(in_features=68224, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=1, bias=True)
+  )
+  (output): None
+  (ego_embedding): Sequential(
+    (0): Linear(in_features=7, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+  (others_embedding): Sequential(
+    (0): Linear(in_features=7, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+  (attention_layer): EgoAttetion(
+    (value_all): Linear(in_features=64, out_features=64, bias=False)
+    (key_all): Linear(in_features=64, out_features=64, bias=False)
+    (query_ego): Linear(in_features=64, out_features=64, bias=False)
+    (attention_combine): Linear(in_features=64, out_features=64, bias=False)
+  )
+  (decoder): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+)
+====================================
+Model has been loaded...
+====================================
+./agent.py:220: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755903507/work/torch/csrc/utils/tensor_new.cpp:210.)
+  return (torch.tensor([state['kinematics']], dtype=torch.float), state_image)
+step: 49, ep_reward: 47.76666666666668
+step: 27, ep_reward: 23.800000000000008
+step: 49, ep_reward: 46.36666666666668
+step: 32, ep_reward: 29.800000000000008
+step: 25, ep_reward: 25.333333333333332
+step: 49, ep_reward: 43.733333333333356
+step: 44, ep_reward: 41.70000000000001
+step: 40, ep_reward: 36.60000000000001
+step: 49, ep_reward: 46.033333333333346
+step: 48, ep_reward: 47.6

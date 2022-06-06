@@ -240,6 +240,7 @@ def parse_args(args):
     parser.add_argument('--normal', default=True, action='store_false')
     parser.add_argument('--absolute', default=False, action='store_true')
     parser.add_argument('--model_ep',default = 1000,type = int)
+    parser.add_argument('--isdeadnot',default = True,action = 'store_false')
 
     return parser.parse_args(args)
 
@@ -342,11 +343,13 @@ def train(args=None):
             s_ = agent.observe(s_)
 
             # pdb.set_trace()
-
-            if (info['crashed'] and done):
-                agent.memory.push(s, a, r, s_, True)
+            if args.isdeadnot == True:
+              if (info['crashed'] and done):
+                  agent.memory.push(s, a, r, s_, True)
+              else:
+                  agent.memory.push(s, a, r, s_, False)
             else:
-                agent.memory.push(s, a, r, s_, False)
+              agent.memory.push(s, a, r, s_, done)  
             # agent.memory.push(s,a,r,s_,done)
             ep_r += r
 

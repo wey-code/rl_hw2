@@ -1,0 +1,70 @@
+pygame 2.1.0 (SDL 2.0.16, Python 3.8.0)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Successfully set seed to 2
+MultiAttentionNetwork(
+  (features): Sequential(
+    (0): Conv2d(4, 32, kernel_size=(8, 8), stride=(4, 4))
+    (1): ReLU()
+    (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+    (3): ReLU()
+    (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+    (5): ReLU()
+  )
+  (attention): NONLocalBlock2D(
+    (g): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (W): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1))
+    (theta): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (phi): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+  )
+  (advantage): Sequential(
+    (0): Linear(in_features=68224, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=5, bias=True)
+  )
+  (value): Sequential(
+    (0): Linear(in_features=68224, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=1, bias=True)
+  )
+  (output): None
+  (ego_embedding): Sequential(
+    (0): Linear(in_features=7, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+  (others_embedding): Sequential(
+    (0): Linear(in_features=7, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+  (attention_layer): EgoAttetion(
+    (value_all): Linear(in_features=64, out_features=64, bias=False)
+    (key_all): Linear(in_features=64, out_features=64, bias=False)
+    (query_ego): Linear(in_features=64, out_features=64, bias=False)
+    (attention_combine): Linear(in_features=64, out_features=64, bias=False)
+  )
+  (decoder): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+)
+./agent.py:220: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755903507/work/torch/csrc/utils/tensor_new.cpp:210.)
+  return (torch.tensor([state['kinematics']], dtype=torch.float), state_image)
+Ep: 0 | Ep_r: 3.83 | t_so_far: {5} | epsilon: 0.101 max: 3.8333333333333335
+Ep: 1 | Ep_r: 10.93 | t_so_far: {55} | epsilon: 0.108 max: 10.933333333333339
+Ep: 2 | Ep_r: 15.33 | t_so_far: {94} | epsilon: 0.113 max: 15.33333333333334
+Ep: 3 | Ep_r: 15.43 | t_so_far: {114} | epsilon: 0.116 max: 15.43333333333334
+Ep: 4 | Ep_r: 13.91 | t_so_far: {123} | epsilon: 0.117 max: 15.43333333333334
+Ep: 5 | Ep_r: 12.04 | t_so_far: {129} | epsilon: 0.118 max: 15.43333333333334
+Ep: 6 | Ep_r: 16.22 | t_so_far: {167} | epsilon: 0.124 max: 16.224266666666672
+Ep: 7 | Ep_r: 13.38 | t_so_far: {170} | epsilon: 0.124 max: 16.224266666666672
+Ep: 8 | Ep_r: 18.6 | t_so_far: {220} | epsilon: 0.131 max: 18.60353066666667
+Ep: 9 | Ep_r: 20.55 | t_so_far: {253} | epsilon: 0.136 max: 20.549491200000002
+Ep: 10 | Ep_r: 18.74 | t_so_far: {267} | epsilon: 0.137 max: 20.549491200000002
+Ep: 11 | Ep_r: 15.41 | t_so_far: {270} | epsilon: 0.138 max: 20.549491200000002
+Ep: 12 | Ep_r: 14.1 | t_so_far: {280} | epsilon: 0.139 max: 20.549491200000002
+Ep: 13 | Ep_r: 13.68 | t_so_far: {294} | epsilon: 0.141 max: 20.549491200000002

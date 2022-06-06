@@ -1014,3 +1014,182 @@ Ep: 956 | Ep_r: 38.11 | t_so_far: {34329} | epsilon: 0.995 max: 44.9944199743150
 Ep: 957 | Ep_r: 38.99 | t_so_far: {34379} | epsilon: 0.995 max: 44.99441997431502
 Ep: 958 | Ep_r: 39.66 | t_so_far: {34429} | epsilon: 0.995 max: 44.99441997431502
 Ep: 959 | Ep_r: 40.17 | t_so_far: {34479} | epsilon: 0.995 max: 44.99441997431502
+Ep: 960 | Ep_r: 40.91 | t_so_far: {34529} | epsilon: 0.995 max: 44.99441997431502
+Ep: 961 | Ep_r: 41.4 | t_so_far: {34579} | epsilon: 0.995 max: 44.99441997431502
+Ep: 962 | Ep_r: 41.92 | t_so_far: {34629} | epsilon: 0.995 max: 44.99441997431502
+Ep: 963 | Ep_r: 42.47 | t_so_far: {34679} | epsilon: 0.995 max: 44.99441997431502
+Ep: 964 | Ep_r: 42.77 | t_so_far: {34729} | epsilon: 0.996 max: 44.99441997431502
+Ep: 965 | Ep_r: 42.35 | t_so_far: {34779} | epsilon: 0.996 max: 44.99441997431502
+Ep: 966 | Ep_r: 42.28 | t_so_far: {34829} | epsilon: 0.996 max: 44.99441997431502
+Ep: 967 | Ep_r: 42.51 | t_so_far: {34879} | epsilon: 0.996 max: 44.99441997431502
+Ep: 968 | Ep_r: 42.26 | t_so_far: {34929} | epsilon: 0.996 max: 44.99441997431502
+Ep: 969 | Ep_r: 42.3 | t_so_far: {34979} | epsilon: 0.996 max: 44.99441997431502
+Ep: 970 | Ep_r: 41.45 | t_so_far: {35021} | epsilon: 0.996 max: 44.99441997431502
+Ep: 971 | Ep_r: 41.8 | t_so_far: {35071} | epsilon: 0.996 max: 44.99441997431502
+Ep: 972 | Ep_r: 42.08 | t_so_far: {35121} | epsilon: 0.996 max: 44.99441997431502
+Ep: 973 | Ep_r: 42.22 | t_so_far: {35171} | epsilon: 0.996 max: 44.99441997431502
+Ep: 974 | Ep_r: 41.72 | t_so_far: {35221} | epsilon: 0.996 max: 44.99441997431502
+Ep: 975 | Ep_r: 41.57 | t_so_far: {35271} | epsilon: 0.996 max: 44.99441997431502
+Ep: 976 | Ep_r: 41.85 | t_so_far: {35321} | epsilon: 0.996 max: 44.99441997431502
+Ep: 977 | Ep_r: 42.12 | t_so_far: {35371} | epsilon: 0.996 max: 44.99441997431502
+Ep: 978 | Ep_r: 42.23 | t_so_far: {35421} | epsilon: 0.996 max: 44.99441997431502
+Ep: 979 | Ep_r: 42.21 | t_so_far: {35471} | epsilon: 0.996 max: 44.99441997431502
+Ep: 980 | Ep_r: 42.94 | t_so_far: {35521} | epsilon: 0.996 max: 44.99441997431502
+Ep: 981 | Ep_r: 43.07 | t_so_far: {35571} | epsilon: 0.996 max: 44.99441997431502
+Ep: 982 | Ep_r: 42.91 | t_so_far: {35621} | epsilon: 0.996 max: 44.99441997431502
+Ep: 983 | Ep_r: 43.0 | t_so_far: {35671} | epsilon: 0.996 max: 44.99441997431502
+Ep: 984 | Ep_r: 43.09 | t_so_far: {35721} | epsilon: 0.996 max: 44.99441997431502
+Ep: 985 | Ep_r: 43.22 | t_so_far: {35771} | epsilon: 0.996 max: 44.99441997431502
+Ep: 986 | Ep_r: 43.1 | t_so_far: {35821} | epsilon: 0.996 max: 44.99441997431502
+Ep: 987 | Ep_r: 43.34 | t_so_far: {35871} | epsilon: 0.996 max: 44.99441997431502
+Ep: 988 | Ep_r: 43.34 | t_so_far: {35921} | epsilon: 0.996 max: 44.99441997431502
+Ep: 989 | Ep_r: 43.99 | t_so_far: {35971} | epsilon: 0.996 max: 44.99441997431502
+Ep: 990 | Ep_r: 41.9 | t_so_far: {36011} | epsilon: 0.996 max: 44.99441997431502
+Ep: 991 | Ep_r: 42.34 | t_so_far: {36061} | epsilon: 0.996 max: 44.99441997431502
+Ep: 992 | Ep_r: 42.39 | t_so_far: {36111} | epsilon: 0.996 max: 44.99441997431502
+Ep: 993 | Ep_r: 42.48 | t_so_far: {36161} | epsilon: 0.996 max: 44.99441997431502
+Ep: 994 | Ep_r: 42.59 | t_so_far: {36211} | epsilon: 0.996 max: 44.99441997431502
+Ep: 995 | Ep_r: 42.58 | t_so_far: {36261} | epsilon: 0.996 max: 44.99441997431502
+Ep: 996 | Ep_r: 43.07 | t_so_far: {36311} | epsilon: 0.996 max: 44.99441997431502
+Ep: 997 | Ep_r: 42.88 | t_so_far: {36361} | epsilon: 0.996 max: 44.99441997431502
+Ep: 998 | Ep_r: 42.7 | t_so_far: {36411} | epsilon: 0.996 max: 44.99441997431502
+Ep: 999 | Ep_r: 42.68 | t_so_far: {36461} | epsilon: 0.996 max: 44.99441997431502
+Ep: 1000 | Ep_r: 42.43 | t_so_far: {36511} | epsilon: 0.996 max: 44.99441997431502
+pygame 2.1.0 (SDL 2.0.16, Python 3.8.0)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Successfully set seed to 2
+MultiAttentionNetwork(
+  (features): Sequential(
+    (0): Conv2d(4, 32, kernel_size=(8, 8), stride=(4, 4))
+    (1): ReLU()
+    (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+    (3): ReLU()
+    (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+    (5): ReLU()
+  )
+  (attention): NONLocalBlock2D(
+    (g): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (W): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1))
+    (theta): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (phi): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+  )
+  (advantage): Sequential(
+    (0): Linear(in_features=68224, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=5, bias=True)
+  )
+  (value): Sequential(
+    (0): Linear(in_features=68224, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=1, bias=True)
+  )
+  (output): None
+  (ego_embedding): Sequential(
+    (0): Linear(in_features=7, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+  (others_embedding): Sequential(
+    (0): Linear(in_features=7, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+  (attention_layer): EgoAttetion(
+    (value_all): Linear(in_features=64, out_features=64, bias=False)
+    (key_all): Linear(in_features=64, out_features=64, bias=False)
+    (query_ego): Linear(in_features=64, out_features=64, bias=False)
+    (attention_combine): Linear(in_features=64, out_features=64, bias=False)
+  )
+  (decoder): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+)
+====================================
+Model has been loaded...
+====================================
+./agent.py:220: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755903507/work/torch/csrc/utils/tensor_new.cpp:210.)
+  return (torch.tensor([state['kinematics']], dtype=torch.float), state_image)
+step: 49, ep_reward: 42.1
+step: 14, ep_reward: 12.700000000000003
+step: 49, ep_reward: 43.33333333333336
+step: 49, ep_reward: 45.30000000000002
+step: 49, ep_reward: 41.60000000000004
+step: 49, ep_reward: 44.233333333333356
+step: 49, ep_reward: 47.599999999999994
+step: 49, ep_reward: 45.533333333333324
+step: 49, ep_reward: 45.16666666666668
+step: 49, ep_reward: 43.40000000000001
+pygame 2.1.0 (SDL 2.0.16, Python 3.8.0)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Successfully set seed to 2
+MultiAttentionNetwork(
+  (features): Sequential(
+    (0): Conv2d(4, 32, kernel_size=(8, 8), stride=(4, 4))
+    (1): ReLU()
+    (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+    (3): ReLU()
+    (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+    (5): ReLU()
+  )
+  (attention): NONLocalBlock2D(
+    (g): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (W): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1))
+    (theta): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (phi): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+  )
+  (advantage): Sequential(
+    (0): Linear(in_features=68224, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=5, bias=True)
+  )
+  (value): Sequential(
+    (0): Linear(in_features=68224, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=1, bias=True)
+  )
+  (output): None
+  (ego_embedding): Sequential(
+    (0): Linear(in_features=7, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+  (others_embedding): Sequential(
+    (0): Linear(in_features=7, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+  (attention_layer): EgoAttetion(
+    (value_all): Linear(in_features=64, out_features=64, bias=False)
+    (key_all): Linear(in_features=64, out_features=64, bias=False)
+    (query_ego): Linear(in_features=64, out_features=64, bias=False)
+    (attention_combine): Linear(in_features=64, out_features=64, bias=False)
+  )
+  (decoder): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+)
+====================================
+Model has been loaded...
+====================================
+./agent.py:220: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755903507/work/torch/csrc/utils/tensor_new.cpp:210.)
+  return (torch.tensor([state['kinematics']], dtype=torch.float), state_image)
+step: 49, ep_reward: 42.4
+step: 49, ep_reward: 42.46666666666668
+step: 49, ep_reward: 42.36666666666669
+step: 49, ep_reward: 43.066666666666684
+step: 49, ep_reward: 42.06666666666666
+step: 49, ep_reward: 44.8666666666667
+step: 49, ep_reward: 45.33333333333334
+step: 49, ep_reward: 45.26666666666667
+step: 49, ep_reward: 46.96666666666666
+step: 21, ep_reward: 17.766666666666662
