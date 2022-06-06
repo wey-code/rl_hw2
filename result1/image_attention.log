@@ -1,0 +1,1124 @@
+pygame 2.1.0 (SDL 2.0.16, Python 3.8.0)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Traceback (most recent call last):
+  File "./agent.py", line 486, in <module>
+    args = parse_args(args)
+  File "./agent.py", line 240, in parse_args
+    parser.add_argument('--normal', default=True, action='store_flase')
+  File "/home/slc/miniconda3/envs/RL2/lib/python3.8/argparse.py", line 1367, in add_argument
+    raise ValueError('unknown action "%s"' % (action_class,))
+ValueError: unknown action "store_flase"
+pygame 2.1.0 (SDL 2.0.16, Python 3.8.0)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Successfully set seed to 2
+attention_Dueling_DQN(
+  (features): Sequential(
+    (0): Conv2d(4, 32, kernel_size=(8, 8), stride=(4, 4))
+    (1): ReLU()
+    (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+    (3): ReLU()
+    (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+    (5): ReLU()
+  )
+  (attention): NONLocalBlock2D(
+    (g): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (W): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1))
+    (theta): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (phi): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+  )
+  (advantage): Sequential(
+    (0): Linear(in_features=68160, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=5, bias=True)
+  )
+  (value): Sequential(
+    (0): Linear(in_features=68160, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=1, bias=True)
+  )
+)
+Ep: 0 | Ep_r: 2.83 | t_so_far: {4} | epsilon: 0.1 max: 2.833333333333334
+Ep: 1 | Ep_r: 9.13 | t_so_far: {47} | epsilon: 0.107 max: 9.126666666666669
+Ep: 2 | Ep_r: 15.55 | t_so_far: {97} | epsilon: 0.114 max: 15.554666666666671
+Ep: 3 | Ep_r: 16.02 | t_so_far: {119} | epsilon: 0.117 max: 16.017066666666672
+Ep: 4 | Ep_r: 15.97 | t_so_far: {138} | epsilon: 0.119 max: 16.017066666666672
+Ep: 5 | Ep_r: 13.17 | t_so_far: {141} | epsilon: 0.12 max: 16.017066666666672
+Ep: 6 | Ep_r: 11.01 | t_so_far: {144} | epsilon: 0.12 max: 16.017066666666672
+Ep: 7 | Ep_r: 16.52 | t_so_far: {189} | epsilon: 0.127 max: 16.51776384
+Ep: 8 | Ep_r: 21.09 | t_so_far: {239} | epsilon: 0.134 max: 21.08754440533334
+Ep: 9 | Ep_r: 18.32 | t_so_far: {248} | epsilon: 0.135 max: 21.08754440533334
+Ep: 10 | Ep_r: 16.96 | t_so_far: {262} | epsilon: 0.137 max: 21.08754440533334
+Ep: 11 | Ep_r: 14.61 | t_so_far: {269} | epsilon: 0.138 max: 21.08754440533334
+Ep: 12 | Ep_r: 14.25 | t_so_far: {283} | epsilon: 0.14 max: 21.08754440533334
+Ep: 13 | Ep_r: 16.52 | t_so_far: {313} | epsilon: 0.144 max: 21.08754440533334
+Ep: 14 | Ep_r: 17.79 | t_so_far: {340} | epsilon: 0.147 max: 21.08754440533334
+Ep: 15 | Ep_r: 18.52 | t_so_far: {363} | epsilon: 0.151 max: 21.08754440533334
+Ep: 16 | Ep_r: 18.49 | t_so_far: {387} | epsilon: 0.154 max: 21.08754440533334
+Ep: 17 | Ep_r: 15.26 | t_so_far: {390} | epsilon: 0.154 max: 21.08754440533334
+Ep: 18 | Ep_r: 20.91 | t_so_far: {440} | epsilon: 0.161 max: 21.08754440533334
+Ep: 19 | Ep_r: 17.16 | t_so_far: {443} | epsilon: 0.161 max: 21.08754440533334
+Ep: 20 | Ep_r: 13.98 | t_so_far: {445} | epsilon: 0.162 max: 21.08754440533334
+Ep: 21 | Ep_r: 15.02 | t_so_far: {469} | epsilon: 0.165 max: 21.08754440533334
+Ep: 22 | Ep_r: 20.07 | t_so_far: {519} | epsilon: 0.172 max: 21.08754440533334
+Ep: 23 | Ep_r: 17.5 | t_so_far: {527} | epsilon: 0.173 max: 21.08754440533334
+Ep: 24 | Ep_r: 15.69 | t_so_far: {538} | epsilon: 0.174 max: 21.08754440533334
+Ep: 25 | Ep_r: 13.31 | t_so_far: {543} | epsilon: 0.175 max: 21.08754440533334
+Ep: 26 | Ep_r: 11.4 | t_so_far: {548} | epsilon: 0.175 max: 21.08754440533334
+Ep: 27 | Ep_r: 10.27 | t_so_far: {555} | epsilon: 0.176 max: 21.08754440533334
+Ep: 28 | Ep_r: 8.65 | t_so_far: {558} | epsilon: 0.177 max: 21.08754440533334
+Ep: 29 | Ep_r: 9.13 | t_so_far: {571} | epsilon: 0.178 max: 21.08754440533334
+Ep: 30 | Ep_r: 7.54 | t_so_far: {573} | epsilon: 0.179 max: 21.08754440533334
+Ep: 31 | Ep_r: 6.4 | t_so_far: {576} | epsilon: 0.179 max: 21.08754440533334
+Ep: 32 | Ep_r: 7.21 | t_so_far: {590} | epsilon: 0.181 max: 21.08754440533334
+Ep: 33 | Ep_r: 10.5 | t_so_far: {621} | epsilon: 0.185 max: 21.08754440533334
+Ep: 34 | Ep_r: 12.41 | t_so_far: {644} | epsilon: 0.188 max: 21.08754440533334
+Ep: 35 | Ep_r: 17.68 | t_so_far: {694} | epsilon: 0.194 max: 21.08754440533334
+Ep: 36 | Ep_r: 17.41 | t_so_far: {712} | epsilon: 0.197 max: 21.08754440533334
+Ep: 37 | Ep_r: 22.45 | t_so_far: {761} | epsilon: 0.203 max: 22.45093724047604
+Ep: 38 | Ep_r: 23.56 | t_so_far: {794} | epsilon: 0.207 max: 23.560749792380836
+Ep: 39 | Ep_r: 26.89 | t_so_far: {844} | epsilon: 0.213 max: 26.88859983390467
+Ep: 40 | Ep_r: 29.56 | t_so_far: {894} | epsilon: 0.22 max: 29.56421320045707
+Ep: 41 | Ep_r: 27.84 | t_so_far: {918} | epsilon: 0.223 max: 29.56421320045707
+Ep: 42 | Ep_r: 24.26 | t_so_far: {931} | epsilon: 0.224 max: 29.56421320045707
+Ep: 43 | Ep_r: 27.18 | t_so_far: {976} | epsilon: 0.23 max: 29.56421320045707
+Ep: 44 | Ep_r: 24.71 | t_so_far: {992} | epsilon: 0.232 max: 29.56421320045707
+Ep: 45 | Ep_r: 20.23 | t_so_far: {995} | epsilon: 0.232 max: 29.56421320045707
+Ep: 46 | Ep_r: 16.61 | t_so_far: {998} | epsilon: 0.233 max: 29.56421320045707
+Ep: 47 | Ep_r: 21.63 | t_so_far: {1048} | epsilon: 0.239 max: 29.56421320045707
+Ep: 48 | Ep_r: 17.74 | t_so_far: {1051} | epsilon: 0.239 max: 29.56421320045707
+Ep: 49 | Ep_r: 19.13 | t_so_far: {1080} | epsilon: 0.243 max: 29.56421320045707
+Ep: 50 | Ep_r: 15.76 | t_so_far: {1083} | epsilon: 0.243 max: 29.56421320045707
+Ep: 51 | Ep_r: 14.53 | t_so_far: {1095} | epsilon: 0.244 max: 29.56421320045707
+Ep: 52 | Ep_r: 17.8 | t_so_far: {1131} | epsilon: 0.249 max: 29.56421320045707
+Ep: 53 | Ep_r: 22.36 | t_so_far: {1181} | epsilon: 0.255 max: 29.56421320045707
+Ep: 54 | Ep_r: 20.35 | t_so_far: {1195} | epsilon: 0.256 max: 29.56421320045707
+Ep: 55 | Ep_r: 24.53 | t_so_far: {1245} | epsilon: 0.262 max: 29.56421320045707
+Ep: 56 | Ep_r: 24.38 | t_so_far: {1273} | epsilon: 0.266 max: 29.56421320045707
+Ep: 57 | Ep_r: 24.54 | t_so_far: {1303} | epsilon: 0.269 max: 29.56421320045707
+Ep: 58 | Ep_r: 19.89 | t_so_far: {1305} | epsilon: 0.269 max: 29.56421320045707
+Ep: 59 | Ep_r: 17.71 | t_so_far: {1315} | epsilon: 0.27 max: 29.56421320045707
+Ep: 60 | Ep_r: 20.7 | t_so_far: {1351} | epsilon: 0.275 max: 29.56421320045707
+Ep: 61 | Ep_r: 22.52 | t_so_far: {1385} | epsilon: 0.279 max: 29.56421320045707
+Ep: 62 | Ep_r: 18.85 | t_so_far: {1390} | epsilon: 0.279 max: 29.56421320045707
+Ep: 63 | Ep_r: 15.72 | t_so_far: {1394} | epsilon: 0.28 max: 29.56421320045707
+Ep: 64 | Ep_r: 15.02 | t_so_far: {1408} | epsilon: 0.281 max: 29.56421320045707
+Ep: 65 | Ep_r: 16.87 | t_so_far: {1435} | epsilon: 0.284 max: 29.56421320045707
+Ep: 66 | Ep_r: 21.54 | t_so_far: {1485} | epsilon: 0.29 max: 29.56421320045707
+Ep: 67 | Ep_r: 25.49 | t_so_far: {1535} | epsilon: 0.296 max: 29.56421320045707
+Ep: 68 | Ep_r: 25.43 | t_so_far: {1564} | epsilon: 0.299 max: 29.56421320045707
+Ep: 69 | Ep_r: 28.55 | t_so_far: {1614} | epsilon: 0.304 max: 29.56421320045707
+Ep: 70 | Ep_r: 28.43 | t_so_far: {1649} | epsilon: 0.308 max: 29.56421320045707
+Ep: 71 | Ep_r: 30.14 | t_so_far: {1691} | epsilon: 0.313 max: 30.141079934285735
+Ep: 72 | Ep_r: 26.28 | t_so_far: {1704} | epsilon: 0.314 max: 30.141079934285735
+Ep: 73 | Ep_r: 26.42 | t_so_far: {1735} | epsilon: 0.318 max: 30.141079934285735
+Ep: 74 | Ep_r: 29.8 | t_so_far: {1785} | epsilon: 0.323 max: 30.141079934285735
+Ep: 75 | Ep_r: 27.96 | t_so_far: {1809} | epsilon: 0.326 max: 30.141079934285735
+Ep: 76 | Ep_r: 23.9 | t_so_far: {1819} | epsilon: 0.327 max: 30.141079934285735
+Ep: 77 | Ep_r: 23.39 | t_so_far: {1846} | epsilon: 0.33 max: 30.141079934285735
+Ep: 78 | Ep_r: 21.9 | t_so_far: {1863} | epsilon: 0.332 max: 30.141079934285735
+Ep: 79 | Ep_r: 26.26 | t_so_far: {1913} | epsilon: 0.337 max: 30.141079934285735
+Ep: 80 | Ep_r: 21.9 | t_so_far: {1919} | epsilon: 0.338 max: 30.141079934285735
+Ep: 81 | Ep_r: 21.73 | t_so_far: {1944} | epsilon: 0.34 max: 30.141079934285735
+Ep: 82 | Ep_r: 20.43 | t_so_far: {1964} | epsilon: 0.342 max: 30.141079934285735
+Ep: 83 | Ep_r: 18.86 | t_so_far: {1978} | epsilon: 0.344 max: 30.141079934285735
+Ep: 84 | Ep_r: 16.98 | t_so_far: {1989} | epsilon: 0.345 max: 30.141079934285735
+Ep: 85 | Ep_r: 21.66 | t_so_far: {2039} | epsilon: 0.35 max: 30.141079934285735
+Ep: 86 | Ep_r: 25.77 | t_so_far: {2089} | epsilon: 0.355 max: 30.141079934285735
+Ep: 87 | Ep_r: 24.84 | t_so_far: {2114} | epsilon: 0.358 max: 30.141079934285735
+Ep: 88 | Ep_r: 22.49 | t_so_far: {2129} | epsilon: 0.359 max: 30.141079934285735
+Ep: 89 | Ep_r: 19.49 | t_so_far: {2139} | epsilon: 0.36 max: 30.141079934285735
+Ep: 90 | Ep_r: 18.52 | t_so_far: {2157} | epsilon: 0.362 max: 30.141079934285735
+Ep: 91 | Ep_r: 15.45 | t_so_far: {2161} | epsilon: 0.363 max: 30.141079934285735
+Ep: 92 | Ep_r: 17.89 | t_so_far: {2193} | epsilon: 0.366 max: 30.141079934285735
+Ep: 93 | Ep_r: 14.77 | t_so_far: {2196} | epsilon: 0.366 max: 30.141079934285735
+Ep: 94 | Ep_r: 14.89 | t_so_far: {2213} | epsilon: 0.368 max: 30.141079934285735
+Ep: 95 | Ep_r: 20.37 | t_so_far: {2263} | epsilon: 0.373 max: 30.141079934285735
+Ep: 96 | Ep_r: 21.71 | t_so_far: {2294} | epsilon: 0.376 max: 30.141079934285735
+Ep: 97 | Ep_r: 18.37 | t_so_far: {2300} | epsilon: 0.377 max: 30.141079934285735
+Ep: 98 | Ep_r: 19.74 | t_so_far: {2329} | epsilon: 0.38 max: 30.141079934285735
+Ep: 99 | Ep_r: 16.43 | t_so_far: {2333} | epsilon: 0.38 max: 30.141079934285735
+Ep: 100 | Ep_r: 15.94 | t_so_far: {2349} | epsilon: 0.382 max: 30.141079934285735
+Ep: 101 | Ep_r: 17.28 | t_so_far: {2375} | epsilon: 0.384 max: 30.141079934285735
+Ep: 102 | Ep_r: 21.69 | t_so_far: {2425} | epsilon: 0.389 max: 30.141079934285735
+Ep: 103 | Ep_r: 19.63 | t_so_far: {2440} | epsilon: 0.39 max: 30.141079934285735
+Ep: 104 | Ep_r: 17.95 | t_so_far: {2453} | epsilon: 0.392 max: 30.141079934285735
+Ep: 105 | Ep_r: 19.42 | t_so_far: {2483} | epsilon: 0.395 max: 30.141079934285735
+Ep: 106 | Ep_r: 23.58 | t_so_far: {2527} | epsilon: 0.399 max: 30.141079934285735
+Ep: 107 | Ep_r: 24.67 | t_so_far: {2564} | epsilon: 0.402 max: 30.141079934285735
+Ep: 108 | Ep_r: 27.66 | t_so_far: {2614} | epsilon: 0.407 max: 30.141079934285735
+Ep: 109 | Ep_r: 30.58 | t_so_far: {2664} | epsilon: 0.412 max: 30.576178376985272
+Ep: 110 | Ep_r: 33.45 | t_so_far: {2714} | epsilon: 0.417 max: 33.44760936825489
+Ep: 111 | Ep_r: 33.14 | t_so_far: {2751} | epsilon: 0.42 max: 33.44760936825489
+Ep: 112 | Ep_r: 27.27 | t_so_far: {2756} | epsilon: 0.42 max: 33.44760936825489
+Ep: 113 | Ep_r: 22.74 | t_so_far: {2762} | epsilon: 0.421 max: 33.44760936825489
+Ep: 114 | Ep_r: 25.0 | t_so_far: {2802} | epsilon: 0.425 max: 33.44760936825489
+Ep: 115 | Ep_r: 21.06 | t_so_far: {2809} | epsilon: 0.425 max: 33.44760936825489
+Ep: 116 | Ep_r: 19.58 | t_so_far: {2825} | epsilon: 0.427 max: 33.44760936825489
+Ep: 117 | Ep_r: 21.51 | t_so_far: {2862} | epsilon: 0.43 max: 33.44760936825489
+Ep: 118 | Ep_r: 22.2 | t_so_far: {2889} | epsilon: 0.433 max: 33.44760936825489
+Ep: 119 | Ep_r: 26.26 | t_so_far: {2939} | epsilon: 0.437 max: 33.44760936825489
+Ep: 120 | Ep_r: 25.53 | t_so_far: {2965} | epsilon: 0.44 max: 33.44760936825489
+Ep: 121 | Ep_r: 27.92 | t_so_far: {3009} | epsilon: 0.443 max: 33.44760936825489
+Ep: 122 | Ep_r: 26.36 | t_so_far: {3034} | epsilon: 0.446 max: 33.44760936825489
+Ep: 123 | Ep_r: 26.27 | t_so_far: {3063} | epsilon: 0.448 max: 33.44760936825489
+Ep: 124 | Ep_r: 26.17 | t_so_far: {3092} | epsilon: 0.451 max: 33.44760936825489
+Ep: 125 | Ep_r: 21.38 | t_so_far: {3095} | epsilon: 0.451 max: 33.44760936825489
+Ep: 126 | Ep_r: 20.5 | t_so_far: {3117} | epsilon: 0.453 max: 33.44760936825489
+Ep: 127 | Ep_r: 18.34 | t_so_far: {3129} | epsilon: 0.454 max: 33.44760936825489
+Ep: 128 | Ep_r: 23.93 | t_so_far: {3179} | epsilon: 0.458 max: 33.44760936825489
+Ep: 129 | Ep_r: 24.49 | t_so_far: {3210} | epsilon: 0.461 max: 33.44760936825489
+Ep: 130 | Ep_r: 22.27 | t_so_far: {3225} | epsilon: 0.462 max: 33.44760936825489
+Ep: 131 | Ep_r: 20.5 | t_so_far: {3242} | epsilon: 0.464 max: 33.44760936825489
+Ep: 132 | Ep_r: 25.33 | t_so_far: {3292} | epsilon: 0.468 max: 33.44760936825489
+Ep: 133 | Ep_r: 22.27 | t_so_far: {3304} | epsilon: 0.469 max: 33.44760936825489
+Ep: 134 | Ep_r: 19.09 | t_so_far: {3312} | epsilon: 0.47 max: 33.44760936825489
+Ep: 135 | Ep_r: 15.86 | t_so_far: {3316} | epsilon: 0.47 max: 33.44760936825489
+Ep: 136 | Ep_r: 16.1 | t_so_far: {3336} | epsilon: 0.472 max: 33.44760936825489
+Ep: 137 | Ep_r: 19.87 | t_so_far: {3374} | epsilon: 0.475 max: 33.44760936825489
+Ep: 138 | Ep_r: 18.5 | t_so_far: {3390} | epsilon: 0.476 max: 33.44760936825489
+Ep: 139 | Ep_r: 20.19 | t_so_far: {3421} | epsilon: 0.479 max: 33.44760936825489
+Ep: 140 | Ep_r: 17.62 | t_so_far: {3429} | epsilon: 0.48 max: 33.44760936825489
+Ep: 141 | Ep_r: 16.23 | t_so_far: {3441} | epsilon: 0.481 max: 33.44760936825489
+Ep: 142 | Ep_r: 17.23 | t_so_far: {3466} | epsilon: 0.483 max: 33.44760936825489
+Ep: 143 | Ep_r: 15.61 | t_so_far: {3476} | epsilon: 0.483 max: 33.44760936825489
+Ep: 144 | Ep_r: 21.19 | t_so_far: {3526} | epsilon: 0.488 max: 33.44760936825489
+Ep: 145 | Ep_r: 18.22 | t_so_far: {3534} | epsilon: 0.488 max: 33.44760936825489
+Ep: 146 | Ep_r: 15.7 | t_so_far: {3541} | epsilon: 0.489 max: 33.44760936825489
+Ep: 147 | Ep_r: 15.06 | t_so_far: {3555} | epsilon: 0.49 max: 33.44760936825489
+Ep: 148 | Ep_r: 18.95 | t_so_far: {3594} | epsilon: 0.493 max: 33.44760936825489
+Ep: 149 | Ep_r: 22.76 | t_so_far: {3639} | epsilon: 0.497 max: 33.44760936825489
+Ep: 150 | Ep_r: 25.78 | t_so_far: {3681} | epsilon: 0.5 max: 33.44760936825489
+Ep: 151 | Ep_r: 21.86 | t_so_far: {3688} | epsilon: 0.501 max: 33.44760936825489
+Ep: 152 | Ep_r: 21.98 | t_so_far: {3712} | epsilon: 0.503 max: 33.44760936825489
+Ep: 153 | Ep_r: 19.75 | t_so_far: {3725} | epsilon: 0.504 max: 33.44760936825489
+Ep: 154 | Ep_r: 17.78 | t_so_far: {3736} | epsilon: 0.504 max: 33.44760936825489
+Ep: 155 | Ep_r: 22.86 | t_so_far: {3786} | epsilon: 0.508 max: 33.44760936825489
+Ep: 156 | Ep_r: 18.96 | t_so_far: {3790} | epsilon: 0.509 max: 33.44760936825489
+Ep: 157 | Ep_r: 15.77 | t_so_far: {3794} | epsilon: 0.509 max: 33.44760936825489
+Ep: 158 | Ep_r: 13.86 | t_so_far: {3801} | epsilon: 0.51 max: 33.44760936825489
+Ep: 159 | Ep_r: 14.88 | t_so_far: {3824} | epsilon: 0.511 max: 33.44760936825489
+Ep: 160 | Ep_r: 15.12 | t_so_far: {3843} | epsilon: 0.513 max: 33.44760936825489
+Ep: 161 | Ep_r: 13.11 | t_so_far: {3849} | epsilon: 0.513 max: 33.44760936825489
+Ep: 162 | Ep_r: 13.34 | t_so_far: {3866} | epsilon: 0.515 max: 33.44760936825489
+Ep: 163 | Ep_r: 12.86 | t_so_far: {3879} | epsilon: 0.516 max: 33.44760936825489
+Ep: 164 | Ep_r: 16.12 | t_so_far: {3912} | epsilon: 0.518 max: 33.44760936825489
+Ep: 165 | Ep_r: 21.92 | t_so_far: {3962} | epsilon: 0.522 max: 33.44760936825489
+Ep: 166 | Ep_r: 26.68 | t_so_far: {4012} | epsilon: 0.526 max: 33.44760936825489
+Ep: 167 | Ep_r: 25.7 | t_so_far: {4037} | epsilon: 0.528 max: 33.44760936825489
+Ep: 168 | Ep_r: 28.99 | t_so_far: {4087} | epsilon: 0.531 max: 33.44760936825489
+Ep: 169 | Ep_r: 28.13 | t_so_far: {4115} | epsilon: 0.534 max: 33.44760936825489
+Ep: 170 | Ep_r: 25.32 | t_so_far: {4131} | epsilon: 0.535 max: 33.44760936825489
+Ep: 171 | Ep_r: 21.05 | t_so_far: {4136} | epsilon: 0.535 max: 33.44760936825489
+Ep: 172 | Ep_r: 25.85 | t_so_far: {4186} | epsilon: 0.539 max: 33.44760936825489
+Ep: 173 | Ep_r: 22.54 | t_so_far: {4197} | epsilon: 0.54 max: 33.44760936825489
+Ep: 174 | Ep_r: 20.45 | t_so_far: {4212} | epsilon: 0.541 max: 33.44760936825489
+Ep: 175 | Ep_r: 24.23 | t_so_far: {4255} | epsilon: 0.544 max: 33.44760936825489
+Ep: 176 | Ep_r: 20.52 | t_so_far: {4262} | epsilon: 0.544 max: 33.44760936825489
+Ep: 177 | Ep_r: 23.97 | t_so_far: {4303} | epsilon: 0.547 max: 33.44760936825489
+Ep: 178 | Ep_r: 25.92 | t_so_far: {4345} | epsilon: 0.55 max: 33.44760936825489
+Ep: 179 | Ep_r: 22.32 | t_so_far: {4354} | epsilon: 0.551 max: 33.44760936825489
+Ep: 180 | Ep_r: 24.13 | t_so_far: {4387} | epsilon: 0.553 max: 33.44760936825489
+Ep: 181 | Ep_r: 22.55 | t_so_far: {4405} | epsilon: 0.555 max: 33.44760936825489
+Ep: 182 | Ep_r: 20.96 | t_so_far: {4422} | epsilon: 0.556 max: 33.44760936825489
+Ep: 183 | Ep_r: 20.01 | t_so_far: {4442} | epsilon: 0.557 max: 33.44760936825489
+Ep: 184 | Ep_r: 24.9 | t_so_far: {4492} | epsilon: 0.561 max: 33.44760936825489
+Ep: 185 | Ep_r: 28.92 | t_so_far: {4542} | epsilon: 0.564 max: 33.44760936825489
+Ep: 186 | Ep_r: 25.91 | t_so_far: {4558} | epsilon: 0.565 max: 33.44760936825489
+Ep: 187 | Ep_r: 23.58 | t_so_far: {4574} | epsilon: 0.566 max: 33.44760936825489
+Ep: 188 | Ep_r: 24.98 | t_so_far: {4609} | epsilon: 0.569 max: 33.44760936825489
+Ep: 189 | Ep_r: 20.92 | t_so_far: {4615} | epsilon: 0.569 max: 33.44760936825489
+Ep: 190 | Ep_r: 19.4 | t_so_far: {4630} | epsilon: 0.57 max: 33.44760936825489
+Ep: 191 | Ep_r: 16.89 | t_so_far: {4639} | epsilon: 0.571 max: 33.44760936825489
+Ep: 192 | Ep_r: 18.09 | t_so_far: {4664} | epsilon: 0.573 max: 33.44760936825489
+Ep: 193 | Ep_r: 23.23 | t_so_far: {4714} | epsilon: 0.576 max: 33.44760936825489
+Ep: 194 | Ep_r: 20.79 | t_so_far: {4727} | epsilon: 0.577 max: 33.44760936825489
+Ep: 195 | Ep_r: 18.78 | t_so_far: {4739} | epsilon: 0.578 max: 33.44760936825489
+Ep: 196 | Ep_r: 16.25 | t_so_far: {4746} | epsilon: 0.578 max: 33.44760936825489
+Ep: 197 | Ep_r: 16.66 | t_so_far: {4770} | epsilon: 0.58 max: 33.44760936825489
+Ep: 198 | Ep_r: 20.89 | t_so_far: {4811} | epsilon: 0.583 max: 33.44760936825489
+Ep: 199 | Ep_r: 24.37 | t_so_far: {4853} | epsilon: 0.585 max: 33.44760936825489
+Ep: 200 | Ep_r: 26.02 | t_so_far: {4889} | epsilon: 0.588 max: 33.44760936825489
+Ep: 201 | Ep_r: 28.54 | t_so_far: {4933} | epsilon: 0.591 max: 33.44760936825489
+Ep: 202 | Ep_r: 28.34 | t_so_far: {4964} | epsilon: 0.593 max: 33.44760936825489
+Ep: 203 | Ep_r: 31.51 | t_so_far: {5014} | epsilon: 0.596 max: 33.44760936825489
+Ep: 204 | Ep_r: 27.11 | t_so_far: {5026} | epsilon: 0.597 max: 33.44760936825489
+Ep: 205 | Ep_r: 24.89 | t_so_far: {5044} | epsilon: 0.598 max: 33.44760936825489
+Ep: 206 | Ep_r: 28.9 | t_so_far: {5094} | epsilon: 0.601 max: 33.44760936825489
+Ep: 207 | Ep_r: 32.1 | t_so_far: {5144} | epsilon: 0.604 max: 33.44760936825489
+Ep: 208 | Ep_r: 29.18 | t_so_far: {5163} | epsilon: 0.605 max: 33.44760936825489
+Ep: 209 | Ep_r: 25.59 | t_so_far: {5177} | epsilon: 0.606 max: 33.44760936825489
+Ep: 210 | Ep_r: 24.6 | t_so_far: {5202} | epsilon: 0.608 max: 33.44760936825489
+Ep: 211 | Ep_r: 28.94 | t_so_far: {5252} | epsilon: 0.611 max: 33.44760936825489
+Ep: 212 | Ep_r: 27.02 | t_so_far: {5273} | epsilon: 0.612 max: 33.44760936825489
+Ep: 213 | Ep_r: 30.5 | t_so_far: {5323} | epsilon: 0.615 max: 33.44760936825489
+Ep: 214 | Ep_r: 33.58 | t_so_far: {5373} | epsilon: 0.618 max: 33.580562916688
+Ep: 215 | Ep_r: 27.97 | t_so_far: {5380} | epsilon: 0.619 max: 33.580562916688
+Ep: 216 | Ep_r: 29.28 | t_so_far: {5417} | epsilon: 0.621 max: 33.580562916688
+Ep: 217 | Ep_r: 30.47 | t_so_far: {5456} | epsilon: 0.623 max: 33.580562916688
+Ep: 218 | Ep_r: 27.73 | t_so_far: {5474} | epsilon: 0.624 max: 33.580562916688
+Ep: 219 | Ep_r: 26.74 | t_so_far: {5500} | epsilon: 0.626 max: 33.580562916688
+Ep: 220 | Ep_r: 27.65 | t_so_far: {5535} | epsilon: 0.628 max: 33.580562916688
+Ep: 221 | Ep_r: 23.79 | t_so_far: {5545} | epsilon: 0.629 max: 33.580562916688
+Ep: 222 | Ep_r: 24.17 | t_so_far: {5574} | epsilon: 0.63 max: 33.580562916688
+Ep: 223 | Ep_r: 21.92 | t_so_far: {5589} | epsilon: 0.631 max: 33.580562916688
+Ep: 224 | Ep_r: 19.11 | t_so_far: {5598} | epsilon: 0.632 max: 33.580562916688
+Ep: 225 | Ep_r: 19.35 | t_so_far: {5621} | epsilon: 0.633 max: 33.580562916688
+Ep: 226 | Ep_r: 16.22 | t_so_far: {5626} | epsilon: 0.633 max: 33.580562916688
+Ep: 227 | Ep_r: 16.81 | t_so_far: {5648} | epsilon: 0.635 max: 33.580562916688
+Ep: 228 | Ep_r: 16.11 | t_so_far: {5663} | epsilon: 0.636 max: 33.580562916688
+Ep: 229 | Ep_r: 20.07 | t_so_far: {5704} | epsilon: 0.638 max: 33.580562916688
+Ep: 230 | Ep_r: 18.25 | t_so_far: {5718} | epsilon: 0.639 max: 33.580562916688
+Ep: 231 | Ep_r: 15.22 | t_so_far: {5722} | epsilon: 0.639 max: 33.580562916688
+Ep: 232 | Ep_r: 12.63 | t_so_far: {5725} | epsilon: 0.639 max: 33.580562916688
+Ep: 233 | Ep_r: 13.43 | t_so_far: {5744} | epsilon: 0.64 max: 33.580562916688
+Ep: 234 | Ep_r: 12.54 | t_so_far: {5754} | epsilon: 0.641 max: 33.580562916688
+Ep: 235 | Ep_r: 13.55 | t_so_far: {5773} | epsilon: 0.642 max: 33.580562916688
+Ep: 236 | Ep_r: 15.23 | t_so_far: {5797} | epsilon: 0.643 max: 33.580562916688
+Ep: 237 | Ep_r: 15.3 | t_so_far: {5815} | epsilon: 0.644 max: 33.580562916688
+Ep: 238 | Ep_r: 20.33 | t_so_far: {5859} | epsilon: 0.647 max: 33.580562916688
+Ep: 239 | Ep_r: 18.61 | t_so_far: {5874} | epsilon: 0.648 max: 33.580562916688
+Ep: 240 | Ep_r: 20.6 | t_so_far: {5907} | epsilon: 0.65 max: 33.580562916688
+Ep: 241 | Ep_r: 18.04 | t_so_far: {5916} | epsilon: 0.65 max: 33.580562916688
+Ep: 242 | Ep_r: 16.94 | t_so_far: {5930} | epsilon: 0.651 max: 33.580562916688
+Ep: 243 | Ep_r: 16.8 | t_so_far: {5948} | epsilon: 0.652 max: 33.580562916688
+Ep: 244 | Ep_r: 22.49 | t_so_far: {5998} | epsilon: 0.655 max: 33.580562916688
+Ep: 245 | Ep_r: 23.22 | t_so_far: {6027} | epsilon: 0.656 max: 33.580562916688
+Ep: 246 | Ep_r: 22.73 | t_so_far: {6051} | epsilon: 0.658 max: 33.580562916688
+Ep: 247 | Ep_r: 18.75 | t_so_far: {6055} | epsilon: 0.658 max: 33.580562916688
+Ep: 248 | Ep_r: 20.09 | t_so_far: {6083} | epsilon: 0.659 max: 33.580562916688
+Ep: 249 | Ep_r: 18.89 | t_so_far: {6101} | epsilon: 0.66 max: 33.580562916688
+Ep: 250 | Ep_r: 17.61 | t_so_far: {6115} | epsilon: 0.661 max: 33.580562916688
+Ep: 251 | Ep_r: 19.02 | t_so_far: {6143} | epsilon: 0.663 max: 33.580562916688
+Ep: 252 | Ep_r: 22.68 | t_so_far: {6183} | epsilon: 0.665 max: 33.580562916688
+Ep: 253 | Ep_r: 19.7 | t_so_far: {6192} | epsilon: 0.665 max: 33.580562916688
+Ep: 254 | Ep_r: 16.35 | t_so_far: {6196} | epsilon: 0.665 max: 33.580562916688
+Ep: 255 | Ep_r: 20.92 | t_so_far: {6240} | epsilon: 0.668 max: 33.580562916688
+Ep: 256 | Ep_r: 22.59 | t_so_far: {6276} | epsilon: 0.67 max: 33.580562916688
+Ep: 257 | Ep_r: 18.51 | t_so_far: {6279} | epsilon: 0.67 max: 33.580562916688
+Ep: 258 | Ep_r: 19.21 | t_so_far: {6304} | epsilon: 0.671 max: 33.580562916688
+Ep: 259 | Ep_r: 19.91 | t_so_far: {6331} | epsilon: 0.672 max: 33.580562916688
+Ep: 260 | Ep_r: 18.36 | t_so_far: {6345} | epsilon: 0.673 max: 33.580562916688
+Ep: 261 | Ep_r: 21.94 | t_so_far: {6384} | epsilon: 0.675 max: 33.580562916688
+Ep: 262 | Ep_r: 20.56 | t_so_far: {6403} | epsilon: 0.676 max: 33.580562916688
+Ep: 263 | Ep_r: 18.91 | t_so_far: {6416} | epsilon: 0.677 max: 33.580562916688
+Ep: 264 | Ep_r: 17.85 | t_so_far: {6431} | epsilon: 0.678 max: 33.580562916688
+Ep: 265 | Ep_r: 14.72 | t_so_far: {6434} | epsilon: 0.678 max: 33.580562916688
+Ep: 266 | Ep_r: 20.95 | t_so_far: {6484} | epsilon: 0.68 max: 33.580562916688
+Ep: 267 | Ep_r: 24.24 | t_so_far: {6524} | epsilon: 0.682 max: 33.580562916688
+Ep: 268 | Ep_r: 20.02 | t_so_far: {6528} | epsilon: 0.683 max: 33.580562916688
+Ep: 269 | Ep_r: 17.54 | t_so_far: {6537} | epsilon: 0.683 max: 33.580562916688
+Ep: 270 | Ep_r: 19.99 | t_so_far: {6571} | epsilon: 0.685 max: 33.580562916688
+Ep: 271 | Ep_r: 17.6 | t_so_far: {6580} | epsilon: 0.685 max: 33.580562916688
+Ep: 272 | Ep_r: 23.01 | t_so_far: {6630} | epsilon: 0.688 max: 33.580562916688
+Ep: 273 | Ep_r: 26.69 | t_so_far: {6674} | epsilon: 0.69 max: 33.580562916688
+Ep: 274 | Ep_r: 30.94 | t_so_far: {6724} | epsilon: 0.692 max: 33.580562916688
+Ep: 275 | Ep_r: 31.79 | t_so_far: {6766} | epsilon: 0.694 max: 33.580562916688
+Ep: 276 | Ep_r: 30.75 | t_so_far: {6798} | epsilon: 0.696 max: 33.580562916688
+Ep: 277 | Ep_r: 33.76 | t_so_far: {6847} | epsilon: 0.698 max: 33.76432555963976
+Ep: 278 | Ep_r: 28.95 | t_so_far: {6858} | epsilon: 0.699 max: 33.76432555963976
+Ep: 279 | Ep_r: 25.21 | t_so_far: {6869} | epsilon: 0.699 max: 33.76432555963976
+Ep: 280 | Ep_r: 20.77 | t_so_far: {6873} | epsilon: 0.7 max: 33.76432555963976
+Ep: 281 | Ep_r: 25.63 | t_so_far: {6921} | epsilon: 0.702 max: 33.76432555963976
+Ep: 282 | Ep_r: 21.39 | t_so_far: {6927} | epsilon: 0.702 max: 33.76432555963976
+Ep: 283 | Ep_r: 18.55 | t_so_far: {6936} | epsilon: 0.703 max: 33.76432555963976
+Ep: 284 | Ep_r: 21.83 | t_so_far: {6973} | epsilon: 0.704 max: 33.76432555963976
+Ep: 285 | Ep_r: 18.1 | t_so_far: {6977} | epsilon: 0.705 max: 33.76432555963976
+Ep: 286 | Ep_r: 18.58 | t_so_far: {7000} | epsilon: 0.706 max: 33.76432555963976
+Ep: 287 | Ep_r: 23.99 | t_so_far: {7050} | epsilon: 0.708 max: 33.76432555963976
+Ep: 288 | Ep_r: 19.64 | t_so_far: {7053} | epsilon: 0.708 max: 33.76432555963976
+Ep: 289 | Ep_r: 20.31 | t_so_far: {7078} | epsilon: 0.709 max: 33.76432555963976
+Ep: 290 | Ep_r: 19.89 | t_so_far: {7098} | epsilon: 0.71 max: 33.76432555963976
+Ep: 291 | Ep_r: 25.11 | t_so_far: {7148} | epsilon: 0.712 max: 33.76432555963976
+Ep: 292 | Ep_r: 28.69 | t_so_far: {7198} | epsilon: 0.715 max: 33.76432555963976
+Ep: 293 | Ep_r: 32.53 | t_so_far: {7248} | epsilon: 0.717 max: 33.76432555963976
+Ep: 294 | Ep_r: 35.15 | t_so_far: {7298} | epsilon: 0.719 max: 35.154609762260044
+Ep: 295 | Ep_r: 33.18 | t_so_far: {7325} | epsilon: 0.72 max: 35.154609762260044
+Ep: 296 | Ep_r: 31.92 | t_so_far: {7354} | epsilon: 0.722 max: 35.154609762260044
+Ep: 297 | Ep_r: 34.81 | t_so_far: {7404} | epsilon: 0.724 max: 35.154609762260044
+Ep: 298 | Ep_r: 31.54 | t_so_far: {7425} | epsilon: 0.725 max: 35.154609762260044
+Ep: 299 | Ep_r: 25.69 | t_so_far: {7428} | epsilon: 0.725 max: 35.154609762260044
+Ep: 300 | Ep_r: 29.82 | t_so_far: {7478} | epsilon: 0.727 max: 35.154609762260044
+Ep: 301 | Ep_r: 25.92 | t_so_far: {7490} | epsilon: 0.728 max: 35.154609762260044
+Ep: 302 | Ep_r: 30.04 | t_so_far: {7540} | epsilon: 0.73 max: 35.154609762260044
+Ep: 303 | Ep_r: 32.98 | t_so_far: {7589} | epsilon: 0.732 max: 35.154609762260044
+Ep: 304 | Ep_r: 35.67 | t_so_far: {7639} | epsilon: 0.734 max: 35.6696251855604
+Ep: 305 | Ep_r: 30.62 | t_so_far: {7651} | epsilon: 0.735 max: 35.6696251855604
+Ep: 306 | Ep_r: 30.56 | t_so_far: {7684} | epsilon: 0.736 max: 35.6696251855604
+Ep: 307 | Ep_r: 33.33 | t_so_far: {7731} | epsilon: 0.738 max: 35.6696251855604
+Ep: 308 | Ep_r: 32.9 | t_so_far: {7765} | epsilon: 0.739 max: 35.6696251855604
+Ep: 309 | Ep_r: 35.6 | t_so_far: {7815} | epsilon: 0.741 max: 35.6696251855604
+Ep: 310 | Ep_r: 37.82 | t_so_far: {7865} | epsilon: 0.744 max: 37.82067315797688
+Ep: 311 | Ep_r: 30.91 | t_so_far: {7869} | epsilon: 0.744 max: 37.82067315797688
+Ep: 312 | Ep_r: 27.85 | t_so_far: {7887} | epsilon: 0.744 max: 37.82067315797688
+Ep: 313 | Ep_r: 22.88 | t_so_far: {7891} | epsilon: 0.745 max: 37.82067315797688
+Ep: 314 | Ep_r: 27.66 | t_so_far: {7941} | epsilon: 0.747 max: 37.82067315797688
+Ep: 315 | Ep_r: 27.31 | t_so_far: {7969} | epsilon: 0.748 max: 37.82067315797688
+Ep: 316 | Ep_r: 22.49 | t_so_far: {7973} | epsilon: 0.748 max: 37.82067315797688
+Ep: 317 | Ep_r: 27.22 | t_so_far: {8023} | epsilon: 0.75 max: 37.82067315797688
+Ep: 318 | Ep_r: 24.62 | t_so_far: {8039} | epsilon: 0.751 max: 37.82067315797688
+Ep: 319 | Ep_r: 22.31 | t_so_far: {8054} | epsilon: 0.751 max: 37.82067315797688
+Ep: 320 | Ep_r: 21.6 | t_so_far: {8075} | epsilon: 0.752 max: 37.82067315797688
+Ep: 321 | Ep_r: 25.98 | t_so_far: {8122} | epsilon: 0.754 max: 37.82067315797688
+Ep: 322 | Ep_r: 29.89 | t_so_far: {8172} | epsilon: 0.756 max: 37.82067315797688
+Ep: 323 | Ep_r: 29.96 | t_so_far: {8205} | epsilon: 0.757 max: 37.82067315797688
+Ep: 324 | Ep_r: 33.33 | t_so_far: {8255} | epsilon: 0.759 max: 37.82067315797688
+Ep: 325 | Ep_r: 31.87 | t_so_far: {8283} | epsilon: 0.76 max: 37.82067315797688
+Ep: 326 | Ep_r: 32.57 | t_so_far: {8322} | epsilon: 0.762 max: 37.82067315797688
+Ep: 327 | Ep_r: 35.34 | t_so_far: {8372} | epsilon: 0.763 max: 37.82067315797688
+Ep: 328 | Ep_r: 34.96 | t_so_far: {8410} | epsilon: 0.765 max: 37.82067315797688
+Ep: 329 | Ep_r: 33.36 | t_so_far: {8441} | epsilon: 0.766 max: 37.82067315797688
+Ep: 330 | Ep_r: 36.04 | t_so_far: {8491} | epsilon: 0.768 max: 37.82067315797688
+Ep: 331 | Ep_r: 31.45 | t_so_far: {8506} | epsilon: 0.768 max: 37.82067315797688
+Ep: 332 | Ep_r: 33.15 | t_so_far: {8549} | epsilon: 0.77 max: 37.82067315797688
+Ep: 333 | Ep_r: 34.14 | t_so_far: {8593} | epsilon: 0.772 max: 37.82067315797688
+Ep: 334 | Ep_r: 27.77 | t_so_far: {8596} | epsilon: 0.772 max: 37.82067315797688
+Ep: 335 | Ep_r: 31.34 | t_so_far: {8646} | epsilon: 0.774 max: 37.82067315797688
+Ep: 336 | Ep_r: 34.37 | t_so_far: {8696} | epsilon: 0.775 max: 37.82067315797688
+Ep: 337 | Ep_r: 36.59 | t_so_far: {8746} | epsilon: 0.777 max: 37.82067315797688
+Ep: 338 | Ep_r: 32.35 | t_so_far: {8763} | epsilon: 0.778 max: 37.82067315797688
+Ep: 339 | Ep_r: 31.24 | t_so_far: {8791} | epsilon: 0.779 max: 37.82067315797688
+Ep: 340 | Ep_r: 34.4 | t_so_far: {8841} | epsilon: 0.78 max: 37.82067315797688
+Ep: 341 | Ep_r: 37.0 | t_so_far: {8891} | epsilon: 0.782 max: 37.82067315797688
+Ep: 342 | Ep_r: 30.04 | t_so_far: {8894} | epsilon: 0.782 max: 37.82067315797688
+Ep: 343 | Ep_r: 27.86 | t_so_far: {8915} | epsilon: 0.783 max: 37.82067315797688
+Ep: 344 | Ep_r: 27.17 | t_so_far: {8942} | epsilon: 0.784 max: 37.82067315797688
+Ep: 345 | Ep_r: 26.18 | t_so_far: {8966} | epsilon: 0.785 max: 37.82067315797688
+Ep: 346 | Ep_r: 30.5 | t_so_far: {9016} | epsilon: 0.787 max: 37.82067315797688
+Ep: 347 | Ep_r: 33.57 | t_so_far: {9066} | epsilon: 0.788 max: 37.82067315797688
+Ep: 348 | Ep_r: 35.88 | t_so_far: {9115} | epsilon: 0.79 max: 37.82067315797688
+Ep: 349 | Ep_r: 31.6 | t_so_far: {9132} | epsilon: 0.79 max: 37.82067315797688
+Ep: 350 | Ep_r: 34.26 | t_so_far: {9182} | epsilon: 0.792 max: 37.82067315797688
+Ep: 351 | Ep_r: 31.82 | t_so_far: {9207} | epsilon: 0.793 max: 37.82067315797688
+Ep: 352 | Ep_r: 28.04 | t_so_far: {9221} | epsilon: 0.793 max: 37.82067315797688
+Ep: 353 | Ep_r: 29.18 | t_so_far: {9258} | epsilon: 0.795 max: 37.82067315797688
+Ep: 354 | Ep_r: 25.1 | t_so_far: {9268} | epsilon: 0.795 max: 37.82067315797688
+Ep: 355 | Ep_r: 22.1 | t_so_far: {9280} | epsilon: 0.795 max: 37.82067315797688
+Ep: 356 | Ep_r: 23.26 | t_so_far: {9311} | epsilon: 0.796 max: 37.82067315797688
+Ep: 357 | Ep_r: 25.11 | t_so_far: {9349} | epsilon: 0.798 max: 37.82067315797688
+Ep: 358 | Ep_r: 20.87 | t_so_far: {9354} | epsilon: 0.798 max: 37.82067315797688
+Ep: 359 | Ep_r: 25.75 | t_so_far: {9404} | epsilon: 0.799 max: 37.82067315797688
+Ep: 360 | Ep_r: 29.74 | t_so_far: {9454} | epsilon: 0.801 max: 37.82067315797688
+Ep: 361 | Ep_r: 28.3 | t_so_far: {9479} | epsilon: 0.802 max: 37.82067315797688
+Ep: 362 | Ep_r: 27.84 | t_so_far: {9508} | epsilon: 0.803 max: 37.82067315797688
+Ep: 363 | Ep_r: 29.07 | t_so_far: {9545} | epsilon: 0.804 max: 37.82067315797688
+Ep: 364 | Ep_r: 27.07 | t_so_far: {9568} | epsilon: 0.804 max: 37.82067315797688
+Ep: 365 | Ep_r: 22.11 | t_so_far: {9571} | epsilon: 0.805 max: 37.82067315797688
+Ep: 366 | Ep_r: 20.72 | t_so_far: {9588} | epsilon: 0.805 max: 37.82067315797688
+Ep: 367 | Ep_r: 25.66 | t_so_far: {9638} | epsilon: 0.807 max: 37.82067315797688
+Ep: 368 | Ep_r: 29.26 | t_so_far: {9688} | epsilon: 0.808 max: 37.82067315797688
+Ep: 369 | Ep_r: 30.83 | t_so_far: {9730} | epsilon: 0.809 max: 37.82067315797688
+Ep: 370 | Ep_r: 30.7 | t_so_far: {9763} | epsilon: 0.81 max: 37.82067315797688
+Ep: 371 | Ep_r: 33.96 | t_so_far: {9813} | epsilon: 0.812 max: 37.82067315797688
+Ep: 372 | Ep_r: 32.04 | t_so_far: {9841} | epsilon: 0.813 max: 37.82067315797688
+Ep: 373 | Ep_r: 26.98 | t_so_far: {9850} | epsilon: 0.813 max: 37.82067315797688
+Ep: 374 | Ep_r: 26.22 | t_so_far: {9876} | epsilon: 0.814 max: 37.82067315797688
+Ep: 375 | Ep_r: 21.79 | t_so_far: {9881} | epsilon: 0.814 max: 37.82067315797688
+Ep: 376 | Ep_r: 21.81 | t_so_far: {9905} | epsilon: 0.815 max: 37.82067315797688
+Ep: 377 | Ep_r: 22.56 | t_so_far: {9934} | epsilon: 0.816 max: 37.82067315797688
+Ep: 378 | Ep_r: 22.42 | t_so_far: {9958} | epsilon: 0.816 max: 37.82067315797688
+Ep: 379 | Ep_r: 27.48 | t_so_far: {10008} | epsilon: 0.818 max: 37.82067315797688
+Ep: 380 | Ep_r: 29.87 | t_so_far: {10058} | epsilon: 0.819 max: 37.82067315797688
+Ep: 381 | Ep_r: 28.69 | t_so_far: {10083} | epsilon: 0.82 max: 37.82067315797688
+Ep: 382 | Ep_r: 29.15 | t_so_far: {10116} | epsilon: 0.821 max: 37.82067315797688
+Ep: 383 | Ep_r: 32.83 | t_so_far: {10166} | epsilon: 0.822 max: 37.82067315797688
+Ep: 384 | Ep_r: 32.93 | t_so_far: {10202} | epsilon: 0.823 max: 37.82067315797688
+Ep: 385 | Ep_r: 31.22 | t_so_far: {10229} | epsilon: 0.824 max: 37.82067315797688
+Ep: 386 | Ep_r: 30.79 | t_so_far: {10261} | epsilon: 0.825 max: 37.82067315797688
+Ep: 387 | Ep_r: 30.81 | t_so_far: {10294} | epsilon: 0.826 max: 37.82067315797688
+Ep: 388 | Ep_r: 33.91 | t_so_far: {10344} | epsilon: 0.827 max: 37.82067315797688
+Ep: 389 | Ep_r: 31.42 | t_so_far: {10368} | epsilon: 0.828 max: 37.82067315797688
+Ep: 390 | Ep_r: 25.59 | t_so_far: {10371} | epsilon: 0.828 max: 37.82067315797688
+Ep: 391 | Ep_r: 24.97 | t_so_far: {10395} | epsilon: 0.829 max: 37.82067315797688
+Ep: 392 | Ep_r: 22.04 | t_so_far: {10406} | epsilon: 0.829 max: 37.82067315797688
+Ep: 393 | Ep_r: 26.89 | t_so_far: {10456} | epsilon: 0.83 max: 37.82067315797688
+Ep: 394 | Ep_r: 27.38 | t_so_far: {10488} | epsilon: 0.831 max: 37.82067315797688
+Ep: 395 | Ep_r: 31.18 | t_so_far: {10537} | epsilon: 0.832 max: 37.82067315797688
+Ep: 396 | Ep_r: 26.57 | t_so_far: {10546} | epsilon: 0.833 max: 37.82067315797688
+Ep: 397 | Ep_r: 30.46 | t_so_far: {10596} | epsilon: 0.834 max: 37.82067315797688
+Ep: 398 | Ep_r: 28.89 | t_so_far: {10621} | epsilon: 0.835 max: 37.82067315797688
+Ep: 399 | Ep_r: 25.03 | t_so_far: {10632} | epsilon: 0.835 max: 37.82067315797688
+Ep: 400 | Ep_r: 25.33 | t_so_far: {10661} | epsilon: 0.836 max: 37.82067315797688
+Ep: 401 | Ep_r: 28.94 | t_so_far: {10707} | epsilon: 0.837 max: 37.82067315797688
+Ep: 402 | Ep_r: 30.54 | t_so_far: {10748} | epsilon: 0.838 max: 37.82067315797688
+Ep: 403 | Ep_r: 25.08 | t_so_far: {10752} | epsilon: 0.838 max: 37.82067315797688
+Ep: 404 | Ep_r: 21.4 | t_so_far: {10760} | epsilon: 0.838 max: 37.82067315797688
+Ep: 405 | Ep_r: 26.11 | t_so_far: {10810} | epsilon: 0.84 max: 37.82067315797688
+Ep: 406 | Ep_r: 23.73 | t_so_far: {10825} | epsilon: 0.84 max: 37.82067315797688
+Ep: 407 | Ep_r: 28.48 | t_so_far: {10875} | epsilon: 0.841 max: 37.82067315797688
+Ep: 408 | Ep_r: 23.44 | t_so_far: {10879} | epsilon: 0.841 max: 37.82067315797688
+Ep: 409 | Ep_r: 27.77 | t_so_far: {10929} | epsilon: 0.843 max: 37.82067315797688
+Ep: 410 | Ep_r: 31.59 | t_so_far: {10979} | epsilon: 0.844 max: 37.82067315797688
+Ep: 411 | Ep_r: 34.28 | t_so_far: {11029} | epsilon: 0.845 max: 37.82067315797688
+Ep: 412 | Ep_r: 29.23 | t_so_far: {11039} | epsilon: 0.845 max: 37.82067315797688
+Ep: 413 | Ep_r: 27.3 | t_so_far: {11061} | epsilon: 0.846 max: 37.82067315797688
+Ep: 414 | Ep_r: 25.1 | t_so_far: {11078} | epsilon: 0.846 max: 37.82067315797688
+Ep: 415 | Ep_r: 27.94 | t_so_far: {11121} | epsilon: 0.847 max: 37.82067315797688
+Ep: 416 | Ep_r: 31.57 | t_so_far: {11171} | epsilon: 0.848 max: 37.82067315797688
+Ep: 417 | Ep_r: 33.84 | t_so_far: {11221} | epsilon: 0.85 max: 37.82067315797688
+Ep: 418 | Ep_r: 34.5 | t_so_far: {11262} | epsilon: 0.851 max: 37.82067315797688
+Ep: 419 | Ep_r: 36.42 | t_so_far: {11312} | epsilon: 0.852 max: 37.82067315797688
+Ep: 420 | Ep_r: 37.85 | t_so_far: {11362} | epsilon: 0.853 max: 37.85102334208048
+Ep: 421 | Ep_r: 39.41 | t_so_far: {11412} | epsilon: 0.854 max: 39.41415200699772
+Ep: 422 | Ep_r: 40.58 | t_so_far: {11462} | epsilon: 0.855 max: 40.57798827226484
+Ep: 423 | Ep_r: 41.62 | t_so_far: {11512} | epsilon: 0.856 max: 41.615723951145206
+Ep: 424 | Ep_r: 38.15 | t_so_far: {11541} | epsilon: 0.857 max: 41.615723951145206
+Ep: 425 | Ep_r: 39.22 | t_so_far: {11591} | epsilon: 0.858 max: 41.615723951145206
+Ep: 426 | Ep_r: 40.52 | t_so_far: {11641} | epsilon: 0.859 max: 41.615723951145206
+Ep: 427 | Ep_r: 41.97 | t_so_far: {11691} | epsilon: 0.86 max: 41.97412053038907
+Ep: 428 | Ep_r: 42.59 | t_so_far: {11741} | epsilon: 0.862 max: 42.59262975764459
+Ep: 429 | Ep_r: 34.51 | t_so_far: {11744} | epsilon: 0.862 max: 42.59262975764459
+Ep: 430 | Ep_r: 36.88 | t_so_far: {11794} | epsilon: 0.863 max: 42.59262975764459
+Ep: 431 | Ep_r: 37.74 | t_so_far: {11839} | epsilon: 0.864 max: 42.59262975764459
+Ep: 432 | Ep_r: 39.4 | t_so_far: {11889} | epsilon: 0.865 max: 42.59262975764459
+Ep: 433 | Ep_r: 39.71 | t_so_far: {11939} | epsilon: 0.866 max: 42.59262975764459
+Ep: 434 | Ep_r: 34.88 | t_so_far: {11959} | epsilon: 0.866 max: 42.59262975764459
+Ep: 435 | Ep_r: 35.75 | t_so_far: {12006} | epsilon: 0.867 max: 42.59262975764459
+Ep: 436 | Ep_r: 37.73 | t_so_far: {12056} | epsilon: 0.868 max: 42.59262975764459
+Ep: 437 | Ep_r: 35.94 | t_so_far: {12091} | epsilon: 0.869 max: 42.59262975764459
+Ep: 438 | Ep_r: 37.21 | t_so_far: {12141} | epsilon: 0.87 max: 42.59262975764459
+Ep: 439 | Ep_r: 38.82 | t_so_far: {12191} | epsilon: 0.871 max: 42.59262975764459
+Ep: 440 | Ep_r: 39.01 | t_so_far: {12236} | epsilon: 0.872 max: 42.59262975764459
+Ep: 441 | Ep_r: 38.31 | t_so_far: {12277} | epsilon: 0.873 max: 42.59262975764459
+Ep: 442 | Ep_r: 38.08 | t_so_far: {12320} | epsilon: 0.874 max: 42.59262975764459
+Ep: 443 | Ep_r: 39.09 | t_so_far: {12370} | epsilon: 0.875 max: 42.59262975764459
+Ep: 444 | Ep_r: 40.01 | t_so_far: {12420} | epsilon: 0.876 max: 42.59262975764459
+Ep: 445 | Ep_r: 40.56 | t_so_far: {12470} | epsilon: 0.877 max: 42.59262975764459
+Ep: 446 | Ep_r: 36.29 | t_so_far: {12490} | epsilon: 0.877 max: 42.59262975764459
+Ep: 447 | Ep_r: 29.65 | t_so_far: {12494} | epsilon: 0.877 max: 42.59262975764459
+Ep: 448 | Ep_r: 32.59 | t_so_far: {12544} | epsilon: 0.878 max: 42.59262975764459
+Ep: 449 | Ep_r: 31.38 | t_so_far: {12575} | epsilon: 0.879 max: 42.59262975764459
+Ep: 450 | Ep_r: 34.52 | t_so_far: {12625} | epsilon: 0.88 max: 42.59262975764459
+Ep: 451 | Ep_r: 36.64 | t_so_far: {12675} | epsilon: 0.881 max: 42.59262975764459
+Ep: 452 | Ep_r: 34.54 | t_so_far: {12703} | epsilon: 0.881 max: 42.59262975764459
+Ep: 453 | Ep_r: 33.07 | t_so_far: {12734} | epsilon: 0.882 max: 42.59262975764459
+Ep: 454 | Ep_r: 32.47 | t_so_far: {12769} | epsilon: 0.882 max: 42.59262975764459
+Ep: 455 | Ep_r: 26.41 | t_so_far: {12772} | epsilon: 0.882 max: 42.59262975764459
+Ep: 456 | Ep_r: 30.03 | t_so_far: {12822} | epsilon: 0.883 max: 42.59262975764459
+Ep: 457 | Ep_r: 32.81 | t_so_far: {12872} | epsilon: 0.884 max: 42.59262975764459
+Ep: 458 | Ep_r: 34.83 | t_so_far: {12922} | epsilon: 0.885 max: 42.59262975764459
+Ep: 459 | Ep_r: 35.64 | t_so_far: {12965} | epsilon: 0.886 max: 42.59262975764459
+Ep: 460 | Ep_r: 37.2 | t_so_far: {13015} | epsilon: 0.887 max: 42.59262975764459
+Ep: 461 | Ep_r: 33.25 | t_so_far: {13034} | epsilon: 0.887 max: 42.59262975764459
+Ep: 462 | Ep_r: 33.52 | t_so_far: {13075} | epsilon: 0.888 max: 42.59262975764459
+Ep: 463 | Ep_r: 36.07 | t_so_far: {13125} | epsilon: 0.889 max: 42.59262975764459
+Ep: 464 | Ep_r: 37.88 | t_so_far: {13174} | epsilon: 0.89 max: 42.59262975764459
+Ep: 465 | Ep_r: 30.77 | t_so_far: {13177} | epsilon: 0.89 max: 42.59262975764459
+Ep: 466 | Ep_r: 28.07 | t_so_far: {13196} | epsilon: 0.89 max: 42.59262975764459
+Ep: 467 | Ep_r: 31.82 | t_so_far: {13246} | epsilon: 0.891 max: 42.59262975764459
+Ep: 468 | Ep_r: 31.11 | t_so_far: {13279} | epsilon: 0.892 max: 42.59262975764459
+Ep: 469 | Ep_r: 26.9 | t_so_far: {13291} | epsilon: 0.892 max: 42.59262975764459
+Ep: 470 | Ep_r: 23.92 | t_so_far: {13305} | epsilon: 0.892 max: 42.59262975764459
+Ep: 471 | Ep_r: 23.93 | t_so_far: {13331} | epsilon: 0.892 max: 42.59262975764459
+Ep: 472 | Ep_r: 28.4 | t_so_far: {13381} | epsilon: 0.893 max: 42.59262975764459
+Ep: 473 | Ep_r: 27.52 | t_so_far: {13410} | epsilon: 0.894 max: 42.59262975764459
+Ep: 474 | Ep_r: 31.55 | t_so_far: {13460} | epsilon: 0.895 max: 42.59262975764459
+Ep: 475 | Ep_r: 32.51 | t_so_far: {13499} | epsilon: 0.895 max: 42.59262975764459
+Ep: 476 | Ep_r: 34.73 | t_so_far: {13549} | epsilon: 0.896 max: 42.59262975764459
+Ep: 477 | Ep_r: 34.44 | t_so_far: {13586} | epsilon: 0.897 max: 42.59262975764459
+Ep: 478 | Ep_r: 36.37 | t_so_far: {13636} | epsilon: 0.898 max: 42.59262975764459
+Ep: 479 | Ep_r: 35.96 | t_so_far: {13676} | epsilon: 0.898 max: 42.59262975764459
+Ep: 480 | Ep_r: 37.75 | t_so_far: {13726} | epsilon: 0.899 max: 42.59262975764459
+Ep: 481 | Ep_r: 38.47 | t_so_far: {13771} | epsilon: 0.9 max: 42.59262975764459
+Ep: 482 | Ep_r: 39.51 | t_so_far: {13821} | epsilon: 0.9 max: 42.59262975764459
+Ep: 483 | Ep_r: 33.43 | t_so_far: {13831} | epsilon: 0.901 max: 42.59262975764459
+Ep: 484 | Ep_r: 31.59 | t_so_far: {13859} | epsilon: 0.901 max: 42.59262975764459
+Ep: 485 | Ep_r: 33.26 | t_so_far: {13909} | epsilon: 0.902 max: 42.59262975764459
+Ep: 486 | Ep_r: 34.06 | t_so_far: {13950} | epsilon: 0.903 max: 42.59262975764459
+Ep: 487 | Ep_r: 36.29 | t_so_far: {14000} | epsilon: 0.903 max: 42.59262975764459
+Ep: 488 | Ep_r: 35.32 | t_so_far: {14034} | epsilon: 0.904 max: 42.59262975764459
+Ep: 489 | Ep_r: 37.67 | t_so_far: {14084} | epsilon: 0.905 max: 42.59262975764459
+Ep: 490 | Ep_r: 34.54 | t_so_far: {14108} | epsilon: 0.905 max: 42.59262975764459
+Ep: 491 | Ep_r: 34.38 | t_so_far: {14147} | epsilon: 0.906 max: 42.59262975764459
+Ep: 492 | Ep_r: 28.57 | t_so_far: {14154} | epsilon: 0.906 max: 42.59262975764459
+Ep: 493 | Ep_r: 31.93 | t_so_far: {14204} | epsilon: 0.906 max: 42.59262975764459
+Ep: 494 | Ep_r: 34.69 | t_so_far: {14254} | epsilon: 0.907 max: 42.59262975764459
+Ep: 495 | Ep_r: 36.72 | t_so_far: {14304} | epsilon: 0.908 max: 42.59262975764459
+Ep: 496 | Ep_r: 36.67 | t_so_far: {14345} | epsilon: 0.908 max: 42.59262975764459
+Ep: 497 | Ep_r: 31.33 | t_so_far: {14358} | epsilon: 0.909 max: 42.59262975764459
+Ep: 498 | Ep_r: 34.09 | t_so_far: {14408} | epsilon: 0.909 max: 42.59262975764459
+Ep: 499 | Ep_r: 32.68 | t_so_far: {14438} | epsilon: 0.91 max: 42.59262975764459
+Ep: 500 | Ep_r: 35.53 | t_so_far: {14488} | epsilon: 0.91 max: 42.59262975764459
+Ep: 501 | Ep_r: 28.86 | t_so_far: {14491} | epsilon: 0.911 max: 42.59262975764459
+Ep: 502 | Ep_r: 24.65 | t_so_far: {14500} | epsilon: 0.911 max: 42.59262975764459
+Ep: 503 | Ep_r: 20.57 | t_so_far: {14505} | epsilon: 0.911 max: 42.59262975764459
+Ep: 504 | Ep_r: 25.45 | t_so_far: {14555} | epsilon: 0.911 max: 42.59262975764459
+Ep: 505 | Ep_r: 29.01 | t_so_far: {14605} | epsilon: 0.912 max: 42.59262975764459
+Ep: 506 | Ep_r: 32.17 | t_so_far: {14655} | epsilon: 0.913 max: 42.59262975764459
+Ep: 507 | Ep_r: 27.62 | t_so_far: {14666} | epsilon: 0.913 max: 42.59262975764459
+Ep: 508 | Ep_r: 31.12 | t_so_far: {14716} | epsilon: 0.914 max: 42.59262975764459
+Ep: 509 | Ep_r: 29.01 | t_so_far: {14740} | epsilon: 0.914 max: 42.59262975764459
+Ep: 510 | Ep_r: 32.03 | t_so_far: {14790} | epsilon: 0.915 max: 42.59262975764459
+Ep: 511 | Ep_r: 34.41 | t_so_far: {14840} | epsilon: 0.915 max: 42.59262975764459
+Ep: 512 | Ep_r: 36.57 | t_so_far: {14890} | epsilon: 0.916 max: 42.59262975764459
+Ep: 513 | Ep_r: 37.82 | t_so_far: {14940} | epsilon: 0.917 max: 42.59262975764459
+Ep: 514 | Ep_r: 39.4 | t_so_far: {14990} | epsilon: 0.917 max: 42.59262975764459
+Ep: 515 | Ep_r: 36.45 | t_so_far: {15016} | epsilon: 0.918 max: 42.59262975764459
+Ep: 516 | Ep_r: 38.14 | t_so_far: {15066} | epsilon: 0.918 max: 42.59262975764459
+Ep: 517 | Ep_r: 39.39 | t_so_far: {15116} | epsilon: 0.919 max: 42.59262975764459
+Ep: 518 | Ep_r: 36.58 | t_so_far: {15143} | epsilon: 0.919 max: 42.59262975764459
+Ep: 519 | Ep_r: 38.42 | t_so_far: {15193} | epsilon: 0.92 max: 42.59262975764459
+Ep: 520 | Ep_r: 39.65 | t_so_far: {15243} | epsilon: 0.921 max: 42.59262975764459
+Ep: 521 | Ep_r: 33.09 | t_so_far: {15251} | epsilon: 0.921 max: 42.59262975764459
+Ep: 522 | Ep_r: 29.91 | t_so_far: {15270} | epsilon: 0.921 max: 42.59262975764459
+Ep: 523 | Ep_r: 27.19 | t_so_far: {15288} | epsilon: 0.921 max: 42.59262975764459
+Ep: 524 | Ep_r: 30.57 | t_so_far: {15338} | epsilon: 0.922 max: 42.59262975764459
+Ep: 525 | Ep_r: 31.95 | t_so_far: {15379} | epsilon: 0.922 max: 42.59262975764459
+Ep: 526 | Ep_r: 30.61 | t_so_far: {15409} | epsilon: 0.923 max: 42.59262975764459
+Ep: 527 | Ep_r: 32.91 | t_so_far: {15455} | epsilon: 0.923 max: 42.59262975764459
+Ep: 528 | Ep_r: 35.78 | t_so_far: {15505} | epsilon: 0.924 max: 42.59262975764459
+Ep: 529 | Ep_r: 36.31 | t_so_far: {15545} | epsilon: 0.924 max: 42.59262975764459
+Ep: 530 | Ep_r: 38.53 | t_so_far: {15595} | epsilon: 0.925 max: 42.59262975764459
+Ep: 531 | Ep_r: 39.7 | t_so_far: {15645} | epsilon: 0.925 max: 42.59262975764459
+Ep: 532 | Ep_r: 36.98 | t_so_far: {15675} | epsilon: 0.926 max: 42.59262975764459
+Ep: 533 | Ep_r: 34.4 | t_so_far: {15702} | epsilon: 0.926 max: 42.59262975764459
+Ep: 534 | Ep_r: 34.67 | t_so_far: {15741} | epsilon: 0.927 max: 42.59262975764459
+Ep: 535 | Ep_r: 37.1 | t_so_far: {15791} | epsilon: 0.927 max: 42.59262975764459
+Ep: 536 | Ep_r: 35.49 | t_so_far: {15825} | epsilon: 0.928 max: 42.59262975764459
+Ep: 537 | Ep_r: 37.49 | t_so_far: {15875} | epsilon: 0.928 max: 42.59262975764459
+Ep: 538 | Ep_r: 38.19 | t_so_far: {15922} | epsilon: 0.929 max: 42.59262975764459
+Ep: 539 | Ep_r: 39.44 | t_so_far: {15972} | epsilon: 0.929 max: 42.59262975764459
+Ep: 540 | Ep_r: 40.89 | t_so_far: {16022} | epsilon: 0.93 max: 42.59262975764459
+Ep: 541 | Ep_r: 41.82 | t_so_far: {16072} | epsilon: 0.93 max: 42.59262975764459
+Ep: 542 | Ep_r: 42.46 | t_so_far: {16122} | epsilon: 0.931 max: 42.59262975764459
+Ep: 543 | Ep_r: 42.6 | t_so_far: {16172} | epsilon: 0.931 max: 42.600347039296864
+Ep: 544 | Ep_r: 43.23 | t_so_far: {16222} | epsilon: 0.932 max: 43.22694429810416
+Ep: 545 | Ep_r: 43.27 | t_so_far: {16272} | epsilon: 0.932 max: 43.274888771816656
+Ep: 546 | Ep_r: 39.87 | t_so_far: {16301} | epsilon: 0.933 max: 43.274888771816656
+Ep: 547 | Ep_r: 40.08 | t_so_far: {16345} | epsilon: 0.933 max: 43.274888771816656
+Ep: 548 | Ep_r: 33.72 | t_so_far: {16354} | epsilon: 0.933 max: 43.274888771816656
+Ep: 549 | Ep_r: 35.97 | t_so_far: {16404} | epsilon: 0.934 max: 43.274888771816656
+Ep: 550 | Ep_r: 33.78 | t_so_far: {16431} | epsilon: 0.934 max: 43.274888771816656
+Ep: 551 | Ep_r: 28.86 | t_so_far: {16441} | epsilon: 0.934 max: 43.274888771816656
+Ep: 552 | Ep_r: 32.38 | t_so_far: {16491} | epsilon: 0.935 max: 43.274888771816656
+Ep: 553 | Ep_r: 34.67 | t_so_far: {16541} | epsilon: 0.935 max: 43.274888771816656
+Ep: 554 | Ep_r: 36.08 | t_so_far: {16587} | epsilon: 0.936 max: 43.274888771816656
+Ep: 555 | Ep_r: 37.45 | t_so_far: {16635} | epsilon: 0.936 max: 43.274888771816656
+Ep: 556 | Ep_r: 33.82 | t_so_far: {16657} | epsilon: 0.936 max: 43.274888771816656
+Ep: 557 | Ep_r: 36.29 | t_so_far: {16707} | epsilon: 0.937 max: 43.274888771816656
+Ep: 558 | Ep_r: 37.76 | t_so_far: {16757} | epsilon: 0.937 max: 43.274888771816656
+Ep: 559 | Ep_r: 39.02 | t_so_far: {16807} | epsilon: 0.938 max: 43.274888771816656
+Ep: 560 | Ep_r: 40.24 | t_so_far: {16857} | epsilon: 0.938 max: 43.274888771816656
+Ep: 561 | Ep_r: 41.16 | t_so_far: {16907} | epsilon: 0.939 max: 43.274888771816656
+Ep: 562 | Ep_r: 41.32 | t_so_far: {16957} | epsilon: 0.939 max: 43.274888771816656
+Ep: 563 | Ep_r: 42.01 | t_so_far: {17007} | epsilon: 0.94 max: 43.274888771816656
+Ep: 564 | Ep_r: 38.85 | t_so_far: {17037} | epsilon: 0.94 max: 43.274888771816656
+Ep: 565 | Ep_r: 39.93 | t_so_far: {17086} | epsilon: 0.941 max: 43.274888771816656
+Ep: 566 | Ep_r: 40.81 | t_so_far: {17135} | epsilon: 0.941 max: 43.274888771816656
+Ep: 567 | Ep_r: 41.83 | t_so_far: {17185} | epsilon: 0.941 max: 43.274888771816656
+Ep: 568 | Ep_r: 42.02 | t_so_far: {17235} | epsilon: 0.942 max: 43.274888771816656
+Ep: 569 | Ep_r: 42.33 | t_so_far: {17285} | epsilon: 0.942 max: 43.274888771816656
+Ep: 570 | Ep_r: 43.11 | t_so_far: {17335} | epsilon: 0.943 max: 43.274888771816656
+Ep: 571 | Ep_r: 43.56 | t_so_far: {17385} | epsilon: 0.943 max: 43.56152159024771
+Ep: 572 | Ep_r: 43.61 | t_so_far: {17435} | epsilon: 0.944 max: 43.60921727219817
+Ep: 573 | Ep_r: 43.29 | t_so_far: {17485} | epsilon: 0.944 max: 43.60921727219817
+Ep: 574 | Ep_r: 43.73 | t_so_far: {17535} | epsilon: 0.945 max: 43.729899054206825
+Ep: 575 | Ep_r: 44.21 | t_so_far: {17585} | epsilon: 0.945 max: 44.21058591003212
+Ep: 576 | Ep_r: 44.36 | t_so_far: {17635} | epsilon: 0.945 max: 44.35513539469236
+Ep: 577 | Ep_r: 44.28 | t_so_far: {17685} | epsilon: 0.946 max: 44.35513539469236
+Ep: 578 | Ep_r: 39.75 | t_so_far: {17711} | epsilon: 0.946 max: 44.35513539469236
+Ep: 579 | Ep_r: 35.27 | t_so_far: {17732} | epsilon: 0.946 max: 44.35513539469236
+Ep: 580 | Ep_r: 37.35 | t_so_far: {17782} | epsilon: 0.947 max: 44.35513539469236
+Ep: 581 | Ep_r: 32.8 | t_so_far: {17798} | epsilon: 0.947 max: 44.35513539469236
+Ep: 582 | Ep_r: 34.95 | t_so_far: {17848} | epsilon: 0.947 max: 44.35513539469236
+Ep: 583 | Ep_r: 36.95 | t_so_far: {17898} | epsilon: 0.948 max: 44.35513539469236
+Ep: 584 | Ep_r: 38.03 | t_so_far: {17948} | epsilon: 0.948 max: 44.35513539469236
+Ep: 585 | Ep_r: 39.55 | t_so_far: {17998} | epsilon: 0.949 max: 44.35513539469236
+Ep: 586 | Ep_r: 39.91 | t_so_far: {18048} | epsilon: 0.949 max: 44.35513539469236
+Ep: 587 | Ep_r: 34.42 | t_so_far: {18062} | epsilon: 0.949 max: 44.35513539469236
+Ep: 588 | Ep_r: 33.1 | t_so_far: {18095} | epsilon: 0.949 max: 44.35513539469236
+Ep: 589 | Ep_r: 35.6 | t_so_far: {18145} | epsilon: 0.95 max: 44.35513539469236
+Ep: 590 | Ep_r: 37.28 | t_so_far: {18195} | epsilon: 0.95 max: 44.35513539469236
+Ep: 591 | Ep_r: 39.05 | t_so_far: {18245} | epsilon: 0.95 max: 44.35513539469236
+Ep: 592 | Ep_r: 40.72 | t_so_far: {18295} | epsilon: 0.951 max: 44.35513539469236
+Ep: 593 | Ep_r: 38.09 | t_so_far: {18327} | epsilon: 0.951 max: 44.35513539469236
+Ep: 594 | Ep_r: 35.55 | t_so_far: {18355} | epsilon: 0.951 max: 44.35513539469236
+Ep: 595 | Ep_r: 37.32 | t_so_far: {18405} | epsilon: 0.952 max: 44.35513539469236
+Ep: 596 | Ep_r: 38.67 | t_so_far: {18455} | epsilon: 0.952 max: 44.35513539469236
+Ep: 597 | Ep_r: 39.45 | t_so_far: {18505} | epsilon: 0.952 max: 44.35513539469236
+Ep: 598 | Ep_r: 37.04 | t_so_far: {18535} | epsilon: 0.953 max: 44.35513539469236
+Ep: 599 | Ep_r: 39.02 | t_so_far: {18585} | epsilon: 0.953 max: 44.35513539469236
+Ep: 600 | Ep_r: 39.64 | t_so_far: {18635} | epsilon: 0.953 max: 44.35513539469236
+Ep: 601 | Ep_r: 40.64 | t_so_far: {18685} | epsilon: 0.954 max: 44.35513539469236
+Ep: 602 | Ep_r: 41.5 | t_so_far: {18735} | epsilon: 0.954 max: 44.35513539469236
+Ep: 603 | Ep_r: 33.97 | t_so_far: {18740} | epsilon: 0.954 max: 44.35513539469236
+Ep: 604 | Ep_r: 35.58 | t_so_far: {18790} | epsilon: 0.955 max: 44.35513539469236
+Ep: 605 | Ep_r: 36.74 | t_so_far: {18836} | epsilon: 0.955 max: 44.35513539469236
+Ep: 606 | Ep_r: 32.46 | t_so_far: {18855} | epsilon: 0.955 max: 44.35513539469236
+Ep: 607 | Ep_r: 27.31 | t_so_far: {18863} | epsilon: 0.955 max: 44.35513539469236
+Ep: 608 | Ep_r: 30.69 | t_so_far: {18913} | epsilon: 0.955 max: 44.35513539469236
+Ep: 609 | Ep_r: 33.68 | t_so_far: {18963} | epsilon: 0.956 max: 44.35513539469236
+Ep: 610 | Ep_r: 28.99 | t_so_far: {18975} | epsilon: 0.956 max: 44.35513539469236
+Ep: 611 | Ep_r: 32.39 | t_so_far: {19025} | epsilon: 0.956 max: 44.35513539469236
+Ep: 612 | Ep_r: 34.27 | t_so_far: {19075} | epsilon: 0.957 max: 44.35513539469236
+Ep: 613 | Ep_r: 36.73 | t_so_far: {19125} | epsilon: 0.957 max: 44.35513539469236
+Ep: 614 | Ep_r: 37.81 | t_so_far: {19175} | epsilon: 0.957 max: 44.35513539469236
+Ep: 615 | Ep_r: 39.16 | t_so_far: {19225} | epsilon: 0.958 max: 44.35513539469236
+Ep: 616 | Ep_r: 40.47 | t_so_far: {19275} | epsilon: 0.958 max: 44.35513539469236
+Ep: 617 | Ep_r: 41.56 | t_so_far: {19325} | epsilon: 0.958 max: 44.35513539469236
+Ep: 618 | Ep_r: 42.39 | t_so_far: {19375} | epsilon: 0.958 max: 44.35513539469236
+Ep: 619 | Ep_r: 40.38 | t_so_far: {19412} | epsilon: 0.959 max: 44.35513539469236
+Ep: 620 | Ep_r: 41.22 | t_so_far: {19462} | epsilon: 0.959 max: 44.35513539469236
+Ep: 621 | Ep_r: 41.54 | t_so_far: {19512} | epsilon: 0.959 max: 44.35513539469236
+Ep: 622 | Ep_r: 41.36 | t_so_far: {19556} | epsilon: 0.96 max: 44.35513539469236
+Ep: 623 | Ep_r: 41.68 | t_so_far: {19606} | epsilon: 0.96 max: 44.35513539469236
+Ep: 624 | Ep_r: 42.64 | t_so_far: {19656} | epsilon: 0.96 max: 44.35513539469236
+Ep: 625 | Ep_r: 43.08 | t_so_far: {19706} | epsilon: 0.961 max: 44.35513539469236
+Ep: 626 | Ep_r: 43.5 | t_so_far: {19756} | epsilon: 0.961 max: 44.35513539469236
+Ep: 627 | Ep_r: 43.15 | t_so_far: {19806} | epsilon: 0.961 max: 44.35513539469236
+Ep: 628 | Ep_r: 43.8 | t_so_far: {19856} | epsilon: 0.961 max: 44.35513539469236
+Ep: 629 | Ep_r: 44.43 | t_so_far: {19906} | epsilon: 0.962 max: 44.431246121114924
+Ep: 630 | Ep_r: 45.1 | t_so_far: {19956} | epsilon: 0.962 max: 45.10499689689194
+Ep: 631 | Ep_r: 45.36 | t_so_far: {20006} | epsilon: 0.962 max: 45.357330850846886
+Ep: 632 | Ep_r: 44.99 | t_so_far: {20056} | epsilon: 0.963 max: 45.357330850846886
+Ep: 633 | Ep_r: 45.12 | t_so_far: {20106} | epsilon: 0.963 max: 45.357330850846886
+Ep: 634 | Ep_r: 44.15 | t_so_far: {20149} | epsilon: 0.963 max: 45.357330850846886
+Ep: 635 | Ep_r: 37.19 | t_so_far: {20161} | epsilon: 0.963 max: 45.357330850846886
+Ep: 636 | Ep_r: 38.86 | t_so_far: {20211} | epsilon: 0.964 max: 45.357330850846886
+Ep: 637 | Ep_r: 40.41 | t_so_far: {20261} | epsilon: 0.964 max: 45.357330850846886
+Ep: 638 | Ep_r: 40.78 | t_so_far: {20311} | epsilon: 0.964 max: 45.357330850846886
+Ep: 639 | Ep_r: 39.82 | t_so_far: {20352} | epsilon: 0.964 max: 45.357330850846886
+Ep: 640 | Ep_r: 40.77 | t_so_far: {20402} | epsilon: 0.965 max: 45.357330850846886
+Ep: 641 | Ep_r: 41.81 | t_so_far: {20452} | epsilon: 0.965 max: 45.357330850846886
+Ep: 642 | Ep_r: 41.75 | t_so_far: {20498} | epsilon: 0.965 max: 45.357330850846886
+Ep: 643 | Ep_r: 42.05 | t_so_far: {20548} | epsilon: 0.965 max: 45.357330850846886
+Ep: 644 | Ep_r: 42.64 | t_so_far: {20598} | epsilon: 0.966 max: 45.357330850846886
+Ep: 645 | Ep_r: 43.34 | t_so_far: {20648} | epsilon: 0.966 max: 45.357330850846886
+Ep: 646 | Ep_r: 43.51 | t_so_far: {20698} | epsilon: 0.966 max: 45.357330850846886
+Ep: 647 | Ep_r: 43.67 | t_so_far: {20748} | epsilon: 0.966 max: 45.357330850846886
+Ep: 648 | Ep_r: 44.52 | t_so_far: {20798} | epsilon: 0.967 max: 45.357330850846886
+Ep: 649 | Ep_r: 44.35 | t_so_far: {20848} | epsilon: 0.967 max: 45.357330850846886
+Ep: 650 | Ep_r: 44.47 | t_so_far: {20898} | epsilon: 0.967 max: 45.357330850846886
+Ep: 651 | Ep_r: 44.91 | t_so_far: {20948} | epsilon: 0.968 max: 45.357330850846886
+Ep: 652 | Ep_r: 44.98 | t_so_far: {20998} | epsilon: 0.968 max: 45.357330850846886
+Ep: 653 | Ep_r: 45.43 | t_so_far: {21048} | epsilon: 0.968 max: 45.42652059830967
+Ep: 654 | Ep_r: 45.71 | t_so_far: {21098} | epsilon: 0.968 max: 45.71454981198107
+Ep: 655 | Ep_r: 45.95 | t_so_far: {21148} | epsilon: 0.968 max: 45.95163984958485
+Ep: 656 | Ep_r: 44.09 | t_so_far: {21187} | epsilon: 0.969 max: 45.95163984958485
+Ep: 657 | Ep_r: 44.29 | t_so_far: {21237} | epsilon: 0.969 max: 45.95163984958485
+Ep: 658 | Ep_r: 35.88 | t_so_far: {21240} | epsilon: 0.969 max: 45.95163984958485
+Ep: 659 | Ep_r: 37.5 | t_so_far: {21290} | epsilon: 0.969 max: 45.95163984958485
+Ep: 660 | Ep_r: 39.12 | t_so_far: {21340} | epsilon: 0.969 max: 45.95163984958485
+Ep: 661 | Ep_r: 40.82 | t_so_far: {21390} | epsilon: 0.97 max: 45.95163984958485
+Ep: 662 | Ep_r: 42.01 | t_so_far: {21440} | epsilon: 0.97 max: 45.95163984958485
+Ep: 663 | Ep_r: 42.05 | t_so_far: {21488} | epsilon: 0.97 max: 45.95163984958485
+Ep: 664 | Ep_r: 42.46 | t_so_far: {21538} | epsilon: 0.97 max: 45.95163984958485
+Ep: 665 | Ep_r: 43.54 | t_so_far: {21588} | epsilon: 0.971 max: 45.95163984958485
+Ep: 666 | Ep_r: 44.54 | t_so_far: {21638} | epsilon: 0.971 max: 45.95163984958485
+Ep: 667 | Ep_r: 44.84 | t_so_far: {21688} | epsilon: 0.971 max: 45.95163984958485
+Ep: 668 | Ep_r: 39.36 | t_so_far: {21707} | epsilon: 0.971 max: 45.95163984958485
+Ep: 669 | Ep_r: 38.33 | t_so_far: {21744} | epsilon: 0.971 max: 45.95163984958485
+Ep: 670 | Ep_r: 39.99 | t_so_far: {21794} | epsilon: 0.971 max: 45.95163984958485
+Ep: 671 | Ep_r: 41.39 | t_so_far: {21844} | epsilon: 0.972 max: 45.95163984958485
+Ep: 672 | Ep_r: 42.2 | t_so_far: {21894} | epsilon: 0.972 max: 45.95163984958485
+Ep: 673 | Ep_r: 40.32 | t_so_far: {21931} | epsilon: 0.972 max: 45.95163984958485
+Ep: 674 | Ep_r: 35.17 | t_so_far: {21947} | epsilon: 0.972 max: 45.95163984958485
+Ep: 675 | Ep_r: 30.41 | t_so_far: {21960} | epsilon: 0.972 max: 45.95163984958485
+Ep: 676 | Ep_r: 29.94 | t_so_far: {21991} | epsilon: 0.972 max: 45.95163984958485
+Ep: 677 | Ep_r: 33.1 | t_so_far: {22041} | epsilon: 0.973 max: 45.95163984958485
+Ep: 678 | Ep_r: 34.38 | t_so_far: {22083} | epsilon: 0.973 max: 45.95163984958485
+Ep: 679 | Ep_r: 28.95 | t_so_far: {22091} | epsilon: 0.973 max: 45.95163984958485
+Ep: 680 | Ep_r: 32.18 | t_so_far: {22141} | epsilon: 0.973 max: 45.95163984958485
+Ep: 681 | Ep_r: 34.78 | t_so_far: {22191} | epsilon: 0.973 max: 45.95163984958485
+Ep: 682 | Ep_r: 36.94 | t_so_far: {22241} | epsilon: 0.973 max: 45.95163984958485
+Ep: 683 | Ep_r: 33.97 | t_so_far: {22265} | epsilon: 0.973 max: 45.95163984958485
+Ep: 684 | Ep_r: 36.1 | t_so_far: {22315} | epsilon: 0.974 max: 45.95163984958485
+Ep: 685 | Ep_r: 38.45 | t_so_far: {22365} | epsilon: 0.974 max: 45.95163984958485
+Ep: 686 | Ep_r: 37.99 | t_so_far: {22405} | epsilon: 0.974 max: 45.95163984958485
+Ep: 687 | Ep_r: 39.12 | t_so_far: {22453} | epsilon: 0.974 max: 45.95163984958485
+Ep: 688 | Ep_r: 40.78 | t_so_far: {22503} | epsilon: 0.974 max: 45.95163984958485
+Ep: 689 | Ep_r: 42.05 | t_so_far: {22553} | epsilon: 0.975 max: 45.95163984958485
+Ep: 690 | Ep_r: 39.49 | t_so_far: {22584} | epsilon: 0.975 max: 45.95163984958485
+Ep: 691 | Ep_r: 40.89 | t_so_far: {22634} | epsilon: 0.975 max: 45.95163984958485
+Ep: 692 | Ep_r: 41.94 | t_so_far: {22684} | epsilon: 0.975 max: 45.95163984958485
+Ep: 693 | Ep_r: 40.67 | t_so_far: {22722} | epsilon: 0.975 max: 45.95163984958485
+Ep: 694 | Ep_r: 41.67 | t_so_far: {22772} | epsilon: 0.975 max: 45.95163984958485
+Ep: 695 | Ep_r: 41.46 | t_so_far: {22815} | epsilon: 0.976 max: 45.95163984958485
+Ep: 696 | Ep_r: 37.71 | t_so_far: {22842} | epsilon: 0.976 max: 45.95163984958485
+Ep: 697 | Ep_r: 36.68 | t_so_far: {22879} | epsilon: 0.976 max: 45.95163984958485
+Ep: 698 | Ep_r: 38.87 | t_so_far: {22929} | epsilon: 0.976 max: 45.95163984958485
+Ep: 699 | Ep_r: 40.02 | t_so_far: {22977} | epsilon: 0.976 max: 45.95163984958485
+Ep: 700 | Ep_r: 37.53 | t_so_far: {23009} | epsilon: 0.976 max: 45.95163984958485
+Ep: 701 | Ep_r: 39.28 | t_so_far: {23059} | epsilon: 0.977 max: 45.95163984958485
+Ep: 702 | Ep_r: 36.86 | t_so_far: {23091} | epsilon: 0.977 max: 45.95163984958485
+Ep: 703 | Ep_r: 35.05 | t_so_far: {23124} | epsilon: 0.977 max: 45.95163984958485
+Ep: 704 | Ep_r: 37.19 | t_so_far: {23174} | epsilon: 0.977 max: 45.95163984958485
+Ep: 705 | Ep_r: 38.56 | t_so_far: {23224} | epsilon: 0.977 max: 45.95163984958485
+Ep: 706 | Ep_r: 39.32 | t_so_far: {23274} | epsilon: 0.977 max: 45.95163984958485
+Ep: 707 | Ep_r: 39.8 | t_so_far: {23324} | epsilon: 0.977 max: 45.95163984958485
+Ep: 708 | Ep_r: 38.5 | t_so_far: {23360} | epsilon: 0.978 max: 45.95163984958485
+Ep: 709 | Ep_r: 40.34 | t_so_far: {23410} | epsilon: 0.978 max: 45.95163984958485
+Ep: 710 | Ep_r: 40.94 | t_so_far: {23460} | epsilon: 0.978 max: 45.95163984958485
+Ep: 711 | Ep_r: 41.7 | t_so_far: {23510} | epsilon: 0.978 max: 45.95163984958485
+Ep: 712 | Ep_r: 42.3 | t_so_far: {23560} | epsilon: 0.978 max: 45.95163984958485
+Ep: 713 | Ep_r: 42.26 | t_so_far: {23610} | epsilon: 0.978 max: 45.95163984958485
+Ep: 714 | Ep_r: 43.17 | t_so_far: {23660} | epsilon: 0.979 max: 45.95163984958485
+Ep: 715 | Ep_r: 43.86 | t_so_far: {23710} | epsilon: 0.979 max: 45.95163984958485
+Ep: 716 | Ep_r: 44.38 | t_so_far: {23760} | epsilon: 0.979 max: 45.95163984958485
+Ep: 717 | Ep_r: 43.85 | t_so_far: {23806} | epsilon: 0.979 max: 45.95163984958485
+Ep: 718 | Ep_r: 43.77 | t_so_far: {23856} | epsilon: 0.979 max: 45.95163984958485
+Ep: 719 | Ep_r: 43.94 | t_so_far: {23906} | epsilon: 0.979 max: 45.95163984958485
+Ep: 720 | Ep_r: 44.22 | t_so_far: {23956} | epsilon: 0.98 max: 45.95163984958485
+Ep: 721 | Ep_r: 44.48 | t_so_far: {24006} | epsilon: 0.98 max: 45.95163984958485
+Ep: 722 | Ep_r: 44.17 | t_so_far: {24056} | epsilon: 0.98 max: 45.95163984958485
+Ep: 723 | Ep_r: 38.54 | t_so_far: {24076} | epsilon: 0.98 max: 45.95163984958485
+Ep: 724 | Ep_r: 39.64 | t_so_far: {24126} | epsilon: 0.98 max: 45.95163984958485
+Ep: 725 | Ep_r: 40.93 | t_so_far: {24176} | epsilon: 0.98 max: 45.95163984958485
+Ep: 726 | Ep_r: 41.7 | t_so_far: {24226} | epsilon: 0.98 max: 45.95163984958485
+Ep: 727 | Ep_r: 42.71 | t_so_far: {24276} | epsilon: 0.981 max: 45.95163984958485
+Ep: 728 | Ep_r: 43.59 | t_so_far: {24326} | epsilon: 0.981 max: 45.95163984958485
+Ep: 729 | Ep_r: 43.93 | t_so_far: {24376} | epsilon: 0.981 max: 45.95163984958485
+Ep: 730 | Ep_r: 43.97 | t_so_far: {24426} | epsilon: 0.981 max: 45.95163984958485
+Ep: 731 | Ep_r: 43.41 | t_so_far: {24474} | epsilon: 0.981 max: 45.95163984958485
+Ep: 732 | Ep_r: 44.2 | t_so_far: {24524} | epsilon: 0.981 max: 45.95163984958485
+Ep: 733 | Ep_r: 44.75 | t_so_far: {24574} | epsilon: 0.981 max: 45.95163984958485
+Ep: 734 | Ep_r: 44.58 | t_so_far: {24624} | epsilon: 0.982 max: 45.95163984958485
+Ep: 735 | Ep_r: 41.94 | t_so_far: {24659} | epsilon: 0.982 max: 45.95163984958485
+Ep: 736 | Ep_r: 41.93 | t_so_far: {24707} | epsilon: 0.982 max: 45.95163984958485
+Ep: 737 | Ep_r: 41.85 | t_so_far: {24757} | epsilon: 0.982 max: 45.95163984958485
+Ep: 738 | Ep_r: 41.58 | t_so_far: {24807} | epsilon: 0.982 max: 45.95163984958485
+Ep: 739 | Ep_r: 41.02 | t_so_far: {24857} | epsilon: 0.982 max: 45.95163984958485
+Ep: 740 | Ep_r: 39.36 | t_so_far: {24897} | epsilon: 0.982 max: 45.95163984958485
+Ep: 741 | Ep_r: 35.34 | t_so_far: {24919} | epsilon: 0.982 max: 45.95163984958485
+Ep: 742 | Ep_r: 36.4 | t_so_far: {24969} | epsilon: 0.982 max: 45.95163984958485
+Ep: 743 | Ep_r: 36.62 | t_so_far: {25019} | epsilon: 0.983 max: 45.95163984958485
+Ep: 744 | Ep_r: 38.11 | t_so_far: {25069} | epsilon: 0.983 max: 45.95163984958485
+Ep: 745 | Ep_r: 39.12 | t_so_far: {25119} | epsilon: 0.983 max: 45.95163984958485
+Ep: 746 | Ep_r: 39.79 | t_so_far: {25169} | epsilon: 0.983 max: 45.95163984958485
+Ep: 747 | Ep_r: 40.54 | t_so_far: {25219} | epsilon: 0.983 max: 45.95163984958485
+Ep: 748 | Ep_r: 41.03 | t_so_far: {25269} | epsilon: 0.983 max: 45.95163984958485
+Ep: 749 | Ep_r: 41.83 | t_so_far: {25319} | epsilon: 0.983 max: 45.95163984958485
+Ep: 750 | Ep_r: 41.69 | t_so_far: {25369} | epsilon: 0.983 max: 45.95163984958485
+Ep: 751 | Ep_r: 42.61 | t_so_far: {25419} | epsilon: 0.984 max: 45.95163984958485
+Ep: 752 | Ep_r: 43.11 | t_so_far: {25469} | epsilon: 0.984 max: 45.95163984958485
+Ep: 753 | Ep_r: 42.87 | t_so_far: {25519} | epsilon: 0.984 max: 45.95163984958485
+Ep: 754 | Ep_r: 43.06 | t_so_far: {25569} | epsilon: 0.984 max: 45.95163984958485
+Ep: 755 | Ep_r: 42.99 | t_so_far: {25619} | epsilon: 0.984 max: 45.95163984958485
+Ep: 756 | Ep_r: 42.18 | t_so_far: {25666} | epsilon: 0.984 max: 45.95163984958485
+Ep: 757 | Ep_r: 42.07 | t_so_far: {25716} | epsilon: 0.984 max: 45.95163984958485
+Ep: 758 | Ep_r: 42.6 | t_so_far: {25766} | epsilon: 0.984 max: 45.95163984958485
+Ep: 759 | Ep_r: 43.22 | t_so_far: {25816} | epsilon: 0.985 max: 45.95163984958485
+Ep: 760 | Ep_r: 42.7 | t_so_far: {25866} | epsilon: 0.985 max: 45.95163984958485
+Ep: 761 | Ep_r: 42.94 | t_so_far: {25916} | epsilon: 0.985 max: 45.95163984958485
+Ep: 762 | Ep_r: 43.78 | t_so_far: {25966} | epsilon: 0.985 max: 45.95163984958485
+Ep: 763 | Ep_r: 41.9 | t_so_far: {26005} | epsilon: 0.985 max: 45.95163984958485
+Ep: 764 | Ep_r: 42.9 | t_so_far: {26055} | epsilon: 0.985 max: 45.95163984958485
+Ep: 765 | Ep_r: 43.52 | t_so_far: {26105} | epsilon: 0.985 max: 45.95163984958485
+Ep: 766 | Ep_r: 38.93 | t_so_far: {26131} | epsilon: 0.985 max: 45.95163984958485
+Ep: 767 | Ep_r: 36.85 | t_so_far: {26162} | epsilon: 0.985 max: 45.95163984958485
+Ep: 768 | Ep_r: 38.82 | t_so_far: {26212} | epsilon: 0.985 max: 45.95163984958485
+Ep: 769 | Ep_r: 40.13 | t_so_far: {26262} | epsilon: 0.986 max: 45.95163984958485
+Ep: 770 | Ep_r: 41.24 | t_so_far: {26312} | epsilon: 0.986 max: 45.95163984958485
+Ep: 771 | Ep_r: 41.77 | t_so_far: {26362} | epsilon: 0.986 max: 45.95163984958485
+Ep: 772 | Ep_r: 42.32 | t_so_far: {26412} | epsilon: 0.986 max: 45.95163984958485
+Ep: 773 | Ep_r: 42.87 | t_so_far: {26462} | epsilon: 0.986 max: 45.95163984958485
+Ep: 774 | Ep_r: 43.29 | t_so_far: {26512} | epsilon: 0.986 max: 45.95163984958485
+Ep: 775 | Ep_r: 43.24 | t_so_far: {26562} | epsilon: 0.986 max: 45.95163984958485
+Ep: 776 | Ep_r: 44.45 | t_so_far: {26612} | epsilon: 0.986 max: 45.95163984958485
+Ep: 777 | Ep_r: 43.28 | t_so_far: {26654} | epsilon: 0.986 max: 45.95163984958485
+Ep: 778 | Ep_r: 36.79 | t_so_far: {26666} | epsilon: 0.986 max: 45.95163984958485
+Ep: 779 | Ep_r: 39.03 | t_so_far: {26716} | epsilon: 0.986 max: 45.95163984958485
+Ep: 780 | Ep_r: 33.87 | t_so_far: {26731} | epsilon: 0.987 max: 45.95163984958485
+Ep: 781 | Ep_r: 36.49 | t_so_far: {26781} | epsilon: 0.987 max: 45.95163984958485
+Ep: 782 | Ep_r: 38.71 | t_so_far: {26831} | epsilon: 0.987 max: 45.95163984958485
+Ep: 783 | Ep_r: 40.29 | t_so_far: {26881} | epsilon: 0.987 max: 45.95163984958485
+Ep: 784 | Ep_r: 41.9 | t_so_far: {26931} | epsilon: 0.987 max: 45.95163984958485
+Ep: 785 | Ep_r: 42.68 | t_so_far: {26981} | epsilon: 0.987 max: 45.95163984958485
+Ep: 786 | Ep_r: 43.94 | t_so_far: {27031} | epsilon: 0.987 max: 45.95163984958485
+Ep: 787 | Ep_r: 44.52 | t_so_far: {27081} | epsilon: 0.987 max: 45.95163984958485
+Ep: 788 | Ep_r: 45.01 | t_so_far: {27131} | epsilon: 0.987 max: 45.95163984958485
+Ep: 789 | Ep_r: 45.11 | t_so_far: {27181} | epsilon: 0.987 max: 45.95163984958485
+Ep: 790 | Ep_r: 45.61 | t_so_far: {27231} | epsilon: 0.987 max: 45.95163984958485
+Ep: 791 | Ep_r: 45.0 | t_so_far: {27277} | epsilon: 0.988 max: 45.95163984958485
+Ep: 792 | Ep_r: 45.41 | t_so_far: {27327} | epsilon: 0.988 max: 45.95163984958485
+Ep: 793 | Ep_r: 45.47 | t_so_far: {27377} | epsilon: 0.988 max: 45.95163984958485
+Ep: 794 | Ep_r: 45.39 | t_so_far: {27427} | epsilon: 0.988 max: 45.95163984958485
+Ep: 795 | Ep_r: 45.48 | t_so_far: {27477} | epsilon: 0.988 max: 45.95163984958485
+Ep: 796 | Ep_r: 45.9 | t_so_far: {27527} | epsilon: 0.988 max: 45.95163984958485
+Ep: 797 | Ep_r: 45.79 | t_so_far: {27577} | epsilon: 0.988 max: 45.95163984958485
+Ep: 798 | Ep_r: 44.81 | t_so_far: {27624} | epsilon: 0.988 max: 45.95163984958485
+Ep: 799 | Ep_r: 44.26 | t_so_far: {27674} | epsilon: 0.988 max: 45.95163984958485
+Ep: 800 | Ep_r: 44.31 | t_so_far: {27724} | epsilon: 0.988 max: 45.95163984958485
+Ep: 801 | Ep_r: 44.78 | t_so_far: {27774} | epsilon: 0.988 max: 45.95163984958485
+Ep: 802 | Ep_r: 44.63 | t_so_far: {27824} | epsilon: 0.989 max: 45.95163984958485
+Ep: 803 | Ep_r: 44.46 | t_so_far: {27874} | epsilon: 0.989 max: 45.95163984958485
+Ep: 804 | Ep_r: 44.84 | t_so_far: {27924} | epsilon: 0.989 max: 45.95163984958485
+Ep: 805 | Ep_r: 44.87 | t_so_far: {27974} | epsilon: 0.989 max: 45.95163984958485
+Ep: 806 | Ep_r: 44.68 | t_so_far: {28024} | epsilon: 0.989 max: 45.95163984958485
+Ep: 807 | Ep_r: 44.66 | t_so_far: {28074} | epsilon: 0.989 max: 45.95163984958485
+Ep: 808 | Ep_r: 42.2 | t_so_far: {28108} | epsilon: 0.989 max: 45.95163984958485
+Ep: 809 | Ep_r: 34.19 | t_so_far: {28111} | epsilon: 0.989 max: 45.95163984958485
+Ep: 810 | Ep_r: 36.24 | t_so_far: {28161} | epsilon: 0.989 max: 45.95163984958485
+Ep: 811 | Ep_r: 38.35 | t_so_far: {28211} | epsilon: 0.989 max: 45.95163984958485
+Ep: 812 | Ep_r: 33.94 | t_so_far: {28229} | epsilon: 0.989 max: 45.95163984958485
+Ep: 813 | Ep_r: 36.55 | t_so_far: {28279} | epsilon: 0.989 max: 45.95163984958485
+Ep: 814 | Ep_r: 36.3 | t_so_far: {28319} | epsilon: 0.989 max: 45.95163984958485
+Ep: 815 | Ep_r: 34.9 | t_so_far: {28350} | epsilon: 0.989 max: 45.95163984958485
+Ep: 816 | Ep_r: 29.47 | t_so_far: {28359} | epsilon: 0.989 max: 45.95163984958485
+Ep: 817 | Ep_r: 32.06 | t_so_far: {28409} | epsilon: 0.989 max: 45.95163984958485
+Ep: 818 | Ep_r: 34.05 | t_so_far: {28459} | epsilon: 0.99 max: 45.95163984958485
+Ep: 819 | Ep_r: 36.29 | t_so_far: {28509} | epsilon: 0.99 max: 45.95163984958485
+Ep: 820 | Ep_r: 38.1 | t_so_far: {28559} | epsilon: 0.99 max: 45.95163984958485
+Ep: 821 | Ep_r: 38.72 | t_so_far: {28606} | epsilon: 0.99 max: 45.95163984958485
+Ep: 822 | Ep_r: 40.38 | t_so_far: {28656} | epsilon: 0.99 max: 45.95163984958485
+Ep: 823 | Ep_r: 35.52 | t_so_far: {28674} | epsilon: 0.99 max: 45.95163984958485
+Ep: 824 | Ep_r: 36.01 | t_so_far: {28715} | epsilon: 0.99 max: 45.95163984958485
+Ep: 825 | Ep_r: 37.56 | t_so_far: {28765} | epsilon: 0.99 max: 45.95163984958485
+Ep: 826 | Ep_r: 39.07 | t_so_far: {28815} | epsilon: 0.99 max: 45.95163984958485
+Ep: 827 | Ep_r: 40.12 | t_so_far: {28865} | epsilon: 0.99 max: 45.95163984958485
+Ep: 828 | Ep_r: 41.16 | t_so_far: {28915} | epsilon: 0.99 max: 45.95163984958485
+Ep: 829 | Ep_r: 41.8 | t_so_far: {28965} | epsilon: 0.99 max: 45.95163984958485
+Ep: 830 | Ep_r: 42.44 | t_so_far: {29015} | epsilon: 0.99 max: 45.95163984958485
+Ep: 831 | Ep_r: 42.59 | t_so_far: {29065} | epsilon: 0.99 max: 45.95163984958485
+Ep: 832 | Ep_r: 43.24 | t_so_far: {29115} | epsilon: 0.99 max: 45.95163984958485
+Ep: 833 | Ep_r: 43.73 | t_so_far: {29165} | epsilon: 0.991 max: 45.95163984958485
+Ep: 834 | Ep_r: 43.76 | t_so_far: {29215} | epsilon: 0.991 max: 45.95163984958485
+Ep: 835 | Ep_r: 44.07 | t_so_far: {29265} | epsilon: 0.991 max: 45.95163984958485
+Ep: 836 | Ep_r: 43.94 | t_so_far: {29315} | epsilon: 0.991 max: 45.95163984958485
+Ep: 837 | Ep_r: 44.38 | t_so_far: {29365} | epsilon: 0.991 max: 45.95163984958485
+Ep: 838 | Ep_r: 44.43 | t_so_far: {29415} | epsilon: 0.991 max: 45.95163984958485
+Ep: 839 | Ep_r: 44.59 | t_so_far: {29465} | epsilon: 0.991 max: 45.95163984958485
+Ep: 840 | Ep_r: 44.81 | t_so_far: {29515} | epsilon: 0.991 max: 45.95163984958485
+Ep: 841 | Ep_r: 41.39 | t_so_far: {29545} | epsilon: 0.991 max: 45.95163984958485
+Ep: 842 | Ep_r: 42.07 | t_so_far: {29595} | epsilon: 0.991 max: 45.95163984958485
+Ep: 843 | Ep_r: 42.5 | t_so_far: {29645} | epsilon: 0.991 max: 45.95163984958485
+Ep: 844 | Ep_r: 42.82 | t_so_far: {29695} | epsilon: 0.991 max: 45.95163984958485
+Ep: 845 | Ep_r: 42.74 | t_so_far: {29745} | epsilon: 0.991 max: 45.95163984958485
+Ep: 846 | Ep_r: 43.21 | t_so_far: {29795} | epsilon: 0.991 max: 45.95163984958485
+Ep: 847 | Ep_r: 43.44 | t_so_far: {29845} | epsilon: 0.991 max: 45.95163984958485
+Ep: 848 | Ep_r: 43.11 | t_so_far: {29895} | epsilon: 0.991 max: 45.95163984958485
+Ep: 849 | Ep_r: 43.18 | t_so_far: {29945} | epsilon: 0.992 max: 45.95163984958485
+Ep: 850 | Ep_r: 42.5 | t_so_far: {29989} | epsilon: 0.992 max: 45.95163984958485
+Ep: 851 | Ep_r: 37.65 | t_so_far: {30010} | epsilon: 0.992 max: 45.95163984958485
+Ep: 852 | Ep_r: 32.13 | t_so_far: {30022} | epsilon: 0.992 max: 45.95163984958485
+Ep: 853 | Ep_r: 34.2 | t_so_far: {30072} | epsilon: 0.992 max: 45.95163984958485
+Ep: 854 | Ep_r: 36.11 | t_so_far: {30122} | epsilon: 0.992 max: 45.95163984958485
+Ep: 855 | Ep_r: 37.93 | t_so_far: {30172} | epsilon: 0.992 max: 45.95163984958485
+Ep: 856 | Ep_r: 38.59 | t_so_far: {30222} | epsilon: 0.992 max: 45.95163984958485
+Ep: 857 | Ep_r: 39.74 | t_so_far: {30272} | epsilon: 0.992 max: 45.95163984958485
+Ep: 858 | Ep_r: 41.0 | t_so_far: {30322} | epsilon: 0.992 max: 45.95163984958485
+Ep: 859 | Ep_r: 41.2 | t_so_far: {30372} | epsilon: 0.992 max: 45.95163984958485
+Ep: 860 | Ep_r: 41.39 | t_so_far: {30422} | epsilon: 0.992 max: 45.95163984958485
+Ep: 861 | Ep_r: 42.23 | t_so_far: {30472} | epsilon: 0.992 max: 45.95163984958485
+Ep: 862 | Ep_r: 42.4 | t_so_far: {30522} | epsilon: 0.992 max: 45.95163984958485
+Ep: 863 | Ep_r: 42.61 | t_so_far: {30572} | epsilon: 0.992 max: 45.95163984958485
+Ep: 864 | Ep_r: 42.72 | t_so_far: {30622} | epsilon: 0.992 max: 45.95163984958485
+Ep: 865 | Ep_r: 43.07 | t_so_far: {30672} | epsilon: 0.992 max: 45.95163984958485
+Ep: 866 | Ep_r: 43.6 | t_so_far: {30722} | epsilon: 0.992 max: 45.95163984958485
+Ep: 867 | Ep_r: 43.35 | t_so_far: {30772} | epsilon: 0.992 max: 45.95163984958485
+Ep: 868 | Ep_r: 43.11 | t_so_far: {30822} | epsilon: 0.993 max: 45.95163984958485
+Ep: 869 | Ep_r: 42.39 | t_so_far: {30866} | epsilon: 0.993 max: 45.95163984958485
+Ep: 870 | Ep_r: 43.25 | t_so_far: {30916} | epsilon: 0.993 max: 45.95163984958485
+Ep: 871 | Ep_r: 43.72 | t_so_far: {30966} | epsilon: 0.993 max: 45.95163984958485
+Ep: 872 | Ep_r: 43.74 | t_so_far: {31016} | epsilon: 0.993 max: 45.95163984958485
+Ep: 873 | Ep_r: 44.42 | t_so_far: {31066} | epsilon: 0.993 max: 45.95163984958485
+Ep: 874 | Ep_r: 44.69 | t_so_far: {31116} | epsilon: 0.993 max: 45.95163984958485
+Ep: 875 | Ep_r: 43.4 | t_so_far: {31161} | epsilon: 0.993 max: 45.95163984958485
+Ep: 876 | Ep_r: 37.77 | t_so_far: {31178} | epsilon: 0.993 max: 45.95163984958485
+Ep: 877 | Ep_r: 39.29 | t_so_far: {31228} | epsilon: 0.993 max: 45.95163984958485
+Ep: 878 | Ep_r: 40.56 | t_so_far: {31278} | epsilon: 0.993 max: 45.95163984958485
+Ep: 879 | Ep_r: 41.44 | t_so_far: {31328} | epsilon: 0.993 max: 45.95163984958485
+Ep: 880 | Ep_r: 38.38 | t_so_far: {31357} | epsilon: 0.993 max: 45.95163984958485
+Ep: 881 | Ep_r: 39.8 | t_so_far: {31407} | epsilon: 0.993 max: 45.95163984958485
+Ep: 882 | Ep_r: 40.7 | t_so_far: {31457} | epsilon: 0.993 max: 45.95163984958485
+Ep: 883 | Ep_r: 41.38 | t_so_far: {31507} | epsilon: 0.993 max: 45.95163984958485
+Ep: 884 | Ep_r: 41.37 | t_so_far: {31557} | epsilon: 0.993 max: 45.95163984958485
+Ep: 885 | Ep_r: 41.5 | t_so_far: {31607} | epsilon: 0.993 max: 45.95163984958485
+Ep: 886 | Ep_r: 41.97 | t_so_far: {31657} | epsilon: 0.993 max: 45.95163984958485
+Ep: 887 | Ep_r: 42.9 | t_so_far: {31707} | epsilon: 0.993 max: 45.95163984958485
+Ep: 888 | Ep_r: 38.1 | t_so_far: {31727} | epsilon: 0.993 max: 45.95163984958485
+Ep: 889 | Ep_r: 37.83 | t_so_far: {31770} | epsilon: 0.993 max: 45.95163984958485
+Ep: 890 | Ep_r: 37.74 | t_so_far: {31811} | epsilon: 0.993 max: 45.95163984958485
+Ep: 891 | Ep_r: 39.0 | t_so_far: {31861} | epsilon: 0.994 max: 45.95163984958485
+Ep: 892 | Ep_r: 40.73 | t_so_far: {31911} | epsilon: 0.994 max: 45.95163984958485
+Ep: 893 | Ep_r: 41.51 | t_so_far: {31961} | epsilon: 0.994 max: 45.95163984958485
+Ep: 894 | Ep_r: 42.8 | t_so_far: {32011} | epsilon: 0.994 max: 45.95163984958485
+Ep: 895 | Ep_r: 43.06 | t_so_far: {32061} | epsilon: 0.994 max: 45.95163984958485
+Ep: 896 | Ep_r: 40.79 | t_so_far: {32096} | epsilon: 0.994 max: 45.95163984958485
+Ep: 897 | Ep_r: 41.47 | t_so_far: {32146} | epsilon: 0.994 max: 45.95163984958485
+Ep: 898 | Ep_r: 42.7 | t_so_far: {32196} | epsilon: 0.994 max: 45.95163984958485
+Ep: 899 | Ep_r: 42.88 | t_so_far: {32246} | epsilon: 0.994 max: 45.95163984958485
+Ep: 900 | Ep_r: 41.75 | t_so_far: {32287} | epsilon: 0.994 max: 45.95163984958485
+Ep: 901 | Ep_r: 42.74 | t_so_far: {32337} | epsilon: 0.994 max: 45.95163984958485
+Ep: 902 | Ep_r: 43.36 | t_so_far: {32387} | epsilon: 0.994 max: 45.95163984958485
+Ep: 903 | Ep_r: 43.9 | t_so_far: {32437} | epsilon: 0.994 max: 45.95163984958485
+Ep: 904 | Ep_r: 43.82 | t_so_far: {32487} | epsilon: 0.994 max: 45.95163984958485
+Ep: 905 | Ep_r: 43.89 | t_so_far: {32537} | epsilon: 0.994 max: 45.95163984958485
+Ep: 906 | Ep_r: 42.2 | t_so_far: {32580} | epsilon: 0.994 max: 45.95163984958485
+Ep: 907 | Ep_r: 41.71 | t_so_far: {32630} | epsilon: 0.994 max: 45.95163984958485
+Ep: 908 | Ep_r: 40.74 | t_so_far: {32670} | epsilon: 0.994 max: 45.95163984958485
+Ep: 909 | Ep_r: 40.99 | t_so_far: {32714} | epsilon: 0.994 max: 45.95163984958485
+Ep: 910 | Ep_r: 42.14 | t_so_far: {32764} | epsilon: 0.994 max: 45.95163984958485
+Ep: 911 | Ep_r: 34.37 | t_so_far: {32768} | epsilon: 0.994 max: 45.95163984958485
+Ep: 912 | Ep_r: 34.31 | t_so_far: {32808} | epsilon: 0.994 max: 45.95163984958485
+Ep: 913 | Ep_r: 36.42 | t_so_far: {32858} | epsilon: 0.994 max: 45.95163984958485
+Ep: 914 | Ep_r: 37.55 | t_so_far: {32908} | epsilon: 0.994 max: 45.95163984958485
+Ep: 915 | Ep_r: 32.77 | t_so_far: {32924} | epsilon: 0.994 max: 45.95163984958485
+Ep: 916 | Ep_r: 35.14 | t_so_far: {32974} | epsilon: 0.994 max: 45.95163984958485
+Ep: 917 | Ep_r: 33.44 | t_so_far: {33003} | epsilon: 0.994 max: 45.95163984958485
+Ep: 918 | Ep_r: 34.7 | t_so_far: {33048} | epsilon: 0.994 max: 45.95163984958485
+Ep: 919 | Ep_r: 35.78 | t_so_far: {33098} | epsilon: 0.994 max: 45.95163984958485
+Ep: 920 | Ep_r: 37.21 | t_so_far: {33148} | epsilon: 0.995 max: 45.95163984958485
+Ep: 921 | Ep_r: 37.9 | t_so_far: {33198} | epsilon: 0.995 max: 45.95163984958485
+Ep: 922 | Ep_r: 39.03 | t_so_far: {33248} | epsilon: 0.995 max: 45.95163984958485
+Ep: 923 | Ep_r: 40.05 | t_so_far: {33298} | epsilon: 0.995 max: 45.95163984958485
+Ep: 924 | Ep_r: 40.89 | t_so_far: {33348} | epsilon: 0.995 max: 45.95163984958485
+Ep: 925 | Ep_r: 41.31 | t_so_far: {33398} | epsilon: 0.995 max: 45.95163984958485
+Ep: 926 | Ep_r: 41.27 | t_so_far: {33448} | epsilon: 0.995 max: 45.95163984958485
+Ep: 927 | Ep_r: 41.62 | t_so_far: {33498} | epsilon: 0.995 max: 45.95163984958485
+Ep: 928 | Ep_r: 41.15 | t_so_far: {33548} | epsilon: 0.995 max: 45.95163984958485
+Ep: 929 | Ep_r: 41.88 | t_so_far: {33598} | epsilon: 0.995 max: 45.95163984958485
+Ep: 930 | Ep_r: 42.37 | t_so_far: {33648} | epsilon: 0.995 max: 45.95163984958485
+Ep: 931 | Ep_r: 42.86 | t_so_far: {33698} | epsilon: 0.995 max: 45.95163984958485
+Ep: 932 | Ep_r: 43.36 | t_so_far: {33748} | epsilon: 0.995 max: 45.95163984958485
+Ep: 933 | Ep_r: 43.03 | t_so_far: {33798} | epsilon: 0.995 max: 45.95163984958485
+Ep: 934 | Ep_r: 38.78 | t_so_far: {33824} | epsilon: 0.995 max: 45.95163984958485
+Ep: 935 | Ep_r: 40.04 | t_so_far: {33874} | epsilon: 0.995 max: 45.95163984958485
+Ep: 936 | Ep_r: 41.24 | t_so_far: {33924} | epsilon: 0.995 max: 45.95163984958485
+Ep: 937 | Ep_r: 38.7 | t_so_far: {33958} | epsilon: 0.995 max: 45.95163984958485
+Ep: 938 | Ep_r: 38.88 | t_so_far: {34008} | epsilon: 0.995 max: 45.95163984958485
+Ep: 939 | Ep_r: 38.26 | t_so_far: {34051} | epsilon: 0.995 max: 45.95163984958485
+Ep: 940 | Ep_r: 39.11 | t_so_far: {34101} | epsilon: 0.995 max: 45.95163984958485
+Ep: 941 | Ep_r: 40.4 | t_so_far: {34151} | epsilon: 0.995 max: 45.95163984958485
+Ep: 942 | Ep_r: 41.71 | t_so_far: {34201} | epsilon: 0.995 max: 45.95163984958485
+Ep: 943 | Ep_r: 42.35 | t_so_far: {34251} | epsilon: 0.995 max: 45.95163984958485
+Ep: 944 | Ep_r: 38.87 | t_so_far: {34281} | epsilon: 0.995 max: 45.95163984958485
+Ep: 945 | Ep_r: 40.5 | t_so_far: {34331} | epsilon: 0.995 max: 45.95163984958485
+Ep: 946 | Ep_r: 41.72 | t_so_far: {34381} | epsilon: 0.995 max: 45.95163984958485
+Ep: 947 | Ep_r: 42.3 | t_so_far: {34431} | epsilon: 0.995 max: 45.95163984958485
+Ep: 948 | Ep_r: 42.1 | t_so_far: {34481} | epsilon: 0.995 max: 45.95163984958485
+Ep: 949 | Ep_r: 42.93 | t_so_far: {34531} | epsilon: 0.995 max: 45.95163984958485
+Ep: 950 | Ep_r: 42.66 | t_so_far: {34581} | epsilon: 0.995 max: 45.95163984958485
+Ep: 951 | Ep_r: 43.39 | t_so_far: {34631} | epsilon: 0.995 max: 45.95163984958485
+Ep: 952 | Ep_r: 43.87 | t_so_far: {34681} | epsilon: 0.996 max: 45.95163984958485
+Ep: 953 | Ep_r: 37.31 | t_so_far: {34693} | epsilon: 0.996 max: 45.95163984958485
+Ep: 954 | Ep_r: 38.17 | t_so_far: {34739} | epsilon: 0.996 max: 45.95163984958485
+Ep: 955 | Ep_r: 39.95 | t_so_far: {34789} | epsilon: 0.996 max: 45.95163984958485
+Ep: 956 | Ep_r: 40.68 | t_so_far: {34839} | epsilon: 0.996 max: 45.95163984958485
+Ep: 957 | Ep_r: 41.24 | t_so_far: {34889} | epsilon: 0.996 max: 45.95163984958485
+Ep: 958 | Ep_r: 42.28 | t_so_far: {34939} | epsilon: 0.996 max: 45.95163984958485
+Ep: 959 | Ep_r: 40.81 | t_so_far: {34980} | epsilon: 0.996 max: 45.95163984958485
+Ep: 960 | Ep_r: 42.27 | t_so_far: {35030} | epsilon: 0.996 max: 45.95163984958485
+Ep: 961 | Ep_r: 39.92 | t_so_far: {35064} | epsilon: 0.996 max: 45.95163984958485
+Ep: 962 | Ep_r: 41.18 | t_so_far: {35114} | epsilon: 0.996 max: 45.95163984958485
+Ep: 963 | Ep_r: 42.23 | t_so_far: {35164} | epsilon: 0.996 max: 45.95163984958485
+Ep: 964 | Ep_r: 42.75 | t_so_far: {35214} | epsilon: 0.996 max: 45.95163984958485
+Ep: 965 | Ep_r: 42.97 | t_so_far: {35264} | epsilon: 0.996 max: 45.95163984958485
+Ep: 966 | Ep_r: 43.46 | t_so_far: {35314} | epsilon: 0.996 max: 45.95163984958485
+Ep: 967 | Ep_r: 43.57 | t_so_far: {35364} | epsilon: 0.996 max: 45.95163984958485
+Ep: 968 | Ep_r: 43.68 | t_so_far: {35414} | epsilon: 0.996 max: 45.95163984958485
+Ep: 969 | Ep_r: 43.42 | t_so_far: {35464} | epsilon: 0.996 max: 45.95163984958485
+Ep: 970 | Ep_r: 43.59 | t_so_far: {35514} | epsilon: 0.996 max: 45.95163984958485
+Ep: 971 | Ep_r: 43.33 | t_so_far: {35564} | epsilon: 0.996 max: 45.95163984958485
+Ep: 972 | Ep_r: 35.13 | t_so_far: {35567} | epsilon: 0.996 max: 45.95163984958485
+Ep: 973 | Ep_r: 34.82 | t_so_far: {35607} | epsilon: 0.996 max: 45.95163984958485
+Ep: 974 | Ep_r: 36.76 | t_so_far: {35657} | epsilon: 0.996 max: 45.95163984958485
+Ep: 975 | Ep_r: 37.7 | t_so_far: {35707} | epsilon: 0.996 max: 45.95163984958485
+Ep: 976 | Ep_r: 38.8 | t_so_far: {35757} | epsilon: 0.996 max: 45.95163984958485
+Ep: 977 | Ep_r: 39.8 | t_so_far: {35807} | epsilon: 0.996 max: 45.95163984958485
+Ep: 978 | Ep_r: 40.08 | t_so_far: {35857} | epsilon: 0.996 max: 45.95163984958485
+Ep: 979 | Ep_r: 41.26 | t_so_far: {35907} | epsilon: 0.996 max: 45.95163984958485
+Ep: 980 | Ep_r: 42.15 | t_so_far: {35957} | epsilon: 0.996 max: 45.95163984958485
+Ep: 981 | Ep_r: 41.49 | t_so_far: {36000} | epsilon: 0.996 max: 45.95163984958485
+Ep: 982 | Ep_r: 39.08 | t_so_far: {36034} | epsilon: 0.996 max: 45.95163984958485
+Ep: 983 | Ep_r: 39.93 | t_so_far: {36084} | epsilon: 0.996 max: 45.95163984958485
+Ep: 984 | Ep_r: 40.57 | t_so_far: {36134} | epsilon: 0.996 max: 45.95163984958485
+Ep: 985 | Ep_r: 40.93 | t_so_far: {36184} | epsilon: 0.996 max: 45.95163984958485
+Ep: 986 | Ep_r: 35.52 | t_so_far: {36200} | epsilon: 0.996 max: 45.95163984958485
+Ep: 987 | Ep_r: 37.21 | t_so_far: {36250} | epsilon: 0.996 max: 45.95163984958485
+Ep: 988 | Ep_r: 38.36 | t_so_far: {36300} | epsilon: 0.996 max: 45.95163984958485
+Ep: 989 | Ep_r: 39.54 | t_so_far: {36350} | epsilon: 0.996 max: 45.95163984958485
+Ep: 990 | Ep_r: 38.86 | t_so_far: {36392} | epsilon: 0.996 max: 45.95163984958485
+Ep: 991 | Ep_r: 40.22 | t_so_far: {36442} | epsilon: 0.996 max: 45.95163984958485
+Ep: 992 | Ep_r: 41.01 | t_so_far: {36492} | epsilon: 0.996 max: 45.95163984958485
+Ep: 993 | Ep_r: 41.5 | t_so_far: {36541} | epsilon: 0.996 max: 45.95163984958485
+Ep: 994 | Ep_r: 40.74 | t_so_far: {36583} | epsilon: 0.996 max: 45.95163984958485
+Ep: 995 | Ep_r: 41.95 | t_so_far: {36633} | epsilon: 0.996 max: 45.95163984958485
+Ep: 996 | Ep_r: 42.51 | t_so_far: {36683} | epsilon: 0.996 max: 45.95163984958485
+Ep: 997 | Ep_r: 41.46 | t_so_far: {36726} | epsilon: 0.996 max: 45.95163984958485
+Ep: 998 | Ep_r: 41.96 | t_so_far: {36776} | epsilon: 0.996 max: 45.95163984958485
+Ep: 999 | Ep_r: 42.55 | t_so_far: {36826} | epsilon: 0.997 max: 45.95163984958485
+Ep: 1000 | Ep_r: 43.14 | t_so_far: {36876} | epsilon: 0.997 max: 45.95163984958485
+pygame 2.1.0 (SDL 2.0.16, Python 3.8.0)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Successfully set seed to 2
+attention_Dueling_DQN(
+  (features): Sequential(
+    (0): Conv2d(4, 32, kernel_size=(8, 8), stride=(4, 4))
+    (1): ReLU()
+    (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+    (3): ReLU()
+    (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+    (5): ReLU()
+  )
+  (attention): NONLocalBlock2D(
+    (g): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (W): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1))
+    (theta): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (phi): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+  )
+  (advantage): Sequential(
+    (0): Linear(in_features=68160, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=5, bias=True)
+  )
+  (value): Sequential(
+    (0): Linear(in_features=68160, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=1, bias=True)
+  )
+)
+====================================
+Model has been loaded...
+====================================
+step: 49, ep_reward: 47.266666666666666
+step: 49, ep_reward: 46.50000000000001
+step: 26, ep_reward: 23.96666666666667
+step: 49, ep_reward: 45.699999999999996
+step: 49, ep_reward: 47.79999999999997
+step: 49, ep_reward: 46.86666666666665
+step: 34, ep_reward: 31.899999999999995
+step: 39, ep_reward: 37.06666666666664
+step: 41, ep_reward: 38.36666666666665
+step: 49, ep_reward: 46.53333333333332
+pygame 2.1.0 (SDL 2.0.16, Python 3.8.0)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Successfully set seed to 2
+attention_Dueling_DQN(
+  (features): Sequential(
+    (0): Conv2d(4, 32, kernel_size=(8, 8), stride=(4, 4))
+    (1): ReLU()
+    (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+    (3): ReLU()
+    (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+    (5): ReLU()
+  )
+  (attention): NONLocalBlock2D(
+    (g): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (W): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1))
+    (theta): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (phi): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+  )
+  (advantage): Sequential(
+    (0): Linear(in_features=68160, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=5, bias=True)
+  )
+  (value): Sequential(
+    (0): Linear(in_features=68160, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=1, bias=True)
+  )
+)
+====================================
+Model has been loaded...
+====================================
+step: 49, ep_reward: 44.666666666666686
+step: 23, ep_reward: 21.86666666666667
+step: 49, ep_reward: 43.500000000000036
+step: 20, ep_reward: 20.03333333333333
+step: 38, ep_reward: 36.33333333333333
+step: 49, ep_reward: 45.7
+step: 49, ep_reward: 46.49999999999999
+step: 49, ep_reward: 45.066666666666684
+step: 49, ep_reward: 45.66666666666668
+step: 49, ep_reward: 43.96666666666668

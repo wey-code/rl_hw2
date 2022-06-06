@@ -432,7 +432,7 @@ class MultiAttentionNetwork(EgoAttentionNetwork, attention_Dueling_DQN):
         img_attention = img_attention.reshape(img_attention.size(0), -1)
         attention = torch.cat([ego_embedded_att, img_attention], dim=1)
         if self.add_dueling:
-            print(1)
+            #print(1)
             advantage = self.advantage(attention)
             value = self.value(attention).expand(-1, self.num_actions)
             return value + advantage - advantage.mean(1).unsqueeze(1).expand(-1, self.num_actions)

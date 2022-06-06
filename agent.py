@@ -239,6 +239,7 @@ def parse_args(args):
     parser.add_argument('--highspeed_r', default=0.4, type=float)
     parser.add_argument('--normal', default=True, action='store_false')
     parser.add_argument('--absolute', default=False, action='store_true')
+    parser.add_argument('--model_ep',default = 1000,type = int)
 
     return parser.parse_args(args)
 
@@ -299,6 +300,8 @@ def train(args=None):
     }
     env = gym.make("highway-v0")
     env.unwrapped.configure(env_config)
+    
+    #pdb.set_trace()
 
     # directory = './weights_with_ego_attention/'
     # dqn.writer = SummaryWriter(directory)
@@ -377,6 +380,8 @@ def train(args=None):
 
 
 def test(args=None):
+    if args.gpu:
+        os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
     env_config = {
         "id": "highway-v0",
         "import_module": "highway_env",
@@ -438,12 +443,16 @@ def test(args=None):
 
     agent.epsilon = 1.0
     path_name = args.file_name + 'weights_with_{}'.format(args.input) + '/'
-    agent.load(path_name, 400)
+    agent.load(path_name, args.model_ep)
     # t_so_far = 0
     time_safe = 0
     ep_r_list = []
     lane_change_list = []
     step_list = []
+    
+    with open(args.file_name + 'result.txt', 'a') as result:
+        result.write("load model episode: {}".format(args.model_ep))
+        result.write('\n')
 
     for _ in range(10):
         state = env.reset()
