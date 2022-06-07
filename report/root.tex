@@ -23,15 +23,15 @@
 \usepackage{mathtools}
 \usepackage{forloop}
 \usepackage{soul}
+\usepackage{caption}
 
  
 \usepackage{algorithmicx}  
 \usepackage{algpseudocode}  
 
 \usepackage{algorithm}  
-\usepackage{graphicx}
-\usepackage{booktabs}
-
+\usepackage{graphics}
+\usepackage{booktabs}  
 \usepackage[UTF8]{ctex} 
 
 
@@ -70,7 +70,7 @@
 \author{沈炼成，林镇阳，韩立君 }% <-this % stops a space
 
 
-\UseRawInputEncoding
+%\UseRawInputEncoding
 \begin{document}
 
 
@@ -125,7 +125,7 @@
 仿真环境可以将动作设置为连续的油门和方向盘角度,但连续空间训练收敛难度会增大。考虑到算力限制，因此使用离散动作进行控制，再将离散动作送入规划器中生成连续动作。在仿真器中，可以分为5个离散动作——左转、保持车道、右转、加速、减速。分别用动作$a_0$到$a_4$表征。这五个动作共同构成了仿真环境的动作空间，下层规划器根据决策指令对车辆动作进行规划控制。
 
 \subsubsection{奖励设置}
-环境中奖励设置较为灵活，主要分为三个部分，碰撞惩罚、车速奖励、靠右奖励。每项奖励均可修改奖励系数，后面我们会讨论调整奖励系数对车辆的影响，实验发现，奖励函数的设置对于车辆的表现影响较大。
+环境中奖励设置较为灵活，主要分为三个部分，碰撞惩罚、车速奖励、靠右奖励。系统默认碰撞惩罚为-1，无碰撞为0。车速奖励为$r_v = 0.4\frac{(v_t-v_{min})}{(v_{max}-v_{min})}$其中，$v_{max} = 30m/s,v_{min}=20m/s$。此外还有靠右奖励，奖励系数为0.1。后面我们会讨论调整奖励系数对车辆的影响，实验发现，删除靠右奖励会导致车辆换道次数显著增加。
 
 \subsection{任务分析}
 根据任务需要我们设计强化学习算法，将低维或高维输入转化为离散的汽车换道决策指令。即首先需要对观测量进行提取推测，得到状态量。再将状态量作为输入得到动作。而近来深度强化学习的兴起让这两个环节可以直接联合训练，提升了学习效率。
@@ -136,15 +136,15 @@
 可以将超车换道问题转化为一个马尔可夫问题，由$<\mathcal{S},\mathcal{A},\mathcal{P},\mathcal{R},\gamma>$来表示，分别代表了状态空间、动作空间、转移概率、奖励函数、折扣因子。
 
 根据前一节的分析，状态空间、动作空间、奖励函数均已得到。折扣因子$\gamma$设为0.99。不妨设$t$时刻的回报$G_t$为:
-$$
-G_t = \sum^{\infty}_{i=0}\gamma^ir_{t+i}
-$$
+\begin{equation}
+    G_t = \sum^{\infty}_{i=0}\gamma^ir_{t+i}
+\end{equation}
 
 $G_t$表示了从$t$时刻到结束的总的奖励，整个强化学习过程的目标即为最大化回报。但转移概率未知，因此采用无模型强化学习的方法，常用的无模型方法为Q学习算法。针对某个策略，定义$Q^\pi$为状态动作对好坏的评价标准，可以借助前面的回报定义为：
 
-$$
-Q^\pi = \mathbb{E}_\pi[G_t|s_t=s,a_t=a]
-$$
+\begin{equation}
+    Q^\pi = \mathbb{E}_\pi[G_t|s_t=s,a_t=a]
+\end{equation}
 
 同时使用经验回放池，使得训练数据满足独立同分布假设，以及充分利用过往探索经验，方便进行深度学习。使用目标网络，防止计算TD误差时目标变动导致更新困难。使用$\epsilon-greedy$算法，$\epsilon$值逐渐衰减，来平衡整个利用与探索的过程。整个DQN算法流程如下所示：
 
@@ -158,9 +158,11 @@ $$
 
 但是传统的DQN算法会存在Q值过高估计的问题，因此引入了Double DQN,将决策动作生成网络和状态动作对估值网络分开，可以一定程度缓解过估计问题。此外在训练数据中，很多状态并不需要估计每个动作的值，使用Q函数可能引入较多噪声。因此将Q函数分解为状态函数$V$和优势函数$A$最终$Q$值为两个函数的叠加。此外由于一个$Q$值可以有无数种分解方式，如果直接估计会导致难以收敛。因此对优势函数去均值保证分解的唯一性。最终$Q$值可以表示为：
 
-$$
-Q(s,a) = V(s)+(A(s,a)-\frac{1}{|\mathcal{A}|}\sum_{a'}A(s,a'))
-$$
+\begin{equation}
+    Q(s,a) = V(s)+(A(s,a)-\frac{1}{|\mathcal{A}|}\sum_{a'}A(s,a'))    
+\end{equation}
+
+
 
 此外我们经过研究发现，获得终止信号有两种情况，撞车或达到仿真时间（50步）。但这两种情况实际上是不一样的。撞车后，我们不学习如何从撞车后恢复（相当于车辆已死亡），此时设为终止没有问题。但是只是到达了仿真步数，此时车辆其实是还可以正常行驶的，如果直接将该状态存为终止状态，会导致Q值的估计震荡不容易收敛。因此我们将原有算法进行了修改，加入了死亡判断。即每次动作得到终止信号时，会判断信号来源于撞车还是到达仿真步数，如果是来源于撞车，则存入经验池的$done=True$，否则仍设为$False$。具体算法如算法1所示。
 
@@ -199,16 +201,24 @@ $$
 \end{algorithm} 
 
 
-\section{注意力机制}
-\subsection{Ego-attention}
-对于基于向量的状态输入，这里采用的注意力模型是ego-attention\cite{leurent2019social}。这种注意力模型是社会注意力机制的一种变形，可以使得智能体更加关注距离其较近或者容易发生碰撞的
-车辆。
+\section{基于注意力机制的Dueling DDQN网络框架}
+在上述加入死亡判断的Dueling DDQN强化学习算法的指导下，我们结合了不同类别的状态作为输入，同时对向量输入和图像输入分别引入了不同的注意力机制，整体网络框架如图\ref{fig:总体架构}所示：
 
-引入ego-attention注意力机制的模型如图\ref{fig:ego-attention}所示，其可以用来表示DQN算法或者Dueling DQN算法中的Q函数。
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\linewidth]{fig/网络结构.png}
-    \caption{引入ego-attention的网络结构}
+    \includegraphics[width=\linewidth]{fig/总体架构.png}
+    \caption{基于注意力机制的Dueling DDQN网络框架\cite{wang2021highway}}
+    \label{fig:总体架构}
+  \end{figure}
+
+\subsection{Ego-attention}
+对于基于向量的状态输入，这里采用的注意力模型是ego-attention\cite{leurent2019social}。这种注意力模型是社会注意力机制的一种变形，可以使得智能体更加关注距离其较近或者容易发生碰撞的车辆。
+
+基于ego-attention注意力机制的模型如图\ref{fig:ego-attention}所示，其可以用来表示DQN算法或者Dueling DDQN算法中的Q函数。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{fig/ego-attention网络结构}
+    \caption{基于ego-attention的网络结构}
     \label{fig:ego-attention}
   \end{figure}
 网络首先由线性编码层组成，所有编码层的权重相同。经过线性编码层后每个实体
@@ -231,6 +241,40 @@ $L_q\in\mathbb{R} ^{d_x\times d_k}$。这个询问之后与键的集合$K=[k_0,\
 \end{equation}
 
 最后所有头的输出经过一个线性层进行结合，整个过程具有置换不变性：一个置换$\tau$会改变公式中键$K$与值$V$行的顺序，但是两者的对应关系仍然得以保持。它也可以很自然地解释当前车辆与环境车辆的交互关系。
+
+\subsection{Non-local block}
+对于基于图像的状态输入，这里使用的注意力机制为non-loacl block\cite{wang2018non}。传统的卷积网络是处理局部区域的操作，为了从图像中获得较大范围的信息，需要通过叠加多层卷积来不断扩大感受野，这样的操作是复杂的，而且需要考验网络设计能力，最终得到的效果也不尽如人意，很难获得较大距离像素间的相对关系。受计算机视觉中非局部均值（non-local means）的启发，non-local block被提出用于捕捉长距离依赖，与传统的卷积神经网络相比，它可以计算两个任意位置之间的交互，进而直接捕获长距离的依赖关系。另外，这一操作是非保持了输入输出的大小，可以很容易地作为一个模块与其他操作结合。
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{fig/non-local细节.png}
+    \caption{non-local block网络结构}
+    \label{fig:nonlocal block}
+  \end{figure}
+在本文中使用的non-local block如图\ref{fig:nonlocal block}所示，$x$是输入，$z$是non-local block的输出，$y$是non-local操作的结果，其关系式为：
+\begin{equation}
+    z_i=W_z*y_i + x_i
+\end{equation}
+$W$是对$y_i$的加权,与输入$x$相加形成残差连接。
+\begin{equation}
+    y_i = \frac{1}{C(x)}\sum_{\forall j}f(x_i,x_j)g(x_j)
+\end{equation}
+$f(x_i,x_j)$用来计算$i$和所有可能关联的位置$j$之间的关系，其计算方式可以有多种，在本文中我们使用简单的点乘，如式\ref{f函数}；$g(x_j)$用于计算输入信号在$j$位置的特征值；$C(x)$是归一化参数。
+\begin{equation}\label{f函数}
+    f(x_i,x_j)=\theta(x_i)^{T}\phi(x_j)
+\end{equation}
+$\theta(x_i)$、$phi(x_j)$、$g(x_j)$均为线性变换，通过空间$1*1$的卷积实现。
+
+
+基于non-loacl block机制，图片作为状态输入的网络模型如图\ref{fig:基于non-local block的网络结构}所示，与上文的ego-attention模型相似，基于non-local block的网络可以用来拟合DQN算法或者Dueling DDQN算法中的Q函数。网络输入包括当前车辆和环境车辆的为图像信息，通过一个浅层的CNN网络初步提取图像特征，然后使用non-local block提取任意两个像素之间的依赖关系，从而获得当前车辆与环境车辆之间的关系。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{fig/non-local网络.png}
+    \caption{引入non-local block的网络结构}
+    \label{fig:基于non-local block的网络结构}
+  \end{figure}
+
+
 \section{实验分析}
 在实验部分，我们将奖励函数分为三个部分
 \begin{enumerate}
@@ -310,6 +354,8 @@ $L_q\in\mathbb{R} ^{d_x\times d_k}$。这个询问之后与键的集合$K=[k_0,\
 经过对比发现，D3QN算法在稳定性和训练效果方面都是目前而言最佳的。其余方法可能导致换道次数显著上升。
 \subsection[]{消融实验}
 为了验证死亡判断对于网络的影响，我们对比了是否加入死亡判断对于最终训练结果的影响。其余设置条件均相同，最终结果如表所示。
+
+
 
 \addtolength{\textheight}{-1cm}   % This command serves to balance the column lengths
                                   % on the last page of the document manually. It shortens
