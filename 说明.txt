@@ -1,3 +1,10 @@
+代码中可以选择模式、输入形式、存储路径以及一系列超参数。具体见agent文档中的parse_args
+
+为了保证文档大小，只随模型文件只保留了混合输入+注意力机制1000轮的代码，如欲测试，执行demo.sh即可。
+
+
+result1-4分别代表了四个对比实验结果
+
 DQN:
 --input ~~
 DDQN:
@@ -7,5 +14,3 @@ Dueling DQN
 D3QN:
 --input ~~ --add_dueling --double
 
-要修改reward：
-在agent.py中env_config字典中修改"RIGHT_LANE_REWARD"，"HIGH_VELOCITY_REWARD"。
