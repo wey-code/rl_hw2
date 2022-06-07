@@ -1,1 +1,1 @@
-nohup python -u ./agent.py --mode test --add_dueling --double --input multi_attention --gpu 0 --file_name ./ >> demo.log 2>&1 &
+python  ./agent.py --mode test --add_dueling --double --input multi_attention --gpu 0 --file_name ./
