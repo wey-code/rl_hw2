@@ -342,7 +342,7 @@ def train(args=None):
             s_, r, done, info = env.step(a)
             s_ = agent.observe(s_)
 
-            # pdb.set_trace()
+            pdb.set_trace()
             if args.isdeadnot == True:
               if (info['crashed'] and done):
                   agent.memory.push(s, a, r, s_, True)

@@ -148175,3 +148175,71 @@ step: 49, ep_reward: 44.79999999999999
 1
 1
 step: 49, ep_reward: 43.60000000000001
+pygame 2.1.0 (SDL 2.0.16, Python 3.8.0)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Successfully set seed to 2
+MultiAttentionNetwork(
+  (features): Sequential(
+    (0): Conv2d(4, 32, kernel_size=(8, 8), stride=(4, 4))
+    (1): ReLU()
+    (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+    (3): ReLU()
+    (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+    (5): ReLU()
+  )
+  (attention): NONLocalBlock2D(
+    (g): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (W): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1))
+    (theta): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (phi): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+  )
+  (advantage): Sequential(
+    (0): Linear(in_features=68224, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=5, bias=True)
+  )
+  (value): Sequential(
+    (0): Linear(in_features=68224, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=1, bias=True)
+  )
+  (output): None
+  (ego_embedding): Sequential(
+    (0): Linear(in_features=7, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+  (others_embedding): Sequential(
+    (0): Linear(in_features=7, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+  (attention_layer): EgoAttetion(
+    (value_all): Linear(in_features=64, out_features=64, bias=False)
+    (key_all): Linear(in_features=64, out_features=64, bias=False)
+    (query_ego): Linear(in_features=64, out_features=64, bias=False)
+    (attention_combine): Linear(in_features=64, out_features=64, bias=False)
+  )
+  (decoder): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+  )
+)
+Traceback (most recent call last):
+  File "./agent.py", line 502, in <module>
+    test(args)
+  File "./agent.py", line 449, in test
+    agent.load(path_name, args.model_ep)
+  File "./agent.py", line 175, in load
+    self.eval_net.load_state_dict(torch.load(directory + 'dqn{}.pth'.format(i)))
+  File "/home/slc/miniconda3/envs/RL2/lib/python3.8/site-packages/torch/serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/slc/miniconda3/envs/RL2/lib/python3.8/site-packages/torch/serialization.py", line 231, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/slc/miniconda3/envs/RL2/lib/python3.8/site-packages/torch/serialization.py", line 212, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './multi_attention_out/weights_with_multi_attention/dqn1000.pth'

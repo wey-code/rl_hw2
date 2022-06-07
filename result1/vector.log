@@ -1092,3 +1092,35 @@ step: 49, ep_reward: 39.13333333333335
 step: 49, ep_reward: 39.799999999999976
 step: 40, ep_reward: 30.600000000000016
 step: 49, ep_reward: 39.29999999999999
+pygame 2.1.0 (SDL 2.0.16, Python 3.8.0)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Successfully set seed to 2
+Dueling_DQN_vector(
+  (features): Sequential(
+    (0): Linear(in_features=105, out_features=512, bias=True)
+    (1): ReLU()
+  )
+  (advantage): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=5, bias=True)
+  )
+  (value): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=1, bias=True)
+  )
+)
+====================================
+Model has been loaded...
+====================================
+step: 49, ep_reward: 39.10000000000002
+step: 49, ep_reward: 39.03333333333336
+step: 49, ep_reward: 38.73333333333335
+step: 49, ep_reward: 39.73333333333335
+step: 49, ep_reward: 39.26666666666668
+step: 49, ep_reward: 39.33333333333335
+step: 49, ep_reward: 40.03333333333335
+step: 49, ep_reward: 37.93333333333336
+step: 49, ep_reward: 37.366666666666696
+step: 49, ep_reward: 38.600000000000016

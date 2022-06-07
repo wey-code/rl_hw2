@@ -1,0 +1,39 @@
+load model episode: 1000
+step: 49, ep_reward: 43.43333333333335, lane change: 21
+step: 49, ep_reward: 40.70000000000003, lane change: 24
+step: 49, ep_reward: 41.633333333333354, lane change: 22
+step: 49, ep_reward: 41.000000000000014, lane change: 18
+step: 49, ep_reward: 42.53333333333335, lane change: 36
+step: 49, ep_reward: 41.100000000000016, lane change: 21
+step: 49, ep_reward: 41.43333333333335, lane change: 25
+step: 49, ep_reward: 37.53333333333337, lane change: 15
+step: 49, ep_reward: 41.10000000000002, lane change: 15
+step: 49, ep_reward: 42.40000000000002, lane change: 20
+average result:
+step: 50.0, ep_reward: 41.28666666666669, lane change: 21.7,safe:1.0
+load model episode: 1000
+step: 49, ep_reward: 44.53333333333334, lane change: 29
+step: 49, ep_reward: 39.53333333333336, lane change: 23
+step: 49, ep_reward: 45.40000000000001, lane change: 34
+step: 49, ep_reward: 40.800000000000026, lane change: 21
+step: 49, ep_reward: 41.06666666666669, lane change: 23
+step: 16, ep_reward: 13.766666666666667, lane change: 10
+step: 49, ep_reward: 40.700000000000024, lane change: 24
+step: 9, ep_reward: 7.833333333333335, lane change: 3
+step: 49, ep_reward: 44.30000000000001, lane change: 20
+step: 49, ep_reward: 41.16666666666668, lane change: 22
+average result:
+step: 42.7, ep_reward: 35.91000000000001, lane change: 20.9,safe:0.8
+load model episode: 800
+step: 49, ep_reward: 43.26666666666668, lane change: 13
+step: 49, ep_reward: 43.066666666666684, lane change: 18
+step: 49, ep_reward: 40.866666666666696, lane change: 12
+step: 49, ep_reward: 40.46666666666668, lane change: 8
+step: 49, ep_reward: 44.23333333333335, lane change: 12
+step: 49, ep_reward: 44.000000000000014, lane change: 11
+step: 20, ep_reward: 18.000000000000004, lane change: 7
+step: 30, ep_reward: 26.60000000000001, lane change: 2
+step: 49, ep_reward: 43.033333333333346, lane change: 10
+step: 7, ep_reward: 6.166666666666666, lane change: 2
+average result:
+step: 41.0, ep_reward: 34.97000000000001, lane change: 9.5,safe:0.7

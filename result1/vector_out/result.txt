@@ -68,3 +68,16 @@ step: 40, ep_reward: 30.600000000000016, lane change: 16
 step: 49, ep_reward: 39.29999999999999, lane change: 17
 average result:
 step: 49.1, ep_reward: 38.19333333333334, lane change: 16.4,safe:0.9
+load model episode: 1000
+step: 49, ep_reward: 39.10000000000002, lane change: 20
+step: 49, ep_reward: 39.03333333333336, lane change: 16
+step: 49, ep_reward: 38.73333333333335, lane change: 13
+step: 49, ep_reward: 39.73333333333335, lane change: 23
+step: 49, ep_reward: 39.26666666666668, lane change: 21
+step: 49, ep_reward: 39.33333333333335, lane change: 15
+step: 49, ep_reward: 40.03333333333335, lane change: 17
+step: 49, ep_reward: 37.93333333333336, lane change: 19
+step: 49, ep_reward: 37.366666666666696, lane change: 17
+step: 49, ep_reward: 38.600000000000016, lane change: 15
+average result:
+step: 50.0, ep_reward: 38.91333333333335, lane change: 17.6,safe:1.0
